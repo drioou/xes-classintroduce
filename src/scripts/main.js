@@ -6,12 +6,14 @@
  */
 
 
+
+
 window.onload = function() {
     $(".content").show();
 };
 
 
-// 屏幕旋转检测=====================================================
+// 屏幕旋转检测=======dfdfff======fdfff=====================================
 
 var orientLayer = document.getElementById("vertical");
 //判断横屏竖屏 
