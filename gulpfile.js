@@ -552,9 +552,10 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var cache = require('gulp-cache');
 var size = require('gulp-size');
-
+var reveasy = require("gulp-rev-easy");
+var reveasy = require("gulp-rev");
 // 给页面的引用添加版本号，清除页面引用缓存
- var rev = require('gulp-rev');
+// var rev = require('gulp-rev');
 
 /* Setup scss path */
 // var paths = {
@@ -578,8 +579,8 @@ gulp.task('minimg', function() {
         //     use: [pngquant()]
         // })))
         .pipe(size())
-        
-        .pipe(gulp.dest('dist/images'));
+
+    .pipe(gulp.dest('dist/images'));
     // .pipe(notify({
     //     message: 'images  ok!'
     // }));
@@ -592,9 +593,12 @@ gulp.task('minify', function() {
             collapseWhitespace: true, //压缩html 
             removeComments: true, //清除注释
         }))
-        
-        .pipe(rename("index.html"))
+
+    .pipe(rename("index.html"))
         .pipe(size())
+        // .pipe(reveasy({
+        //     suffix: 'duanyong'
+        // }))
         .pipe(gulp.dest('./'));
     // .pipe(notify({
     //     message: 'html is  OK!'
@@ -610,8 +614,8 @@ gulp.task('minicon', function() {
             removeComments: true, //清除注释
         }))
         .pipe(size())
-        
-        .pipe(gulp.dest("dist/content"));
+        // .pipe(reveasy({revType:'date', dateFormat:'yyyymmddHHmm' , suffix:'duanyong'}))
+        .pipe(gulp.dest("./dist/content"));
 })
 
 /* Scripts task */
@@ -627,8 +631,8 @@ gulp.task('scripts', function() {
         }))
         .pipe(size())
         // .pipe(uglify().on('error', gutil.log))
-        
-        .pipe(gulp.dest('dist/scripts'));
+
+    .pipe(gulp.dest('dist/scripts'));
     // .pipe(notify({
     //     message: 'JS is OK!'
     // }));
@@ -655,14 +659,13 @@ gulp.task('css', function() {
             cascade: true, //是否美化属性值 默认：true 像这样：
             //-webkit-transform: rotate(45deg);
             //        transform: rotate(45deg);
-            remove:true //是否去掉不必要的前缀 默认：true 
+            remove: true //是否去掉不必要的前缀 默认：true 
         }))
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(size())
         .pipe(minifycss())
-        
         .pipe(gulp.dest('dist/styles'));
     // .pipe(notify({
     //     message: 'CSS is OK! '
