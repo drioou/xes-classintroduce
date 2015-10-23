@@ -132,9 +132,11 @@
   animation: movebg 60s infinite; }
 
 .active .bounceinleft {
+  -webkit-animation: bounceInLeft 1s 0.5s forwards;
   animation: bounceInLeft 1s 0.5s forwards; }
 
 .active .bounceinright {
+  -webkit-animation: bounceInRight 1s 0.5s forwards;
   animation: bounceInRight 1s 0.5s forwards; }
 
 .fp-slides .slide {
@@ -952,6 +954,7 @@
       background-size: contain;
       top: 4%;
       left: 5%;
+      -webkit-transform: translate3d(-100%, 100%, 0);
       transform: translate3d(-100%, 100%, 0); }
     .two .two-3 .two-con .two-con-gogo {
       height: 30%;
@@ -960,6 +963,7 @@
       background-size: contain;
       top: 80%;
       left: 70%;
+      -webkit-transform: translate3d(-100%, 100%, 0);
       transform: translate3d(-100%, 100%, 0); }
     .two .two-3 .two-con .two-con-cloud {
       height: 30%;
@@ -1078,39 +1082,52 @@
 
 @keyframes rotateSun {
   from {
-    transform: rotate(0); }
+    transform: rotate(0);
+    -webkit-transform: rotate(0); }
   to {
-    transform: rotate(360deg); } }
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
 
 @-webkit-keyframes rotateSun {
   from {
-    transform: rotate(0); }
+    transform: rotate(0);
+    -webkit-transform: rotate(0); }
   to {
-    transform: rotate(360deg); } }
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
 
 @keyframes moveCloud {
   25% {
+    -webkit-transform: translate3d(50%, 0, 0);
     transform: translate3d(50%, 0, 0); }
   70% {
+    -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); }
   0, 100%, 50% {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
 @-webkit-keyframes moveCloud {
   25% {
+    -webkit-transform: translate3d(50%, 0, 0);
     transform: translate3d(50%, 0, 0); }
   70% {
+    -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); }
   0, 100%, 50% {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
 .there-chinese .active.section .there-chinese-sun {
+  -webkit-animation: rotateSun 30s infinite;
   animation: rotateSun 30s infinite; }
 
 .there-chinese .active.section .there-chinese-cloud-1, .there-chinese .active.section .there-chinese-ballon-red {
+  -webkit-animation: moveCloud 40s infinite;
   animation: moveCloud 40s infinite; }
 
 .there-chinese .active.section .there-chinese-cloud, .there-chinese .active.section .there-chinese-ballon-blue {
+  -webkit-animation: moveCloud 30s infinite;
   animation: moveCloud 30s infinite; }
 
 .there-chinese .active.section .there-chinese-top .there-chinese-top-left .there-chinese-top-left-text {
