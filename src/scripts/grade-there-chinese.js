@@ -16,7 +16,7 @@ window.onload = function() {
 // 屏幕旋转检测=======dfdfff======fdfff=====================================
 
 var orientLayer = document.getElementById("vertical");
-//判断横屏竖屏 
+//判断横屏竖屏
 function checkDirect() {
     if (document.documentElement.clientHeight >= document.documentElement.clientWidth) {
         return "portrait";
@@ -24,7 +24,7 @@ function checkDirect() {
         return "landscape";
     }
 };
-//显示屏幕方向提示浮层 
+//显示屏幕方向提示浮层
 function orientNotice() {
     var orient = checkDirect();
     if (orient == "portrait") {
@@ -66,6 +66,8 @@ $(document).ready(function() {
         scrollOverflow: false,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
+        controlArrows: true,
+        resize : false,
         // onLeave: function(index, nextIndex, direction) {
         //     var leavingSection = $(this);
 

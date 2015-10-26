@@ -2,13 +2,16 @@
 .content, body, html {
   height: 100%; }
 
+li {
+  list-style-type: none; }
+
 .thumbnailimg {
   z-index: 1; }
 
 .content, .up, .thumbnailimg {
   position: absolute; }
 
-.content, .fp-controlArrow, .none {
+.content, .fp-controlArrow, .none, .last-section.active .up {
   display: none; }
 
 .content {
@@ -33,7 +36,7 @@
   position: relative;
   overflow: hidden; }
 
-.picscale.modal, .picscale1.modal {
+.modal-open .modal {
   overflow: scroll; }
 
 .active .active.slide .slide-title {
@@ -140,7 +143,7 @@
   animation: bounceInRight 1s 0.5s forwards; }
 
 .fp-slides .slide {
-  padding: 4% 0 0;
+  padding: 3% 0 0;
   position: relative; }
   .fp-slides .slide .slide-movebg {
     background: url(../images/bb-03.png) bottom repeat-x;
@@ -166,7 +169,7 @@
     font-size: 2.3rem;
     color: #17598A;
     font-weight: bolder;
-    margin: 2% 0 7%;
+    margin: 1% 0 7%;
     -webkit-animation: zoomOut 1s forwards;
     animation: zoomOut 1s forwards; }
     .fp-slides .slide h3 i {
@@ -419,7 +422,7 @@
 .modal-content {
   border: none;
   border-radius: 0;
-  padding: 0 0 20%; }
+  padding: 0 0 5%; }
   .modal-content .col-xs-6 {
     text-align: center; }
   .modal-content .newstudent:before {
@@ -453,7 +456,6 @@
       position: relative; }
       .slide2.slide .globe ul li {
         height: 50%;
-        list-style-type: none;
         position: absolute;
         width: 80%;
         font-size: 1.2rem; }
@@ -569,14 +571,14 @@
   top: 15%;
   left: 23%; }
 
-.there .slide.slide3 .circle-top {
+.three .slide.slide3 .circle-top {
   background-image: url(../images/bb6-1.png); }
 
-.there .slide.slide3 .circle-bottom {
+.three .slide.slide3 .circle-bottom {
   background-image: url(../images/bb7-2.png);
-  width: 73%;
-  top: 15%;
-  left: 23%; }
+  width: 80%;
+  top: 12.6%;
+  left: 16%; }
 
 .four .slide.slide3 .circle-top {
   background-image: url(../images/bb6-1.png); }
@@ -692,7 +694,6 @@
         height: 30%;
         width: 50%;
         position: absolute;
-        list-style-type: none;
         opacity: 0; }
         .one .one-1 .one-1-con ul li:nth-child(1) {
           background: url(../images/one-10.png) center center no-repeat;
@@ -757,8 +758,7 @@
       .one .one-3 .one-3-con ul li {
         height: 30%;
         width: 30%;
-        position: absolute;
-        list-style-type: none; }
+        position: absolute; }
         .one .one-3 .one-3-con ul li:nth-child(1) {
           background: url(../images/one-24.png) center center no-repeat;
           background-size: contain;
@@ -1053,9 +1053,9 @@
   .two .two-7 .two-title {
     margin: 0 15%; }
   .two .two-7 .two-con {
-    margin: 10% 0; }
+    margin: 8% 0 0; }
   .two .two-7 p {
-    padding: 5%; }
+    padding: 3%; }
 
 .two .two-8 {
   padding: 5% 5% 0;
@@ -1076,12 +1076,657 @@
       background: url(../images/two-46.png) no-repeat;
       background-size: contain; }
   .two .two-8 .two-bottom {
-    margin: 0 10%; }
+    margin: 0 2%; }
   .two .two-8 p {
     padding: 2%; }
 
+@keyframes three-li-1 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  100% {
+    left: 25%;
+    top: 7%;
+    opacity: 1; } }
+
+@-webkit-keyframes three-li-1 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  100% {
+    left: 25%;
+    top: 7%;
+    opacity: 1; } }
+
+@keyframes three-li-2 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  100% {
+    left: 53%;
+    top: 7%;
+    opacity: 1; } }
+
+@-webkit-keyframes three-li-2 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  100% {
+    left: 53%;
+    top: 7%;
+    opacity: 1; } }
+
+@keyframes three-li-3 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  43% {
+    left: 50%;
+    top: 7%;
+    opacity: 1; }
+  58% {
+    left: 82%;
+    top: 7%;
+    opacity: 1; }
+  91% {
+    left: 82%;
+    top: 63%;
+    opacity: 1; }
+  100% {
+    top: 63%;
+    left: 60%;
+    opacity: 1; } }
+
+@keyframes three-li-4 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  33% {
+    left: 50%;
+    top: 7%;
+    opacity: 1; }
+  48% {
+    left: 82%;
+    top: 7%;
+    opacity: 1; }
+  81% {
+    left: 82%;
+    top: 63%;
+    opacity: 1; }
+  100% {
+    top: 63%;
+    left: 38%;
+    opacity: 1; } }
+
+@keyframes three-li-5 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  13% {
+    left: 50%;
+    top: 7%;
+    opacity: 1; }
+  28% {
+    left: 82%;
+    top: 7%;
+    opacity: 1; }
+  61% {
+    left: 82%;
+    top: 63%;
+    opacity: 1; }
+  100% {
+    top: 63%;
+    left: 16%;
+    opacity: 1; } }
+
+@-webkit-keyframes three-li-3 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  43% {
+    left: 50%;
+    top: 7%;
+    opacity: 1; }
+  58% {
+    left: 82%;
+    top: 7%;
+    opacity: 1; }
+  91% {
+    left: 82%;
+    top: 63%;
+    opacity: 1; }
+  100% {
+    top: 63%;
+    left: 60%;
+    opacity: 1; } }
+
+@-webkit-keyframes three-li-4 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  33% {
+    left: 50%;
+    top: 7%;
+    opacity: 1; }
+  48% {
+    left: 82%;
+    top: 7%;
+    opacity: 1; }
+  81% {
+    left: 82%;
+    top: 63%;
+    opacity: 1; }
+  100% {
+    top: 63%;
+    left: 38%;
+    opacity: 1; } }
+
+@-webkit-keyframes three-li-5 {
+  0% {
+    left: 0;
+    top: 7%;
+    opacity: 1; }
+  13% {
+    left: 50%;
+    top: 7%;
+    opacity: 1; }
+  28% {
+    left: 82%;
+    top: 7%;
+    opacity: 1; }
+  61% {
+    left: 82%;
+    top: 63%;
+    opacity: 1; }
+  100% {
+    top: 63%;
+    left: 16%;
+    opacity: 1; } }
+
+.three .active.three-1.section .cloud {
+  animation: moveCloud 20s infinite; }
+
+.three .active.three-1.section .cloud-1 {
+  animation: moveCloud 10s infinite; }
+
+.three .active.three-1.section .con {
+  animation: fadeIn 0.4s forwards; }
+  .three .active.three-1.section .con ul {
+    animation: fadeInDown 0.3s 0.2s forwards; }
+    .three .active.three-1.section .con ul li:nth-child(1) {
+      animation: three-li-1 2s 1s forwards linear; }
+    .three .active.three-1.section .con ul li:nth-child(2) {
+      animation: three-li-2 2s 1s forwards linear; }
+    .three .active.three-1.section .con ul li:nth-child(3) {
+      animation: three-li-3 2s 1s forwards linear; }
+    .three .active.three-1.section .con ul li:nth-child(4) {
+      animation: three-li-4 2s 1s forwards linear; }
+    .three .active.three-1.section .con ul li:nth-child(5) {
+      animation: three-li-5 2s 1s forwards linear; }
+
+.three .active.three-3 li:nth-child(1) {
+  animation: fadeInDown 1s 0.6s forwards; }
+
+.three .active.three-3 li:nth-child(2) {
+  animation: fadeInDown 1s 0.8s forwards; }
+
+.three .active.three-3 li:nth-child(3) {
+  animation: fadeInDown 1s 1s forwards; }
+
+.three .active.three-3 li:nth-child(4) {
+  animation: fadeInDown 1s 1.2s forwards; }
+
+.three .active.three-3 li:nth-child(5) {
+  animation: bounceIn 1s 1.4s forwards; }
+
+.three .active.three-3 li:nth-child(6) {
+  animation: bounceIn 1s 1.6s forwards; }
+
+.three .active.three-3 li:nth-child(7) {
+  animation: bounceIn 1s 1.8s forwards; }
+
+.three .active.three-3 li:nth-child(8) {
+  animation: bounceIn 1s 2s forwards; }
+
+.three .active.three-4 li:nth-child(1) {
+  animation: fadeInDown 1s 0.6s forwards; }
+
+.three .active.three-4 li:nth-child(2) {
+  animation: fadeInDown 1s 0.8s forwards; }
+
+.three .active.three-4 li:nth-child(3) {
+  animation: fadeInDown 1s 1s forwards; }
+
+.three .active.three-4 li:nth-child(4) {
+  animation: fadeInDown 1s 1.2s forwards; }
+
+.three .active.three-4 li:nth-child(5) {
+  animation: bounceInRight 1s 1.4s forwards; }
+
+.three .active.three-4 li:nth-child(6) {
+  animation: bounceInLeft 1s 1.6s forwards; }
+
+.three .active.three-4 li:nth-child(7) {
+  animation: bounceInRight 1s 1.8s forwards; }
+
+.three .active.three-5.section .con ul li:nth-child(1) {
+  transform: translate3d(0, 0, 0); }
+
+.three .active.three-5.section .con ul li:nth-child(2) {
+  transform: translate3d(0, 0, 0); }
+
+.three .active.three-5.section .con ul li:nth-child(3) {
+  animation: fadeInLeft 1s 0.8s forwards; }
+
+.three .active.three-8 li:nth-child(1) {
+  animation: fadeInDown 1s 0.6s forwards; }
+
+.three .active.three-8 li:nth-child(2) {
+  animation: fadeInDown 1s 0.8s forwards; }
+
+.three .active.three-8 li:nth-child(3) {
+  animation: fadeInDown 1s 1s forwards; }
+
+.three .three-1.section {
+  background: url(../images/three-15.png);
+  position: relative; }
+  .three .three-1.section .con-title {
+    background: url(../images/three-09.png) no-repeat center;
+    background-size: contain;
+    height: 50%; }
+    .three .three-1.section .con-title .cloud {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 10%;
+      left: 80%;
+      background: url(../images/three-10.png) no-repeat center;
+      background-size: contain; }
+    .three .three-1.section .con-title .cloud-1 {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      background: url(../images/three-11.png) no-repeat center;
+      background-size: contain; }
+  .three .three-1.section .con-three {
+    height: 10%;
+    background: url(../images/three-12.png) no-repeat center;
+    background-size: contain;
+    width: 80%;
+    margin: 0 auto; }
+  .three .three-1.section .con {
+    background: url(../images/three-21.png) no-repeat center;
+    background-size: 90%;
+    height: 30%; }
+    .three .three-1.section .con ul {
+      height: 100%;
+      background: url(../images/three-13.png) no-repeat;
+      background-size: 13%;
+      position: relative;
+      opacity: 0; }
+      .three .three-1.section .con ul li:nth-child(1) {
+        background-image: url(../images/three-16.png); }
+      .three .three-1.section .con ul li:nth-child(2) {
+        background-image: url(../images/three-17.png); }
+      .three .three-1.section .con ul li:nth-child(3) {
+        background-image: url(../images/three-18.png); }
+      .three .three-1.section .con ul li:nth-child(4) {
+        background-image: url(../images/three-19.png); }
+      .three .three-1.section .con ul li:nth-child(5) {
+        background-image: url(../images/three-20.png); }
+      .three .three-1.section .con ul li {
+        display: inline-block;
+        width: 30%;
+        height: 30%;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0; }
+        .three .three-1.section .con ul li a {
+          width: 100%;
+          height: 100%;
+          display: block; }
+
+.three .section-2.section {
+  padding: 5% 0 0 0;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.three .three-2.section {
+  background: #92BF5E;
+  padding: 25% 0  0 0; }
+  .three .three-2.section .con {
+    height: 50%;
+    background-image: url(../images/three-22.png); }
+  .three .three-2.section .con-bottom {
+    height: 15%;
+    background-image: url(../images/three-23.png); }
+  .three .three-2.section .con-p {
+    height: 10%;
+    background-image: url(../images/three-24.png); }
+
+.three .three-3.section {
+  background-image: url(../images/three-30.png);
+  padding: 10% 0 0 0; }
+  .three .three-3.section .con-title {
+    background-image: url(../images/three-64.png);
+    height: 10%; }
+  .three .three-3.section .con {
+    height: 50%; }
+    .three .three-3.section .con ul {
+      height: 100%;
+      position: relative; }
+      .three .three-3.section .con ul li:nth-child(1) {
+        background-image: url(../images/three-26.png);
+        top: 20%;
+        left: 0; }
+      .three .three-3.section .con ul li:nth-child(2) {
+        background-image: url(../images/three-27.png);
+        top: 50%;
+        left: 20%; }
+      .three .three-3.section .con ul li:nth-child(3) {
+        background-image: url(../images/three-28.png);
+        top: 35%;
+        left: 45%; }
+      .three .three-3.section .con ul li:nth-child(4) {
+        background-image: url(../images/three-29.png);
+        top: 20%;
+        left: 76%; }
+      .three .three-3.section .con ul li:nth-child(5) {
+        background-image: url(../images/three-60.png);
+        top: 80%;
+        left: 0;
+        width: 18%;
+        height: 18%; }
+      .three .three-3.section .con ul li:nth-child(6) {
+        background-image: url(../images/three-61.png);
+        top: 90%;
+        left: 25%;
+        width: 15%;
+        height: 15%; }
+      .three .three-3.section .con ul li:nth-child(7) {
+        background-image: url(../images/three-62.png);
+        width: 20%;
+        height: 20%;
+        top: 90%;
+        left: 45%; }
+      .three .three-3.section .con ul li:nth-child(8) {
+        background-image: url(../images/three-63.png);
+        left: 76%;
+        top: 95%; }
+      .three .three-3.section .con ul li {
+        height: 25%;
+        width: 25%;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0; }
+  .three .three-3.section .con-bottom {
+    margin: 20% 0 0 0;
+    height: 10%;
+    background-image: url(../images/three-59.png); }
+  .three .three-3.section .con-p {
+    text-indent: 2em;
+    padding: 0 5%;
+    font-weight: bolder; }
+    .three .three-3.section .con-p:before {
+      content: "内容涵盖杯赛高频考点，构建完整知识体系，时刻准备在四年级中脱颖而出，为小升初占据有得地位。"; }
+
+.three .section.three-4 {
+  background-color: #FBF1D5;
+  padding: 10% 0 0 0; }
+  .three .section.three-4 .con-title {
+    background-image: url(../images/three-65.png);
+    height: 10%; }
+  .three .section.three-4 .con {
+    height: 50%;
+    margin: 6% 0 0 0; }
+    .three .section.three-4 .con ul {
+      height: 100%;
+      position: relative; }
+      .three .section.three-4 .con ul li:nth-child(1) {
+        background-image: url(../images/three-31.png);
+        left: 10%;
+        top: 0; }
+      .three .section.three-4 .con ul li:nth-child(2) {
+        background-image: url(../images/three-32.png);
+        right: 10%;
+        top: 31%; }
+      .three .section.three-4 .con ul li:nth-child(3) {
+        background-image: url(../images/three-33.png);
+        left: 10%;
+        top: 62%; }
+      .three .section.three-4 .con ul li:nth-child(4) {
+        background-image: url(../images/three-34.png);
+        top: 93%;
+        right: 10%; }
+      .three .section.three-4 .con ul li:nth-child(5) {
+        background-image: url(../images/three-36.png);
+        top: 15%;
+        right: 10%;
+        width: 27%;
+        height: 27%; }
+      .three .section.three-4 .con ul li:nth-child(6) {
+        background-image: url(../images/three-37.png);
+        top: 47%;
+        left: 20%;
+        width: 18%;
+        height: 18%; }
+      .three .section.three-4 .con ul li:nth-child(7) {
+        background-image: url(../images/three-38.png);
+        width: 15%;
+        height: 15%;
+        top: 83%;
+        left: 65%; }
+      .three .section.three-4 .con ul li {
+        height: 28%;
+        width: 60%;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0; }
+  .three .section.three-4 .con-bottom {
+    margin: 25% 0 0 0;
+    height: 5%;
+    background-image: url(../images/three-35.png); }
+  .three .section.three-4 .con-p {
+    text-indent: 2em;
+    padding: 5%;
+    font-weight: bolder; }
+    .three .section.three-4 .con-p:before {
+      content: "连贯学习是孩子成绩提升的关键，7天密集学习，成就优秀学员。"; }
+
+.three .section.three-5 {
+  background-color: #EDC21E;
+  padding: 20% 0 0 0; }
+  .three .section.three-5 .con {
+    background-image: url(../images/three-40.png);
+    height: 50%;
+    position: relative; }
+    .three .section.three-5 .con i {
+      position: absolute;
+      font-size: 4rem;
+      left: 45%;
+      top: 77%;
+      color: #ED7673; }
+    .three .section.three-5 .con ul {
+      height: 100%;
+      position: relative; }
+      .three .section.three-5 .con ul li:nth-child(1) {
+        background-image: url(../images/three-41.png);
+        left: 50%;
+        top: 85%;
+        transform: translate3d(100%, 100%, 0); }
+      .three .section.three-5 .con ul li:nth-child(2) {
+        background-image: url(../images/three-43.png);
+        right: 10%;
+        top: 0;
+        width: 30%;
+        height: 30%;
+        transform: translate3d(100%, -100%, 0); }
+      .three .section.three-5 .con ul li:nth-child(3) {
+        width: 25%;
+        height: 25%;
+        background-image: url(../images/three-42.png);
+        left: 3%;
+        top: 52%; }
+      .three .section.three-5 .con ul li {
+        height: 37%;
+        width: 37%;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 1s 0.5s; }
+  .three .section.three-5 .con-bottom {
+    margin: 30% 0 0 0;
+    height: 5%;
+    background-image: url(../images/three-44.png); }
+  .three .section.three-5 .con-p {
+    background-image: url(../images/three-45.png);
+    height: 6%;
+    margin: 5% 0 0 0; }
+
+.three .section.three-6 {
+  background-color: #D8EEF4;
+  padding-top: 10%;
+  background-image: url(../images/three-46.png);
+  background-size: contain;
+  background-position: bottom center; }
+  .three .section.three-6 .con-title {
+    background-image: url(../images/three-47.png);
+    height: 18%; }
+  .three .section.three-6 p {
+    padding: 5%;
+    text-indent: 2em;
+    font-weight: bolder;
+    line-height: 2.2rem; }
+    .three .section.three-6 p:before {
+      content: "让乐乐和大宽带我们进入故事中学习单词和语法。通过漫画的方式背诵课文。最有趣的新概念，最适合小学生螺旋上升、语法复现的学习体系。"; }
+
+.three .section.three-7 {
+  background-image: url(../images/three-49.png);
+  padding-top: 10%; }
+  .three .section.three-7 .con-title {
+    background-image: url(../images/three-48.png);
+    height: 18%; }
+  .three .section.three-7 p {
+    padding: 5%;
+    text-indent: 2em;
+    font-weight: bolder;
+    line-height: 2.2rem; }
+    .three .section.three-7 p:before {
+      content: "新概念英语涵盖小升初英语所有必考语法。三年级作为从小低到小高的关键转型时期，基础语法的学习极其重要。"; }
+  .three .section.three-7 .con {
+    background-image: url(../images/three-50.png);
+    height: 40%; }
+  .three .section.three-7 .con-people {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    bottom: 5%;
+    left: 10%;
+    background-image: url(../images/three-51.png);
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat; }
+
+.three .section.three-8 {
+  background-image: url(../images/three-52.png);
+  padding-top: 10%; }
+  .three .section.three-8 .con-title {
+    background-image: url(../images/three-54.png);
+    height: 18%; }
+  .three .section.three-8 .con {
+    margin: 6% 0 0 0;
+    height: 30%;
+    position: relative; }
+    .three .section.three-8 .con ul {
+      height: 100%;
+      position: relative;
+      padding: 0; }
+      .three .section.three-8 .con ul li:nth-child(1) {
+        background-image: url(../images/three-55.png); }
+      .three .section.three-8 .con ul li:nth-child(2) {
+        background-image: url(../images/three-56.png);
+        height: 49%; }
+      .three .section.three-8 .con ul li:nth-child(3) {
+        background-image: url(../images/three-57.png);
+        height: 56%; }
+      .three .section.three-8 .con ul li {
+        height: 38%;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0; }
+    .three .section.three-8 .con .con-plane {
+      position: absolute;
+      width: 45%;
+      height: 40%;
+      top: -23%;
+      right: -5%;
+      z-index: 10;
+      background-image: url(../images/three-53.png);
+      background-size: contain;
+      background-position: bottom center;
+      background-repeat: no-repeat; }
+  .three .section.three-8 .con-people {
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    bottom: 5%;
+    left: 10%;
+    background-image: url(../images/three-58.png);
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat; }
+
+.three .section {
+  padding: 5%;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .three .section .con, .three .section .con-title, .three .section .con-p, .three .section .con-bottom {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .three .section .con-bottom {
+    margin: 10% 0  0;
+    opacity: 0; }
+  .three .section .con-p {
+    opacity: 0; }
+  .three .section .con-title {
+    opacity: 0; }
+
+.three .active.section .con-title {
+  animation: fadeInDown 1s 0.5s forwards; }
+
+.three .active.section .con-bottom {
+  animation: fadeInTitle 0.5s 0.6s forwards; }
+
+.three .active.section .con-p {
+  animation: fadeInUp 1s 0.7s forwards; }
+
+.three .active.section p {
+  animation: fadeInTitle 0.5s 0.4s forwards; }
+
 @keyframes rotateSun {
-  from {
+  0 {
     transform: rotate(0);
     -webkit-transform: rotate(0); }
   to {
@@ -1117,6 +1762,9 @@
   0, 100%, 50% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
+
+.table1.modal .modal-content img, .table2.modal .modal-content img {
+  background: #5DBA77; }
 
 .there-chinese .active.section .there-chinese-sun {
   -webkit-animation: rotateSun 30s infinite;
@@ -1329,13 +1977,12 @@
   background-color: #DF695B; }
   .there-chinese .there-chinese-7.section .there-chinese-con-set .there-chinese-set {
     background-image: url(../images/there-chinese-45.png);
-    padding: 16% 0 0 0;
+    padding: 25% 0 0 0;
     background-position: 79%;
-    height: 70%;
-    height: 61%; }
+    height: 70%; }
     .there-chinese .there-chinese-7.section .there-chinese-con-set .there-chinese-set .there-chinese-set-classset {
       background: url(../images/there-chinese-46.png) 48% 67% no-repeat;
-      height: 44%;
+      height: 52%;
       background-size: contain;
       position: relative; }
   .there-chinese .there-chinese-7.section .there-chinese-con-set .there-chinese-btn {
@@ -1348,7 +1995,8 @@
 .there-chinese .there-chinese-8.section {
   background-color: #63B6B6; }
   .there-chinese .there-chinese-8.section .there-chinese-con-set .there-chinese-set {
-    background-image: url(../images/there-chinese-49.png); }
+    background-image: url(../images/there-chinese-49.png);
+    height: 72%; }
   .there-chinese .there-chinese-8.section .there-chinese-con-set .there-chinese-btn {
     background-image: url(../images/there-chinese-51.png); }
   .there-chinese .there-chinese-8.section .there-chinese-con-set .there-chinese-text {
@@ -1370,7 +2018,6 @@
         width: 25%;
         height: 25%;
         background: url(../images/there-chinese-52.png) top center no-repeat;
-        height: 30%;
         background-size: contain; }
     .there-chinese .there-chinese-9.section .there-chinese-con-set .there-chinese-spring {
       background: url(../images/there-chinese-56.png) top center no-repeat;
@@ -1380,13 +2027,12 @@
       position: relative; }
       .there-chinese .there-chinese-9.section .there-chinese-con-set .there-chinese-spring .there-chinese-spring-icon {
         position: absolute;
-        width: 30%;
-        height: 30%;
+        width: 40%;
+        height: 40%;
         background: url(../images/there-chinese-53.png) top center no-repeat;
-        height: 30%;
         background-size: contain;
-        right: 0;
-        bottom: 5%; }
+        right: -5%;
+        bottom: 11%; }
     .there-chinese .there-chinese-9.section .there-chinese-con-set .there-chinese-btn {
       background-image: url(../images/there-chinese-54.png); }
 
@@ -1404,13 +2050,13 @@
         height: 100%; }
         .there-chinese .there-chinese-10.section .there-chinese-con-set .there-chinese-path ul li {
           height: 40%;
-          list-style-type: none;
           position: absolute;
           display: inline-block;
           width: 40%;
           background-size: contain;
           background-repeat: no-repeat;
-          background-position: center; }
+          background-position: center;
+          opacity: 0; }
         .there-chinese .there-chinese-10.section .there-chinese-con-set .there-chinese-path ul li:nth-child(1) {
           background-image: url(../images/there-chinese-67.png);
           width: 34%;
@@ -1429,17 +2075,17 @@
           background-image: url(../images/there-chinese-71.png);
           width: 30%;
           left: 33%;
-          top: 20%; }
+          top: 39%; }
         .there-chinese .there-chinese-10.section .there-chinese-con-set .there-chinese-path ul li:nth-child(5) {
           background-image: url(../images/there-chinese-72.png);
           width: 20%;
-          left: 15%;
-          top: 16%; }
+          left: 13%;
+          top: 39%; }
         .there-chinese .there-chinese-10.section .there-chinese-con-set .there-chinese-path ul li:nth-child(6) {
           background-image: url(../images/there-chinese-73.png);
           width: 20%;
-          left: 54%;
-          top: 14%; }
+          left: 62%;
+          top: 40%; }
         .there-chinese .there-chinese-10.section .there-chinese-con-set .there-chinese-path ul li:nth-child(7) {
           background-image: url(../images/there-chinese-74.png);
           width: 20%;
@@ -1447,14 +2093,14 @@
           top: 3%; }
         .there-chinese .there-chinese-10.section .there-chinese-con-set .there-chinese-path ul li:nth-child(8) {
           background-image: url(../images/there-chinese-75.png);
-          width: 10%;
-          left: 59%;
-          top: 7%; }
+          width: 13%;
+          left: 62%;
+          top: 23%; }
         .there-chinese .there-chinese-10.section .there-chinese-con-set .there-chinese-path ul li:nth-child(9) {
           background-image: url(../images/there-chinese-76.png);
           width: 10%;
-          left: 21%;
-          top: 10%; }
+          left: 19%;
+          top: 24%; }
     .there-chinese .there-chinese-10.section .there-chinese-con-set .there-chinese-btn {
       background-image: url(../images/there-chinese-63.png);
       margin: -10% 0 0 0; }
@@ -1472,6 +2118,33 @@
       text-align: right;
       width: 100%;
       display: block; }
+
+.active.there-chinese-10 li:nth-child(1) {
+  animation: bounceInLeft 1s 0.5s forwards; }
+
+.active.there-chinese-10 li:nth-child(2) {
+  animation: bounceInRight 1s 0.6s forwards; }
+
+.active.there-chinese-10 li:nth-child(3) {
+  animation: bounceInDown 1s 0.7s forwards; }
+
+.active.there-chinese-10 li:nth-child(4) {
+  animation: bounceInDown 1s 0.8s forwards; }
+
+.active.there-chinese-10 li:nth-child(5) {
+  animation: bounceInDown 1s 0.9s forwards; }
+
+.active.there-chinese-10 li:nth-child(6) {
+  animation: bounceInDown 1s 1s forwards; }
+
+.active.there-chinese-10 li:nth-child(7) {
+  animation: bounceInDown 1s 1.1s forwards; }
+
+.active.there-chinese-10 li:nth-child(8) {
+  animation: bounceInDown 1s 1.2s forwards; }
+
+.active.there-chinese-10 li:nth-child(9) {
+  animation: bounceInDown 1s 1.3s forwards; }
 
 .section {
   background-repeat: no-repeat;
@@ -1548,7 +2221,6 @@
     top: 35%;
     padding: 0; }
     .six .six-1 ul li {
-      list-style-type: none;
       height: 25%;
       opacity: 0; }
       .six .six-1 ul li:nth-child(1) {
@@ -2158,8 +2830,7 @@
       padding: 0;
       width: 100%; }
       .eight .commonbg .eight-gear ul li {
-        position: absolute;
-        list-style-type: none; }
+        position: absolute; }
         .eight .commonbg .eight-gear ul li:nth-child(1) {
           left: 44%;
           top: 17%; }

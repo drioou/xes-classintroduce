@@ -1,22 +1,30 @@
-/*
- * @Author: 勇
- * @Date:   2015-07-23 11:13:52
- * @Last Modified by:   duanyong
- * @Last Modified time: 2015-09-28 10:38:52
- */
-
-
-
 
 window.onload = function() {
     $(".content").show();
 };
 
 
-// 屏幕旋转检测=======dfdfff======fdfff=====================================
+// meta================
+function mkmeta() {
+    var meta = document.createElement("meta");
+    meta.setAttribute("name", "Author");
+    meta.setAttribute("content", "duanyong");
+    // document.head.appendChild(meta);
+    $("head").append(meta);
+}
+mkmeta();
+// 屏幕旋转检测============================================
+
+function mkup() {
+    var up = document.createElement("div");
+    up.setAttribute("class", "up fa fa-2x fa-chevron-circle-down");
+    $(".section").append(up);
+}
+mkup();
+
 
 var orientLayer = document.getElementById("vertical");
-//判断横屏竖屏 
+//判断横屏竖屏
 function checkDirect() {
     if (document.documentElement.clientHeight >= document.documentElement.clientWidth) {
         return "portrait";
@@ -24,7 +32,7 @@ function checkDirect() {
         return "landscape";
     }
 };
-//显示屏幕方向提示浮层 
+//显示屏幕方向提示浮层
 function orientNotice() {
     var orient = checkDirect();
     if (orient == "portrait") {
@@ -41,6 +49,8 @@ function init() {
     })
 };
 init();
+
+
 
 
 // 屏幕旋转检测结束===============================================================
@@ -72,7 +82,7 @@ $(document).ready(function() {
 
 
             if (index == 2) {
-
+                $(".up").show();
                 $.fn.fullpage.setAllowScrolling(true, "down");
             }
 
@@ -80,7 +90,7 @@ $(document).ready(function() {
         afterLoad: function(anchorLink, index) {
 
             if (index == 2) {
-
+                $(".up").hide();
                 $.fn.fullpage.setAllowScrolling(false, "down")
             }
 
@@ -119,6 +129,9 @@ $(document).ready(function() {
         $.fn.fullpage.moveTo(6, 0);
     });
     $('#twoenglish').click(function() {
+        $.fn.fullpage.moveTo(6, 0);
+    });
+    $('#threeenglish').click(function() {
         $.fn.fullpage.moveTo(6, 0);
     });
     $('#sixenglish').click(function() {
@@ -164,10 +177,10 @@ $(".btn.oldstudent").on("click", function() {
 $("#onetime").html("11月30日一年级数学9:00  <br/>一年级英语9:30");
 $("#onenewtime").html("12月7日一年级数学9:00  <br/>一年级英语9:30");
 // 二年级=============================================================
-$("#twotime").html("11月30日二年级数学10:00 <br/> 一年级英语10:30");
-$("#twonewtime").html("11月7日二年级数学10:00  <br/>一年级英语10:30");
-$("#theretime").html("11月30日三年级数学9:00  <br/>一年级英语9:30");
-$("#therenewtime").html("11月30日三年级数学9:00 <br/> 一年级英语9:30");
+$("#twotime").html("11月30日二年级数学10:00 <br/> 二年级英语10:30");
+$("#twonewtime").html("11月7日二年级数学10:00  <br/>二年级英语10:30");
+$("#there-time").html("11月30日三年级数学11:00  <br/>三年级英语11:30");
+$("#there-new-time").html("11月30日三年级数学9:00 <br/> 三年级英语9:30");
 $("#fourtime").html("11月30日四年级数学9:00 <br/> 一年级英语9:30");
 $("#fournewtime").html("11月30日四年级数学9:00 <br/> 一年级英语9:30");
 $("#fivetime").html("11月30日五年级数学9:00 <br/> 一年级英语9:30");
@@ -189,4 +202,3 @@ $("#eleventime").html("12月1日数学14:30 <br/> 物理15:00&nbsp;化学15:30")
 $("#elevennewtime").html("12月7日数学14:30 <br/> 物理15:00&nbsp;化学15:30");
 // 高中
 // $(".ten-15 .col-xs-4").css({"height":$(".ten-15 .row").height()+"px","line-height":$(".ten-15 .row").width()+"px","border-radius":$(".ten-15 .row").width()+"px"})
-
