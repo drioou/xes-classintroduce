@@ -1,16 +1,10 @@
 @charset "UTF-8";
 .content,body,html{height:100%}
 li{list-style-type:none}
-.thumbnailimg{z-index:1}
-// 各年级最后一页
-.last-section{
-        background:#2F4965;padding:10% 0 0;
-        .logo{height:15%;background:url(../images/logo.png) center no-repeat;background-size:contain;}
-}
-
-.content,.up,.thumbnailimg{position:absolute}
+.thumbnailimg{z-index:3}
+.content,.up,.thumbnailimg{position:absolute;}
 .content,.fp-controlArrow,.none,.last-section.active .up{display:none}
-.content{z-index:10;width:100%;background:#fff}
+.content{z-index:10;width:100%;background:#fff;max-width:720px;left:50%;}
 .up{bottom:5%;left:50%;margin:0 0 0 -10px;opacity:0;-webkit-animation:up 4s 2s infinite;animation:up 4s 2s infinite;
     &.up-white{color:#fff}
 }
@@ -130,7 +124,7 @@ li{list-style-type:none}
         i{position:absolute;right:10%;top:1%;color:#BFE4E4}
     }
 }
-.fp-slidesNav.top{width:100%;height:10%;top:0;left:0;background:RGB(53,71,91);
+.fp-slidesNav.top{width:100%;height:10%;top:0;left:0;background:#363E4E;
     ul{height:100%;
         li{width:20%;margin:0;font-size:1rem;height:100%;
             span{background:RGB(159,160,160);top:30%;width:8px;height:8px;margin:-4px 0 0 -4px;transition:all .5s}
@@ -206,6 +200,14 @@ li{list-style-type:none}
 .slide3.slide .slide3-text{text-align:center;
     img{width:40%;margin:0 auto}
 }
+.slide4.slide{background:url(../images/bb-29.png) center no-repeat;background-size:cover;
+    .slide4-con{margin:5% 1%;
+        img{margin:5% 0 0}
+    }
+    h3{text-align:left;margin:0 5% 2%;color:#DA5658}
+}
+.slide4-price img{width:40%}
+.slide5.slide{text-align:center;padding:15% 0 0}
 .picscale.modal .modal-dialog,.picscale1.modal .modal-dialog{margin:0}
 .active.slide3.slide{.circle-bottom,.circle-top{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 }
@@ -216,11 +218,13 @@ li{list-style-type:none}
 .three .slide.slide3{.circle-top{background-image:url(../images/bb3-1.png)}
     .circle-bottom{background-image:url(../images/bb3-2.png);width:73%;top:17%;left:24%;}
 }
-.four .slide.slide3{.circle-top{background-image:url(../images/bb6-1.png)}
-    .circle-bottom{background-image:url(../images/bb7-2.png);top:12.4%;left:16%}
-}
-.five .slide.slide3{.circle-top{background-image:url(../images/bb6-1.png)}
-    .circle-bottom{background-image:url(../images/bb7-2.png);width:73%;top:15%;left:23%}
+.four .slide.slide3{
+    .slide-con{height:240px;
+    .circle-top{background-image:url(../images/bb4-1.png);height:125px;width:90%;left:5%;top:0;}
+    .circle-bottom{background-image:url(../images/bb4-2.png);height:125px;top:40%;left:5%;width:90%;}
+}}
+.five .slide.slide3{.circle-top{background-image:url(../images/bb5-1.png);}
+    .circle-bottom{background-image:url(../images/bb5-2.png);width:73%;top:15%;left:23%}
 }
 .six .slide.slide3{.circle-top{background-image:url(../images/bb6-1.png)}
     .circle-bottom{background-image:url(../images/bb6-2.png);top:12.4%;left:16%}
@@ -258,15 +262,44 @@ li{list-style-type:none}
     .slide3-text{p:before{content:"新生需要参加新生入学测试，通过测试可以到尖子班就读"}
     }
 }
-// 各年级班次设置结束========================================================================
-.slide4.slide{background:url(../images/bb-29.png) center no-repeat;background-size:cover;
-    .slide4-con{margin:5% 1%;
-        img{margin:5% 0 0}
+// 各个slide背景色 暗色===================
+.blankbg{
+    .slide{background-image:url(../images/bb-bg.png);background-size:cover;background-position:bottom;
+
+        .globe{
+        ul{
+                background: url(../images/bb-s2-1.png) center no-repeat;
+                background-size:contain;
+        }
     }
-    h3{text-align:left;margin:0 5% 2%;color:#DA5658}
+    }
+    .slide2{
+        color:#fff;
+        .slide-title{height:7%;background:url(../images/bb-s3.png) center no-repeat;background-size:contain;}
+        .slide2-title{
+        height:23%;background:url(../images/bb-s2-2.png) center no-repeat;background-size:contain;
+        }
+    }
+
+    .slide3{
+        color: #fff;
+        .slide-title{
+            height:7%;background:url(../images/bb-s4.png) center no-repeat;background-size:contain;
+        }
+    }
+    .slide4,.slide5{
+        color: #fff;
+        .slide-title{
+            height:7%;background:url(../images/bb-s5.png) center no-repeat;background-size:contain;
+        }
+    }
+    .prepage{color:#fff;}
 }
-.slide4-price img{width:40%}
-.slide5.slide{text-align:center;padding:15% 0 0}
+.four{.blankbg{.slide1{background:none;}
+    }
+}
+// 各年级班次设置结束========================================================================
+
 .one{.one-1{padding:10% 0 0;background:url(../images/one-43.png) center no-repeat;background-size:cover;
         .one-title{height:10%;background:url(../images/one-09.png) center no-repeat;background-size:contain}
         .one-1-con{height:70%;
@@ -784,49 +817,71 @@ li{list-style-type:none}
 // 三年级语文样式结束===========
 
 // 四年级样式
-.four{.four-1.section{background-image:url(../images/four-33.png);padding:10% 0 0 0;
+.four{
+    .four-1.section{background-image:url(../images/four-33.png);padding:10% 0 0 0;background-size:cover;
         .con-title{height:8%;background-image:url(../images/four-08.png)}
         .con{height:40%;
-            ul{li:nth-child(1){background-image:url(../images/four-09.png);left:0;top:100%;}
-                li:nth-child(2){background-image:url(../images/four-10.png);left:17%;top:50%;}
-                li:nth-child(3){background-image:url(../images/four-11.png);right:17%;top:50%;}
-                li:nth-child(4){background-image:url(../images/four-12.png);right:0;top:100%;}
+            ul{position:relative;z-index:10;
+                li:nth-child(1){background-image:url(../images/four-09.png);left:35%;top:100%;transition:all 1s .8s}
+                li:nth-child(2){background-image:url(../images/four-10.png);left:35%;top:100%;transition:all 1s 1s}
+                li:nth-child(3){background-image:url(../images/four-11.png);right:30%;top:100%;transition:all 1s 1.2s}
+                li:nth-child(4){background-image:url(../images/four-12.png);right:30%;top:100%;transition:all 1s 1.4s}
                 li{width:35%;height:35%;background-image:url(../images/four-09.png);}
             }
         }
         .con-robot{height:40%;background:url(../images/four-13.png) no-repeat;background-size:70%;background-position:bottom;}
     }
-    .active.four-1{.con-robot{animation:moveRobot 30s infinite;}
-    }
-    @keyframes moveRobot{
-        25%{-webkit-transform:translate3d(7%,0,0);transform:translate3d(7%,0,0)}
-        70%{-webkit-transform:translate3d(-7%,0,0);transform:translate3d(-7%,0,0)}
-        0,100%,50%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-    }
-    @-webkit-keyframes moveRobot{
-        25%{-webkit-transform:translate3d(7%,0,0);transform:translate3d(7%,0,0)}
-        70%{-webkit-transform:translate3d(-7%,0,0);transform:translate3d(-7%,0,0)}
-        0,100%,50%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+    .active.four-1{
+        .con-robot{animation:moveRobot 30s infinite;}
+        .con{ul{
+                li:nth-child(1){left:0;top:100%;}
+                li:nth-child(2){left:17%;top:50%;}
+                li:nth-child(3){right:17%;top:50%;}
+                li:nth-child(4){right:0;top:100%;}
+
+            }}
     }
     .four-2.section{background:#F08D66;padding:12% 0 0;
         .con-title{height:19%;background-image:url(../images/four-14.png)}
         .con{margin:9% 0 0;height:53%;background-image:url(../images/four-15.png)}
     }
+    .active.four-3.section{
+        .tree-1{
+            animation:moveup 3s infinite;
+        }
+        .con{ul{li:nth-child(2){.tree{background-size:30%;}}}}
+        .con{ul{li:nth-child(3){.tree{background-size:40%;}}}}
+        .con{ul{li:nth-child(4){.tree{background-size:100%;}}}}
+    }
+    @keyframes moveup{
+        0%{top:65%;opacity: 0;}
+        10%{opacity: 1;}
+        80%{opacity: 1;}
+        100%{opacity: 0;}
+    }
+    @-webkit-keyframes moveup{
+        0%{top:65%;opacity: 0;}
+        10%{opacity: 1;}
+        80%{opacity: 1;}
+        100%{opacity: 0;}
+    }
     .four-3.section{background-image:url(../images/four-34.png);background-position:0 8%;padding:10% 0 0;
         .con-title{height:17%;background-image:url(../images/four-17.png);}
         .con{height:65%;position:relative;
             ul{height:100%;
-                li:nth-child(1){.hand{height:70%;background-image:url(../images/four-35.png);}
-                    dl{height:30%;background:url(../images/four-38.png) no-repeat;background-size:cover;background-position:top;}
+                li:nth-child(1){
+                    .hand{height:70%;background-image:url(../images/four-35.png);position: relative;}
+                    .tree-1{width:10%;height:10%;position: absolute;bottom:0;background:url(../images/four-36.png) no-repeat;background-size:contain;z-index:10;top:72%;left:55%;}
+                    dl{height:30%;background:url(../images/four-38.png) no-repeat;background-size:cover;background-position:top;position: relative;}
                 }
-                li:nth-child(2){.tree{height:60%;background-image:url(../images/four-39.png);background-size:30%;}
+                li:nth-child(2){.tree{height:60%;background-image:url(../images/four-39.png);background-size:0%;transition:all 1s .6s;}
                     dl{height:40%;background:#F5A741;}
                 }
                 li:nth-child(3){.water{height:30%;background-image:url(../images/four-42.png);background-size:100%;}
-                    .tree{height:20%;background-image:url(../images/four-40.png);background-size:40%;background-position:11% 100%;}
+                    .tree{height:20%;background-image:url(../images/four-40.png);background-size:0%;background-position:11% 100%;transition:all 1s 1s;}
                     dl{height:50%;background:#F08D66;}
                 }
-                li:nth-child(4){.tree{height:40%;background-image:url(../images/four-41.png);background-size:100%;}
+                li:nth-child(4){.tree{height:40%;background-image:url(../images/four-41.png);background-size:0%;transition:all 1s 1.5s;}
                     dl{height:60%;background:#E85E5E;}
                 }
                 li{width:25%;height:100%;position:relative;vertical-align:bottom;
@@ -850,7 +905,7 @@ li{list-style-type:none}
             li:nth-child(4){background-image:url(../images/four-44.png);right:2%;top:0;}
             li{width:31%;height:31%;}
         }
-        p{text-align:center;padding:6% 2% 0;}
+        p{text-align:center;padding:6% 1% 0;}
     }
     .four-5.section{background:#DC5152;padding:19% 0 0;
         .con-title{height:14%;background-image:url(../images/four-26.png);}
@@ -885,9 +940,9 @@ li{list-style-type:none}
                 li{height:27%;width:40%;}
             }
             .rocket{height:40%;background:url(../images/four-28.png) center no-repeat;background-position:bottom;background-size:80%;position:relative;}
-            .rocket-fly{height:80%;position:absolute;width:30%;top:5%;left:36%;overflow:hidden;img{height  :100%;margin:100% 0 0 0; transition:all 1s 1s;}
-                    // transform:translate3d(0,100%,0);
-                }
+            .rocket-fly{height:80%;position:absolute;width:30%;top:5%;left:36%;overflow:hidden;
+                img{height:100%;margin:100% 0 0 0;transition:all 1s 1s;}
+            }
         }
         p{color:#fff;padding:0 2%;font-size:1.3rem;margin:3% 0 0;}
     }
@@ -895,7 +950,8 @@ li{list-style-type:none}
         li:nth-child(2){animation:moveRobot 35s infinite;}
         li:nth-child(3){animation:moveRobot 40s infinite;}
         li:nth-child(4){animation:moveRobot 25s infinite;}
-        .con{.rocket-fly{img{margin:0;}}
+        .con{.rocket-fly{img{margin:0;}
+            }
         }
     }
     .section{padding:0;
@@ -909,6 +965,16 @@ li{list-style-type:none}
 // 四年级样式结束
 
 
+@keyframes moveRobot{
+    25%{-webkit-transform:translate3d(7%,0,0);transform:translate3d(7%,0,0)}
+    70%{-webkit-transform:translate3d(-7%,0,0);transform:translate3d(-7%,0,0)}
+    0,100%,50%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+}
+@-webkit-keyframes moveRobot{
+    25%{-webkit-transform:translate3d(7%,0,0);transform:translate3d(7%,0,0)}
+    70%{-webkit-transform:translate3d(-7%,0,0);transform:translate3d(-7%,0,0)}
+    0,100%,50%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+}
 // 五年级样式==================================================================
 .five{.five-1.section{background:#0E3A60;padding:15% 2% 0;
         .con-title{height:6%;background-image:url(../images/five-65.png)}
@@ -1458,7 +1524,84 @@ li{list-style-type:none}
     .ten-18{background-image:url(../images/high-22.png)}
 }
 // 高二年级样式结束=======================================================
-.vertical{width:100%;height:100%;position:absolute;background:#fff;z-index:10;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 各年级最后一页
+.last-section.active{
+    .up{left:200%;}
+}
+.last-section{background:#2F4965;
+
+    .logo{height:15%;background:url(../images/logo.png) center no-repeat;background-size:contain;margin:2% 0 0;}
+    .code{height:31%;margin:2% 5% 0;
+        .row{margin:0;height:100%;
+            .col-xs-5{height:100%;padding:0;
+                dd{height:30%;background:url(../images/last-04.png) center no-repeat;background-size:contain;}
+            }
+            .col-xs-5:nth-child(3){dd{background:url(../images/last-05.png) center no-repeat;background-size:contain;}
+            }
+        }
+    }
+    .zc{background:#F8B62B;
+        a:before{content:"2016第十四届学而思综测"}
+    }
+    .xc{background:#1AAA8D;
+        a:before{content:"2016寒春新生入学测试"}
+    }
+    .xb{background:#1BA8DA;
+        a:before{content:"续报常见问题"}
+    }
+    .btn{color:#fff;margin:5% 5% 0 5%;width:90%;
+        a{color:#fff;font-weight:bolder;letter-spacing:0.2rem;
+            i{margin:0 0 0 2%;}
+        }
+    }
+    .row.back{margin:5% 5% 0;
+        .col-xs-5{padding:0;}
+        a{margin:0;width:100%;text-align:center;}
+        i{margin:0 5%;}
+    }
+    .copy,.maker{text-align:center;color:#fff;margin:5% 0 0;font-size:1.2rem;
+        i{margin:0 2% 0 0;}
+    }
+    .copy:after{content:"学而思培优上海市场部制作";}
+    .maker{margin:0;}
+    .maker:after{content:"设计:海虹、思佳;制作:段勇";}
+}
+.vertical{width:100%;height:100%;position:absolute;background:#fff;z-index:4;
     i{font-size:12rem;color:#000;margin:-120px 0 0 -60px;-webkit-animation:verticalPhone 5s infinite;animation:verticalPhone 5s infinite}
     p{font-size:2rem;margin:10px 0 0 -150px}
 }
