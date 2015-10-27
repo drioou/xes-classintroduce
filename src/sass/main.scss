@@ -218,11 +218,11 @@ li{list-style-type:none}
 .three .slide.slide3{.circle-top{background-image:url(../images/bb3-1.png)}
     .circle-bottom{background-image:url(../images/bb3-2.png);width:73%;top:17%;left:24%;}
 }
-.four .slide.slide3{
-    .slide-con{height:240px;
-    .circle-top{background-image:url(../images/bb4-1.png);height:125px;width:90%;left:5%;top:0;}
-    .circle-bottom{background-image:url(../images/bb4-2.png);height:125px;top:40%;left:5%;width:90%;}
-}}
+.four .slide.slide3{.slide-con{height:240px;
+        .circle-top{background-image:url(../images/bb4-1.png);height:125px;width:90%;left:5%;top:0;}
+        .circle-bottom{background-image:url(../images/bb4-2.png);height:125px;top:40%;left:5%;width:90%;}
+    }
+}
 .five .slide.slide3{.circle-top{background-image:url(../images/bb5-1.png);}
     .circle-bottom{background-image:url(../images/bb5-2.png);width:73%;top:15%;left:23%}
 }
@@ -263,39 +263,25 @@ li{list-style-type:none}
     }
 }
 // 各个slide背景色 暗色===================
-.blankbg{
-    .slide{background-image:url(../images/bb-bg.png);background-size:cover;background-position:bottom;
-
-        .globe{
-        ul{
-                background: url(../images/bb-s2-1.png) center no-repeat;
-                background-size:contain;
+.blankbg{.slide{background-image:url(../images/bb-bg.png);background-size:cover;background-position:bottom;
+        .globe{ul{background:url(../images/bb-s2-1.png) center no-repeat;background-size:contain;}
         }
     }
-    }
-    .slide2{
-        color:#fff;
+    .slide2{color:#fff;
         .slide-title{height:7%;background:url(../images/bb-s3.png) center no-repeat;background-size:contain;}
-        .slide2-title{
-        height:23%;background:url(../images/bb-s2-2.png) center no-repeat;background-size:contain;
-        }
+        .slide2-title{height:23%;background:url(../images/bb-s2-2.png) center no-repeat;background-size:contain;}
     }
-
-    .slide3{
-        color: #fff;
-        .slide-title{
-            height:7%;background:url(../images/bb-s4.png) center no-repeat;background-size:contain;
-        }
+    .slide3{color:#fff;
+        .slide-title{height:7%;background:url(../images/bb-s4.png) center no-repeat;background-size:contain;}
     }
-    .slide4,.slide5{
-        color: #fff;
-        .slide-title{
-            height:7%;background:url(../images/bb-s5.png) center no-repeat;background-size:contain;
-        }
+    .slide4,.slide5{color:#fff;
+        .slide-title{height:7%;background:url(../images/bb-s5.png) center no-repeat;background-size:contain;}
     }
     .prepage{color:#fff;}
 }
-.four{.blankbg{.slide1{background:none;}
+.four{.blankbg{.slide1{background:none;
+            i{color:#000;}
+        }
     }
 }
 // 各年级班次设置结束========================================================================
@@ -817,8 +803,7 @@ li{list-style-type:none}
 // 三年级语文样式结束===========
 
 // 四年级样式
-.four{
-    .four-1.section{background-image:url(../images/four-33.png);padding:10% 0 0 0;background-size:cover;
+.four{.four-1.section{background-image:url(../images/four-33.png);padding:10% 0 0 0;background-size:cover;
         .con-title{height:8%;background-image:url(../images/four-08.png)}
         .con{height:40%;
             ul{position:relative;z-index:10;
@@ -831,48 +816,51 @@ li{list-style-type:none}
         }
         .con-robot{height:40%;background:url(../images/four-13.png) no-repeat;background-size:70%;background-position:bottom;}
     }
-    .active.four-1{
-        .con-robot{animation:moveRobot 30s infinite;}
-        .con{ul{
-                li:nth-child(1){left:0;top:100%;}
+    .active.four-1{.con-robot{animation:moveRobot 30s infinite;}
+        .con{ul{li:nth-child(1){left:0;top:100%;}
                 li:nth-child(2){left:17%;top:50%;}
                 li:nth-child(3){right:17%;top:50%;}
                 li:nth-child(4){right:0;top:100%;}
-
-            }}
+            }
+        }
     }
     .four-2.section{background:#F08D66;padding:12% 0 0;
         .con-title{height:19%;background-image:url(../images/four-14.png)}
         .con{margin:9% 0 0;height:53%;background-image:url(../images/four-15.png)}
     }
-    .active.four-3.section{
-        .tree-1{
-            animation:moveup 3s infinite;
+    .active.four-3.section{.tree-1{animation:moveup 3s infinite;}
+        .con{ul{li:nth-child(2){.tree{background-size:30%;}
+                }
+            }
         }
-        .con{ul{li:nth-child(2){.tree{background-size:30%;}}}}
-        .con{ul{li:nth-child(3){.tree{background-size:40%;}}}}
-        .con{ul{li:nth-child(4){.tree{background-size:100%;}}}}
+        .con{ul{li:nth-child(3){.tree{background-size:40%;}
+                }
+            }
+        }
+        .con{ul{li:nth-child(4){.tree{background-size:100%;}
+                }
+            }
+        }
     }
     @keyframes moveup{
-        0%{top:65%;opacity: 0;}
-        10%{opacity: 1;}
-        80%{opacity: 1;}
-        100%{opacity: 0;}
+        0%{top:65%;opacity:0;}
+        10%{opacity:1;}
+        80%{opacity:1;}
+        100%{opacity:0;}
     }
     @-webkit-keyframes moveup{
-        0%{top:65%;opacity: 0;}
-        10%{opacity: 1;}
-        80%{opacity: 1;}
-        100%{opacity: 0;}
+        0%{top:65%;opacity:0;}
+        10%{opacity:1;}
+        80%{opacity:1;}
+        100%{opacity:0;}
     }
     .four-3.section{background-image:url(../images/four-34.png);background-position:0 8%;padding:10% 0 0;
         .con-title{height:17%;background-image:url(../images/four-17.png);}
         .con{height:65%;position:relative;
             ul{height:100%;
-                li:nth-child(1){
-                    .hand{height:70%;background-image:url(../images/four-35.png);position: relative;}
-                    .tree-1{width:10%;height:10%;position: absolute;bottom:0;background:url(../images/four-36.png) no-repeat;background-size:contain;z-index:10;top:72%;left:55%;}
-                    dl{height:30%;background:url(../images/four-38.png) no-repeat;background-size:cover;background-position:top;position: relative;}
+                li:nth-child(1){.hand{height:70%;background-image:url(../images/four-35.png);position:relative;}
+                    .tree-1{width:10%;height:10%;position:absolute;bottom:0;background:url(../images/four-36.png) no-repeat;background-size:contain;z-index:10;top:72%;left:55%;}
+                    dl{height:30%;background:url(../images/four-38.png) no-repeat;background-size:cover;background-position:top;position:relative;}
                 }
                 li:nth-child(2){.tree{height:60%;background-image:url(../images/four-39.png);background-size:0%;transition:all 1s .6s;}
                     dl{height:40%;background:#F5A741;}
@@ -1560,11 +1548,9 @@ li{list-style-type:none}
 
 
 // 各年级最后一页
-.last-section.active{
-    .up{left:200%;}
+.last-section.active{.up{left:200%;}
 }
 .last-section{background:#2F4965;
-
     .logo{height:15%;background:url(../images/logo.png) center no-repeat;background-size:contain;margin:2% 0 0;}
     .code{height:31%;margin:2% 5% 0;
         .row{margin:0;height:100%;
@@ -1601,6 +1587,46 @@ li{list-style-type:none}
     .maker{margin:0;}
     .maker:after{content:"设计:海虹、思佳;制作:段勇";}
 }
+// 终于到主页了=================
+.index{background:#1B2B39;padding:3% 0 0 0;
+    .logo{height:7%;background:url(../images/logo.png) 90% 50% no-repeat;background-size:contain;}
+    .title{margin:5% 0 0;height:11%;background:url(../images/index-14.png) center no-repeat;background-size:contain;}
+    .i3{height:21%;margin:1% 0 0 0;padding:0 2%;
+        .i4{height:100%;color:#fff;background-color:#4D6079;background-position:center;background-repeat:no-repeat;-webkit-background-size:cover;background-size:cover;background-image:url(../images/index-02.png);}
+        .i5,.i6{width:24%;margin:0 0 0 1%;height:100%;}
+        .i5{background:url(../images/index-03.png) center no-repeat;background-size:cover;}
+        .i6{background:url(../images/index-04.png) center no-repeat;background-size:cover;}
+    }
+    .i7{height:50%;margin:1% 2%  0;
+        .i8,.i9{height:52%;}
+        .i8{background:url(../images/index-05.png) center no-repeat;background-size:cover;}
+        .i9{width:24%;margin:0 0 0 1%;
+            .i9-1{background:url(../images/index-06.png) center no-repeat;background-size:cover;height:48%;}
+            .i9-2{background:url(../images/index-07.png) center no-repeat;background-size:cover;height:48%;margin:5% 0 0 0;}
+        }
+        .i10{width:49%;margin-left:1%;height:30%;
+            .row{height:100%;
+                .i10-1{width:49%;height:100%;background:url(../images/index-08.png) center no-repeat;background-size:cover;}
+                .i10-2{width:48%;height:100%;background:url(../images/index-09.png) center no-repeat;background-size:cover;margin:0 0 0 2.5%;}
+            }
+        }
+        .i13,.i16{float:right;margin:1% 0 0 1%;}
+        .i13{height:53%;width:24%;margin:1% 0 0 1%;
+            .i14{height:48%;background:url(../images/index-12.png) center no-repeat;background-size:cover;}
+            .i15{height:48%;background:url(../images/index-13.png) center no-repeat;background-size:cover;margin:5% 0 0 0;}
+        }
+        .i16{height:52%;width:24%;margin:1% 0 0 1%;background:url(../images/index-10.png) center no-repeat;background-size:cover;}
+        .i19{height:30%;margin:1% 0 0 0;background:url(../images/index-11.png) center no-repeat;background-size:cover;}
+    }
+    a{display: block;width:100%;height:100%;}
+    .btn{
+        position:relative;width:96%;background:#6986A7;margin:-20% 2% 0;border-radius:0;
+        a{color:#fff;font-weight: bolder;letter-spacing:.5rem;}
+    }
+}
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.row{padding:0;margin:0;}
+// 终于到主页了结束=================
+
 .vertical{width:100%;height:100%;position:absolute;background:#fff;z-index:4;
     i{font-size:12rem;color:#000;margin:-120px 0 0 -60px;-webkit-animation:verticalPhone 5s infinite;animation:verticalPhone 5s infinite}
     p{font-size:2rem;margin:10px 0 0 -150px}
