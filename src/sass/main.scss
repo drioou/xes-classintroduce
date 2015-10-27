@@ -2,6 +2,12 @@
 .content,body,html{height:100%}
 li{list-style-type:none}
 .thumbnailimg{z-index:1}
+// 各年级最后一页
+.last-section{
+        background:#2F4965;padding:10% 0 0;
+        .logo{height:15%;background:url(../images/logo.png) center no-repeat;background-size:contain;}
+}
+
 .content,.up,.thumbnailimg{position:absolute}
 .content,.fp-controlArrow,.none,.last-section.active .up{display:none}
 .content{z-index:10;width:100%;background:#fff}
@@ -48,7 +54,7 @@ li{list-style-type:none}
         img{width:50%}
         i{font-size:2rem;position:absolute;right:4%}
     }
-    h3{text-align:center;font-size:2.3rem;color:#17598A;font-weight:bolder;margin:1% 0 7%;-webkit-animation:zoomOut 1s forwards;animation:zoomOut 1s forwards;
+    h3{text-align:center;font-size:2.3rem;color:#17598A;font-weight:bolder;margin:1% 0 5%;-webkit-animation:zoomOut 1s forwards;animation:zoomOut 1s forwards;
         i{margin:0 1% 0 0}
     }
     .row{height:85%;padding:0 10%;
@@ -105,20 +111,21 @@ li{list-style-type:none}
     p{padding:0 2%;
         span{color:#DA5658;font-size:2rem;font-weight:bolder}
     }
-    .text-right{font-size:2rem;font-weight:bolder;margin:0 0 7%;
+    .text-right{font-size:2rem;font-weight:bolder;margin:0 0 2%;
         a{color:#F08700;text-decoration:none}
     }
-    .row.new{height:20%;
-        .col-xs-7{height:60%}
+    .row.new{height:27%;
+        .col-xs-7{height:63%;}
         .col-xs-1{height:20%}
         .col-xs-4{margin:0;color:#65A3D8;height:20%}
         .col-xs-1:nth-child(4) dt{background:#4EBEC1}
         .col-xs-4:nth-child(5){color:#4EBEC1}
-        .col-xs-7:nth-child(6){margin:0}
+        .col-xs-7:nth-child(6){margin:0;}
+        // .col-xs-7:nth-child(3){text-align:right;}
     }
-    .tips{height:50%;padding:0 5%;position:relative;
+    .tips{padding:0 5%;position:relative;
         dl{padding:2%;border:2px solid #BFE4E4;
-            dt{color:#DA5658;font-weight:bolder;font-size:2rem}
+            dt{color:#DA5658;font-weight:bolder;font-size:2rem;position:absolute;}
         }
         i{position:absolute;right:10%;top:1%;color:#BFE4E4}
     }
@@ -206,8 +213,8 @@ li{list-style-type:none}
 .two .slide.slide3{.circle-top{background-image:url(../images/bb2-1.png)}
     .circle-bottom{background-image:url(../images/bb2-2.png);width:73%;top:15%;left:23%}
 }
-.three .slide.slide3{.circle-top{background-image:url(../images/bb6-1.png)}
-    .circle-bottom{background-image:url(../images/bb7-2.png);width:80%;top:12.6%;left:16%;}
+.three .slide.slide3{.circle-top{background-image:url(../images/bb3-1.png)}
+    .circle-bottom{background-image:url(../images/bb3-2.png);width:73%;top:17%;left:24%;}
 }
 .four .slide.slide3{.circle-top{background-image:url(../images/bb6-1.png)}
     .circle-bottom{background-image:url(../images/bb7-2.png);top:12.4%;left:16%}
@@ -775,10 +782,135 @@ li{list-style-type:none}
     }
 }
 // 三年级语文样式结束===========
-// 五年级样式==================================================================
-.five{
 
-        .five-1.section{background:#0E3A60;padding:15% 2% 0;
+// 四年级样式
+.four{.four-1.section{background-image:url(../images/four-33.png);padding:10% 0 0 0;
+        .con-title{height:8%;background-image:url(../images/four-08.png)}
+        .con{height:40%;
+            ul{li:nth-child(1){background-image:url(../images/four-09.png);left:0;top:100%;}
+                li:nth-child(2){background-image:url(../images/four-10.png);left:17%;top:50%;}
+                li:nth-child(3){background-image:url(../images/four-11.png);right:17%;top:50%;}
+                li:nth-child(4){background-image:url(../images/four-12.png);right:0;top:100%;}
+                li{width:35%;height:35%;background-image:url(../images/four-09.png);}
+            }
+        }
+        .con-robot{height:40%;background:url(../images/four-13.png) no-repeat;background-size:70%;background-position:bottom;}
+    }
+    .active.four-1{.con-robot{animation:moveRobot 30s infinite;}
+    }
+    @keyframes moveRobot{
+        25%{-webkit-transform:translate3d(7%,0,0);transform:translate3d(7%,0,0)}
+        70%{-webkit-transform:translate3d(-7%,0,0);transform:translate3d(-7%,0,0)}
+        0,100%,50%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+    }
+    @-webkit-keyframes moveRobot{
+        25%{-webkit-transform:translate3d(7%,0,0);transform:translate3d(7%,0,0)}
+        70%{-webkit-transform:translate3d(-7%,0,0);transform:translate3d(-7%,0,0)}
+        0,100%,50%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+    }
+    .four-2.section{background:#F08D66;padding:12% 0 0;
+        .con-title{height:19%;background-image:url(../images/four-14.png)}
+        .con{margin:9% 0 0;height:53%;background-image:url(../images/four-15.png)}
+    }
+    .four-3.section{background-image:url(../images/four-34.png);background-position:0 8%;padding:10% 0 0;
+        .con-title{height:17%;background-image:url(../images/four-17.png);}
+        .con{height:65%;position:relative;
+            ul{height:100%;
+                li:nth-child(1){.hand{height:70%;background-image:url(../images/four-35.png);}
+                    dl{height:30%;background:url(../images/four-38.png) no-repeat;background-size:cover;background-position:top;}
+                }
+                li:nth-child(2){.tree{height:60%;background-image:url(../images/four-39.png);background-size:30%;}
+                    dl{height:40%;background:#F5A741;}
+                }
+                li:nth-child(3){.water{height:30%;background-image:url(../images/four-42.png);background-size:100%;}
+                    .tree{height:20%;background-image:url(../images/four-40.png);background-size:40%;background-position:11% 100%;}
+                    dl{height:50%;background:#F08D66;}
+                }
+                li:nth-child(4){.tree{height:40%;background-image:url(../images/four-41.png);background-size:100%;}
+                    dl{height:60%;background:#E85E5E;}
+                }
+                li{width:25%;height:100%;position:relative;vertical-align:bottom;
+                    .tree,.hand,.water{background-size:contain;background-position:bottom;background-repeat:no-repeat;}
+                    dl{color:#fff;padding:0 6%;position:relative;margin:-5% 0 0 0;
+                        dt{padding:20% 0 10%;}
+                    }
+                }
+            }
+        }
+        .con-bottom{height:22%;background:#2B6A86;margin:-5% 0 0 0;padding:5% 0 0 0;color:#fff;font-weight:bolder;position:relative;
+            p{position:absolute;top:50%;width:100%;margin:-20px 0 0 0;text-align:center;}
+        }
+    }
+    .four-4.section{background:#F8E9A7;padding:15% 0  0;
+        .con-title{height:8%;background-image:url(../images/four-18.png);}
+        .con{margin:10% 0 0;height:59%;background-image:url(../images/four-43.png);
+            li:nth-child(1){background-image:url(../images/four-47.png);right:1%;bottom:22%;}
+            li:nth-child(2){background-image:url(../images/four-45.png);left:5%;top:0;}
+            li:nth-child(3){background-image:url(../images/four-46.png);left:5%;bottom:0;}
+            li:nth-child(4){background-image:url(../images/four-44.png);right:2%;top:0;}
+            li{width:31%;height:31%;}
+        }
+        p{text-align:center;padding:6% 2% 0;}
+    }
+    .four-5.section{background:#DC5152;padding:19% 0 0;
+        .con-title{height:14%;background-image:url(../images/four-26.png);}
+        .con{margin:5% 0 0;height:60%;background-image:url(../images/four-19.png)}
+    }
+    .four-6.section{background:#17A19E;padding:17% 0 0;
+        .con-title{height:6%;background-image:url(../images/four-27.png);}
+        .con{height:41%;
+            ul{height:50%;width:75%;margin:0 auto;position:relative;z-index:10;
+                li:nth-child(1){background-image:url(../images/four-20.png);left:5%;}
+                li:nth-child(2){background-image:url(../images/four-21.png);left:38%;}
+                li:nth-child(3){background-image:url(../images/four-22.png);left:71%;}
+                li{width:25%;height:100%;background-position:bottom;}
+            }
+            ul.bottom{li:nth-child(1){background-image:url(../images/four-25.png);left:5%;background-size:100%;width:35%;bottom:-28%;}
+                li:nth-child(2){background-image:url(../images/four-24.png);left:38%;}
+                li:nth-child(3){background-image:url(../images/four-23.png);left:71%;}
+            }
+            .border5{border-bottom:5px solid #fff;width:75%;margin:-2px auto 0;position:relative;}
+        }
+        h5{margin:10% 0 0 0;color:#fff;font-size:1.4rem;font-weight:bolder;padding:0 3%;line-height:2rem;}
+        p{margin:5% 0 0 0;color:#fff;font-size:1.3rem;padding:0 3%;}
+    }
+    .four-7.section{background:#2B6A86;padding:17% 0 0;
+        .con-title{height:6%;background-image:url(../images/four-49.png);}
+        .con{height:67%;position:relative;
+            ul{height:60%;
+                li:nth-child(1){background-image:url(../images/four-29.png);left:0;top:50%;}
+                li:nth-child(2){background-image:url(../images/four-30.png);left:10%;top:63%;}
+                li:nth-child(3){background-image:url(../images/four-31.png);left:60%;top:20%;}
+                li:nth-child(4){background-image:url(../images/four-32.png);left:65%;top:60%;}
+                li{height:27%;width:40%;}
+            }
+            .rocket{height:40%;background:url(../images/four-28.png) center no-repeat;background-position:bottom;background-size:80%;position:relative;}
+            .rocket-fly{height:80%;position:absolute;width:30%;top:5%;left:36%;overflow:hidden;img{height  :100%;margin:100% 0 0 0; transition:all 1s 1s;}
+                    // transform:translate3d(0,100%,0);
+                }
+        }
+        p{color:#fff;padding:0 2%;font-size:1.3rem;margin:3% 0 0;}
+    }
+    .active.four-7{li:nth-child(1){animation:moveRobot 30s infinite;}
+        li:nth-child(2){animation:moveRobot 35s infinite;}
+        li:nth-child(3){animation:moveRobot 40s infinite;}
+        li:nth-child(4){animation:moveRobot 25s infinite;}
+        .con{.rocket-fly{img{margin:0;}}
+        }
+    }
+    .section{padding:0;
+        .con-title,.con,.con-p,.con-bottom{background-repeat:no-repeat;background-size:contain;background-position:center;
+            ul{height:100%;position:relative;padding:0;
+                li{background-repeat:no-repeat;display:inline-block;position:absolute;background-size:contain;background-position:center;}
+            }
+        }
+    }
+}
+// 四年级样式结束
+
+
+// 五年级样式==================================================================
+.five{.five-1.section{background:#0E3A60;padding:15% 2% 0;
         .con-title{height:6%;background-image:url(../images/five-65.png)}
         .con-robot{position:absolute;width:20%;height:20%;background:url(../images/five-67.png) center no-repeat;background-size:contain;right:5%;}
         .con{height:0;background-image:url(../images/five-76.png);background-size:70%;background-position:right;position:relative;transition:all .5s .5s;
@@ -791,52 +923,46 @@ li{list-style-type:none}
                 li:nth-child(6){background-image:url("../images/five-69.png");top:42%;left:44%;height:24%;}
                 li:nth-child(7){background-image:url("../images/five-70.png");top:2%;left:0%;height:15%;}
                 li:nth-child(8){background-image:url("../images/five-71.png");top:18%;left:26%;}
-                li{width:60%;height:16%;opacity: 0;}
+                li{width:60%;height:16%;opacity:0;}
             }
             .con-people{width:30%;height:40%;background:url(../images/five-66.png) center no-repeat;background-size:contain;position:absolute;top:80%;left:10%;}
         }
         .btn{bottom:2%;position:absolute;}
     }
-     .active.section.five-1{
-            .con{height:60%;
-                li:nth-child(1){animation:bounceInRight 1s 1.1s forwards;}
-                li:nth-child(2){animation:bounceInRight 1s 1.2s forwards;}
-                li:nth-child(3){animation:bounceInLeft 1s 1.3s forwards;}
-                li:nth-child(4){animation:bounceInRight 1s 1.4s forwards;}
-                li:nth-child(5){animation:bounceInDown .5s .7s forwards;}
-                li:nth-child(6){animation:bounceInDown .5s .8s forwards;}
-                li:nth-child(7){animation:bounceInDown .5s .9s forwards;}
-                li:nth-child(8){animation:bounceInDown .5s 1s forwards;}
-            }
-
+    .active.section.five-1{.con{height:60%;
+            li:nth-child(1){animation:bounceInRight 1s 1.1s forwards;}
+            li:nth-child(2){animation:bounceInRight 1s 1.2s forwards;}
+            li:nth-child(3){animation:bounceInLeft 1s 1.3s forwards;}
+            li:nth-child(4){animation:bounceInRight 1s 1.4s forwards;}
+            li:nth-child(5){animation:bounceInDown .5s .7s forwards;}
+            li:nth-child(6){animation:bounceInDown .5s .8s forwards;}
+            li:nth-child(7){animation:bounceInDown .5s .9s forwards;}
+            li:nth-child(8){animation:bounceInDown .5s 1s forwards;}
         }
-    .active.five-2.section{
-        .con-star{animation:five-star .5s infinite linear;}
-        .con{.con-rocket{.con-rocket-circle{
-            transform: translate3d(174%,10%,0)
-        }}}
+    }
+    .active.five-2.section{.con-star{animation:five-star .5s infinite linear;}
+        .con{.con-rocket{.con-rocket-circle{transform:translate3d(174%,10%,0)}
+            }
+        }
     }
     @keyframes five-star{
-            0%{background-image:url(../images/five-14.png) }
-            100%{background-image:url(../images/five-15.png)}
+        0%{background-image:url(../images/five-14.png)}
+        100%{background-image:url(../images/five-15.png)}
     }
     @-webkit-keyframes five-star{
-            0%{background-image:url(../images/five-14.png) }
-            100%{background-image:url(../images/five-15.png)}
+        0%{background-image:url(../images/five-14.png)}
+        100%{background-image:url(../images/five-15.png)}
     }
     .five-2.section{background:#2587AF;padding:20% 0 0 0;
         .con-title{height:10%;background-image:url("../images/five-09.png")}
         .con-p{height:8%;background-image:url("../images/five-10.png");}
-        .con{margin:10% 0 0 0;background-image:url("../images/five-13.png");height:50%;position: relative;
+        .con{margin:10% 0 0 0;background-image:url("../images/five-13.png");height:50%;position:relative;
             .con-rocket{height:100%;width:58%;margin:0 auto;background:url(../images/five-12.png) center no-repeat;background-size:contain;position:relative;
                 .con-rocket-circle{width:40%;height:40%;background:url(../images/five-11.png) center no-repeat;background-size:contain;position:absolute;transform:translate3d(-60%,150%,0);transition:all 2s .3s;}
             }
-            .con-star{
-                width:100%;height:100%;background:url(../images/five-14.png) center no-repeat;background-size:contain;position:absolute;top:0;
-            }
+            .con-star{width:100%;height:100%;background:url(../images/five-14.png) center no-repeat;background-size:contain;position:absolute;top:0;}
         }
     }
-
     .five-3.section{background:#DB5E4E;padding:10% 0 0 0;
         .con-title{height:13%;background-image:url("../images/five-17.png");}
         .con{margin:10% 0 0 0;height:60%;background-image:url("../images/five-16.png");background-size:67%;position:relative;
@@ -844,10 +970,10 @@ li{list-style-type:none}
                 li:nth-child(2){background-image:url("../images/five-19.png");left:10%;top:-6%;transition:all .5s 2s;}
                 li:nth-child(3){background-image:url("../images/five-20.png");left:30%;top:-6%;transition:all .9s 2s;}
                 li:nth-child(4){background-image:url("../images/five-21.png");left:50%;top:-6%;transition:all 1.5s 2s;}
-                li:nth-child(5){opacity: 0;background-image:url("../images/five-24.png");left:28%;top:3%;}
-                li:nth-child(6){opacity: 0;background-image:url("../images/five-25.png");top:28%;left:14%;height:13%;}
-                li:nth-child(7){opacity: 0;background-image:url("../images/five-26.png");top:54%;height:19%;left:39%;}
-                li:nth-child(8){opacity: 0;background-image:url("../images/five-27.png");top:81%;left:30%;height:13%;}
+                li:nth-child(5){opacity:0;background-image:url("../images/five-24.png");left:28%;top:3%;}
+                li:nth-child(6){opacity:0;background-image:url("../images/five-25.png");top:28%;left:14%;height:13%;}
+                li:nth-child(7){opacity:0;background-image:url("../images/five-26.png");top:54%;height:19%;left:39%;}
+                li:nth-child(8){opacity:0;background-image:url("../images/five-27.png");top:81%;left:30%;height:13%;}
                 li{width:60%;height:12%;}
             }
             .con-people{width:20%;height:20%;background:url(../images/five-23.png) center no-repeat;background-size:contain;position:absolute;left:-2%;top:6%;}
@@ -856,20 +982,17 @@ li{list-style-type:none}
             .con-book{width:20%;height:20%;background:url(../images/five-28.png) center no-repeat;background-size:contain;position:absolute;right:61%;top:96%;}
         }
     }
-    .five-3.section.active{
-        ul{
-            li:nth-child(1){animation:shake .4s 5; top:11%;left:-9%;}
-            li:nth-child(2){animation:shake .4s 5; top:28%;left:49%;}
-            li:nth-child(3){animation:shake .4s 5; top:50%;left:15%;}
-            li:nth-child(4){animation:shake .4s 5; top:81%;left:-2%;}
+    .five-3.section.active{ul{li:nth-child(1){animation:shake .4s 5;top:11%;left:-9%;}
+            li:nth-child(2){animation:shake .4s 5;top:28%;left:49%;}
+            li:nth-child(3){animation:shake .4s 5;top:50%;left:15%;}
+            li:nth-child(4){animation:shake .4s 5;top:81%;left:-2%;}
             li:nth-child(5){animation:fadeInRight 1s .4s forwards;}
             li:nth-child(6){animation:fadeInLeft 1s .6s forwards;}
             li:nth-child(7){animation:fadeInRight 1s .8s forwards;}
             li:nth-child(8){animation:fadeInRight 1s 1s forwards;}
         }
     }
-    .five-4.section.active{
-        li:nth-child(1){animation:bounceInLeft .5s .5s forwards;}
+    .five-4.section.active{li:nth-child(1){animation:bounceInLeft .5s .5s forwards;}
         li:nth-child(2){animation:bounceInLeft .5s .6s forwards;}
         li:nth-child(3){animation:bounceInLeft .5s .7s forwards;}
         li:nth-child(4){animation:bounceInDown .5s .8s forwards;}
@@ -883,98 +1006,53 @@ li{list-style-type:none}
         p{color:#fff;text-align:center;margin:5% 0;
             span{font-size:1.8rem;font-weight:bolder;color:#EAB240;margin:0 4%}
         }
-        .con{height:60%;background-image:url("../images/five-30.png");background-size: 79%; margin:14% 0 0 0;
+        .con{height:60%;background-image:url("../images/five-30.png");background-size:79%;margin:14% 0 0 0;
             ul{height:100%;
-                li:nth-child(1){background-image: url("../images/five-32.png");top:67%;left:-4%;}
-                li:nth-child(2){background-image: url("../images/five-33.png");top:43%;left:-7%;}
-                li:nth-child(3){background-image: url("../images/five-34.png");top:15%;left:5%;}
-                li:nth-child(4){background-image: url("../images/five-35.png");top:5%;left:26%;}
-                li:nth-child(5){background-image: url("../images/five-36.png");top:15%;left:61%;}
-                li:nth-child(6){background-image: url("../images/five-37.png");top:43%;right:-14%;}
-                li:nth-child(7){background-image: url("../images/five-38.png");top:67%;left:67%;}
-                li{width:50%;height:6%;opacity: 0;}
+                li:nth-child(1){background-image:url("../images/five-32.png");top:67%;left:-4%;}
+                li:nth-child(2){background-image:url("../images/five-33.png");top:43%;left:-7%;}
+                li:nth-child(3){background-image:url("../images/five-34.png");top:15%;left:5%;}
+                li:nth-child(4){background-image:url("../images/five-35.png");top:5%;left:26%;}
+                li:nth-child(5){background-image:url("../images/five-36.png");top:15%;left:61%;}
+                li:nth-child(6){background-image:url("../images/five-37.png");top:43%;right:-14%;}
+                li:nth-child(7){background-image:url("../images/five-38.png");top:67%;left:67%;}
+                li{width:50%;height:6%;opacity:0;}
             }
         }
     }
-    .five-5.section{
-        background:#EAB240;
-        .con-title{
-        height:10%;background-image:url("../images/five-49.png");
-        }
-        .con-p{
-        height:8%;background-image:url("../images/five-50.png");
-        }
-        .con{
-            height: 60%;background-image:url("../images/five-48.png");background-size:70%;
-            background-position:80%;position: relative;
-            .con-people{
-                width: 70%;height:70%;position: absolute;;background:url(../images/five-51.png) center no-repeat;background-size:contain;top:50%;left:10%;
-            }
+    .five-5.section{background:#EAB240;
+        .con-title{height:10%;background-image:url("../images/five-49.png");}
+        .con-p{height:8%;background-image:url("../images/five-50.png");}
+        .con{height:60%;background-image:url("../images/five-48.png");background-size:70%;background-position:80%;position:relative;
+            .con-people{width:70%;height:70%;position:absolute;background:url(../images/five-51.png) center no-repeat;background-size:contain;top:50%;left:10%;}
         }
     }
-    .five-6.active{
-        .con-book{
-            animation:fadeInTitle .5s .4s forwards;
-        }
-        .con{
-            animation:fadeInTitle .5s .7s forwards;
-        }
-
+    .five-6.active{.con-book{animation:fadeInTitle .5s .4s forwards;}
+        .con{animation:fadeInTitle .5s .7s forwards;}
     }
-    .five-6.section{
-        background:#E8854A;padding:10% 0 0 0;
-        .con-title{
-        height:8%;background-image:url("../images/five-52.png");
+    .five-6.section{background:#E8854A;padding:10% 0 0 0;
+        .con-title{height:8%;background-image:url("../images/five-52.png");}
+        .con{margin:10% 0 0 0;height:60%;background-image:url("../images/five-53.png");background-size:60%;background-position:60%;position:relative;z-index:10;opacity:0;
+            .con-pen{width:40%;height:40%;position:absolute;background:url(../images/five-55.png) center no-repeat;background-size:contain;top:30%;right:-10%;}
         }
-
-        .con{
-            margin:10% 0 0 0;
-            height: 60%;background-image:url("../images/five-53.png");background-size:60%;
-            background-position:60%;position: relative;z-index:10;opacity: 0;
-        .con-pen{
-            width: 40%;height:40%;position: absolute;;background:url(../images/five-55.png) center no-repeat;background-size:contain;top:30%;right:-10%;
-        }
-        }
-        .con-book{
-                width: 60%;height:60%;position: absolute;background:url(../images/five-54.png) center no-repeat;background-size:contain;top:13%;left:0%;z-index:1;opacity: 0;
-            }
-            .con-bottom{
-                height: 20%;background-image:url("../images/five-56.png");
-            }
+        .con-book{width:60%;height:60%;position:absolute;background:url(../images/five-54.png) center no-repeat;background-size:contain;top:13%;left:0%;z-index:1;opacity:0;}
+        .con-bottom{height:20%;background-image:url("../images/five-56.png");}
     }
-    .five-7.section{background: #32518B;padding:10% 0 0 ;
-        .con-title{
-            height:8%;background-image:url("../images/five-57.png");
-        }
-        .con{
-            margin:5% 0  0;
-            height: 60%;background-image:url("../images/five-58.png");
-        }
-        .con-bottom{
-             height: 20%;background-image:url("../images/five-59.png");
-        }
+    .five-7.section{background:#32518B;padding:10% 0 0;
+        .con-title{height:8%;background-image:url("../images/five-57.png");}
+        .con{margin:5% 0  0;height:60%;background-image:url("../images/five-58.png");}
+        .con-bottom{height:20%;background-image:url("../images/five-59.png");}
     }
-    .five-8.section{
-        background: #2587AF;padding:7% 0 0;
-        .con-title{
-            height:13%;background-image:url("../images/five-77.png");
+    .five-8.section{background:#2587AF;padding:7% 0 0;
+        .con-title{height:13%;background-image:url("../images/five-77.png");}
+        .con{margin:10% 0 0;position:relative;height:50%;background-image:url("../images/five-64.png");background-size:70%;
+            .con-people{width:50%;height:50%;background:url(../images/five-60.png) center no-repeat;background-size:contain;left:25%;top:19%;position:absolute;}
+            .con-cloud{width:40%;height:40%;background:url(../images/five-63.png) center no-repeat;background-size:contain;left:-3%;top:3%;position:absolute;}
+            .con-cloud-1{width:30%;height:30%;background:url(../images/five-61.png) center no-repeat;background-size:contain;left:69%;top:32%;position:absolute;}
+            .con-cloud-2{width:20%;height:20%;background:url(../images/five-61.png) center no-repeat;background-size:contain;left:70%;top:0%;position:absolute;}
         }
-        .con{margin:10% 0 0 ;position: relative;
-            height: 50%;background-image:url("../images/five-64.png");background-size:70%;
-            .con-people{
-                width: 50%;height:50%;background:url(../images/five-60.png) center no-repeat;background-size:contain;left:25%;top:19%;position: absolute;
-            }
-            .con-cloud{width: 40%;height:40%;background:url(../images/five-63.png) center no-repeat;background-size:contain;left:-3%;top:3%;position: absolute;}
-            .con-cloud-1{width: 30%;height:30%;background:url(../images/five-61.png) center no-repeat;background-size:contain;left:69%;top:32%;position: absolute;}
-            .con-cloud-2{width: 20%;height:20%;background:url(../images/five-61.png) center no-repeat;background-size:contain;left:70%;top:0%;position: absolute;}
-        }
-        .con-bottom{
-            margin:10% 0 0 0;
-            height: 15%;background-image:url("../images/five-62.png");
-        }
+        .con-bottom{margin:10% 0 0 0;height:15%;background-image:url("../images/five-62.png");}
     }
-    .active.five-8{
-        .con-cloud-2{animation:moveCloud 40s infinite}
+    .active.five-8{.con-cloud-2{animation:moveCloud 40s infinite}
     }
     .section{.con-title,.con,.con-p,.con-bottom{background-repeat:no-repeat;background-size:contain;background-position:center;
             ul{height:100%;position:relative;padding:0;
