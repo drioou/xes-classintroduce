@@ -23,6 +23,8 @@ function mkup() {
 mkup();
 
 
+
+
 var orientLayer = document.getElementById("vertical");
 //判断横屏竖屏
 function checkDirect() {

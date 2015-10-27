@@ -143,7 +143,7 @@ li {
   animation: bounceInRight 1s 0.5s forwards; }
 
 .fp-slides .slide {
-  padding: 3% 0 0;
+  padding: 4% 0 0;
   position: relative; }
   .fp-slides .slide .slide-movebg {
     background: url(../images/bb-03.png) bottom repeat-x;
@@ -175,7 +175,7 @@ li {
     .fp-slides .slide h3 i {
       margin: 0 1% 0 0; }
   .fp-slides .slide .row {
-    height: 90%;
+    height: 85%;
     padding: 0 10%; }
     .fp-slides .slide .row .col-xs-1:nth-child(1), .fp-slides .slide .row .col-xs-4:nth-child(1), .fp-slides .slide .row .col-xs-7:nth-child(1) {
       -webkit-animation-delay: .1s;
@@ -422,7 +422,7 @@ li {
 .modal-content {
   border: none;
   border-radius: 0;
-  padding: 0 0 5%; }
+  padding: 0 0 20%; }
   .modal-content .col-xs-6 {
     text-align: center; }
   .modal-content .newstudent:before {
@@ -505,7 +505,7 @@ li {
           animation-delay: .5s;
           opacity: 0; }
   .slide2.slide .slide2-title {
-    margin: 15% 10% 5%; }
+    margin: 10% 10% 5%; }
   .slide2.slide .text-right {
     font-size: 1.4rem;
     padding: 0 10% 0 0; }
@@ -518,7 +518,7 @@ li {
   background-size: cover; }
   .slide3.slide .slide-con {
     width: 300px;
-    height: 295px;
+    height: 270px;
     margin: 0 auto;
     position: relative; }
     .slide3.slide .slide-con .circle-top {
@@ -629,35 +629,46 @@ li {
   left: 16%; }
 
 .nine .fp-slidesNav.top ul li {
-  width: 16.66%; }
+  width: 14.28%; }
 
 .nine .fp-slidesNav.top ul li:nth-child(3) a:after {
-  content: "班次(数)"; }
+  content: "数学"; }
 
 .nine .fp-slidesNav.top ul li:nth-child(4) a:after {
-  content: "班次(物)"; }
+  content: "物理"; }
 
 .nine .fp-slidesNav.top ul li:nth-child(5) a:after {
-  content: "上课时间"; }
+  content: "化学"; }
 
 .nine .fp-slidesNav.top ul li:nth-child(6) a:after {
+  content: "上课时间"; }
+
+.nine .fp-slidesNav.top ul li:nth-child(7) a:after {
   content: "课程介绍"; }
 
 .ten .slide.slide3 .circle-top {
-  background-image: url(../images/bb6-1.png); }
+  background-image: url(../images/bb10-1.png);
+  width: 100%; }
 
 .ten .slide.slide3 .circle-bottom {
-  background-image: url(../images/bb6-2.png);
+  background-image: none;
   top: 12.4%;
   left: 16%; }
+
+.ten .slide.slide3 .slide3-text p:before {
+  content: "新生需要参加新生入学测试，通过测试可以到尖子班就读。想到清北交复班主读的同学需要参加学而思第十四届综合素质测评。"; }
 
 .eleven .slide.slide3 .circle-top {
-  background-image: url(../images/bb6-1.png); }
+  background-image: url(../images/bb11-1.png);
+  width: 100%; }
 
 .eleven .slide.slide3 .circle-bottom {
-  background-image: url(../images/bb6-2.png);
+  background-image: none;
   top: 12.4%;
   left: 16%; }
+
+.eleven .slide.slide3 .slide3-text p:before {
+  content: "新生需要参加新生入学测试，通过测试可以到尖子班就读"; }
 
 .slide4.slide {
   background: url(../images/bb-29.png) center no-repeat;
@@ -1406,7 +1417,7 @@ li {
 
 .three .three-2.section {
   background: #92BF5E;
-  padding: 25% 0  0 0; }
+  padding: 25% 0 0 0; }
   .three .three-2.section .con {
     height: 50%;
     background-image: url(../images/three-22.png); }
@@ -1706,7 +1717,7 @@ li {
     background-repeat: no-repeat;
     background-position: center; }
   .three .section .con-bottom {
-    margin: 10% 0  0;
+    margin: 10% 0 0;
     opacity: 0; }
   .three .section .con-p {
     opacity: 0; }
@@ -2210,6 +2221,401 @@ li {
       background-repeat: no-repeat;
       height: 23%;
       background-size: contain; }
+
+.five .five-1.section {
+  background: #0E3A60;
+  padding: 15% 2% 0; }
+  .five .five-1.section .con-title {
+    height: 6%;
+    background-image: url(../images/five-65.png); }
+  .five .five-1.section .con-robot {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background: url(../images/five-67.png) center no-repeat;
+    background-size: contain;
+    right: 5%; }
+  .five .five-1.section .con {
+    height: 0;
+    background-image: url(../images/five-76.png);
+    background-size: 70%;
+    background-position: right;
+    position: relative;
+    transition: all 0.5s 0.5s; }
+    .five .five-1.section .con ul {
+      margin: 20% 0 0 0; }
+      .five .five-1.section .con ul li:nth-child(1) {
+        background-image: url("../images/five-72.png");
+        height: 9%;
+        top: 5%;
+        left: 26%; }
+      .five .five-1.section .con ul li:nth-child(2) {
+        background-image: url("../images/five-73.png");
+        top: 24%;
+        left: 51%;
+        height: 9%; }
+      .five .five-1.section .con ul li:nth-child(3) {
+        background-image: url("../images/five-74.png");
+        top: 58%;
+        height: 9%;
+        left: -8%; }
+      .five .five-1.section .con ul li:nth-child(4) {
+        background-image: url("../images/five-75.png");
+        top: 84%;
+        left: 36%;
+        height: 12%; }
+      .five .five-1.section .con ul li:nth-child(5) {
+        background-image: url("../images/five-68.png");
+        top: 37%;
+        left: -9%; }
+      .five .five-1.section .con ul li:nth-child(6) {
+        background-image: url("../images/five-69.png");
+        top: 42%;
+        left: 44%;
+        height: 24%; }
+      .five .five-1.section .con ul li:nth-child(7) {
+        background-image: url("../images/five-70.png");
+        top: 2%;
+        left: 0%;
+        height: 15%; }
+      .five .five-1.section .con ul li:nth-child(8) {
+        background-image: url("../images/five-71.png");
+        top: 18%;
+        left: 26%; }
+      .five .five-1.section .con ul li {
+        width: 60%;
+        height: 16%;
+        opacity: 0; }
+    .five .five-1.section .con .con-people {
+      width: 30%;
+      height: 40%;
+      background: url(../images/five-66.png) center no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 80%;
+      left: 10%; }
+  .five .five-1.section .btn {
+    bottom: 2%;
+    position: absolute; }
+
+.five .active.section .con {
+  height: 60%; }
+  .five .active.section .con li:nth-child(1) {
+    animation: bounceInRight 1s 1.1s forwards; }
+  .five .active.section .con li:nth-child(2) {
+    animation: bounceInRight 1s 1.2s forwards; }
+  .five .active.section .con li:nth-child(3) {
+    animation: bounceInLeft 1s 1.3s forwards; }
+  .five .active.section .con li:nth-child(4) {
+    animation: bounceInRight 1s 1.4s forwards; }
+  .five .active.section .con li:nth-child(5) {
+    animation: bounceInDown 0.5s 0.7s forwards; }
+  .five .active.section .con li:nth-child(6) {
+    animation: bounceInDown 0.5s 0.8s forwards; }
+  .five .active.section .con li:nth-child(7) {
+    animation: bounceInDown 0.5s 0.9s forwards; }
+  .five .active.section .con li:nth-child(8) {
+    animation: bounceInDown 0.5s 1s forwards; }
+
+.five .five-2.section {
+  background: #2587AF;
+  padding: 20% 0 0 0; }
+  .five .five-2.section .con-title {
+    height: 10%;
+    background-image: url("../images/five-09.png"); }
+  .five .five-2.section .con-p {
+    height: 8%;
+    background-image: url("../images/five-10.png"); }
+  .five .five-2.section .con {
+    margin: 10% 0 0 0;
+    background-image: url("../images/five-13.png");
+    height: 50%; }
+    .five .five-2.section .con .con-rocket {
+      height: 100%;
+      width: 58%;
+      margin: 0 auto;
+      background: url(../images/five-12.png) center no-repeat;
+      background-size: contain;
+      position: relative; }
+      .five .five-2.section .con .con-rocket .con-rocket-circle {
+        width: 50%;
+        height: 50%;
+        background: url(../images/five-11.png) center no-repeat;
+        background-size: contain;
+        position: absolute; }
+
+.five .five-3.section {
+  background: #DB5E4E;
+  padding: 10% 0 0 0; }
+  .five .five-3.section .con-title {
+    height: 13%;
+    background-image: url("../images/five-17.png"); }
+  .five .five-3.section .con {
+    margin: 10% 0 0 0;
+    height: 60%;
+    background-image: url("../images/five-16.png");
+    background-size: 67%;
+    position: relative; }
+    .five .five-3.section .con ul li:nth-child(1) {
+      background-image: url("../images/five-18.png");
+      top: 11%;
+      left: -9%; }
+    .five .five-3.section .con ul li:nth-child(2) {
+      background-image: url("../images/five-19.png");
+      top: 28%;
+      left: 49%; }
+    .five .five-3.section .con ul li:nth-child(3) {
+      background-image: url("../images/five-20.png");
+      top: 50%;
+      left: 15%; }
+    .five .five-3.section .con ul li:nth-child(4) {
+      background-image: url("../images/five-21.png");
+      top: 81%;
+      left: -2%; }
+    .five .five-3.section .con ul li:nth-child(5) {
+      background-image: url("../images/five-24.png");
+      left: 28%;
+      top: 3%; }
+    .five .five-3.section .con ul li:nth-child(6) {
+      background-image: url("../images/five-25.png");
+      top: 28%;
+      left: 14%;
+      height: 13%; }
+    .five .five-3.section .con ul li:nth-child(7) {
+      background-image: url("../images/five-26.png");
+      top: 54%;
+      height: 19%;
+      left: 39%; }
+    .five .five-3.section .con ul li:nth-child(8) {
+      background-image: url("../images/five-27.png");
+      top: 81%;
+      left: 30%;
+      height: 13%; }
+    .five .five-3.section .con ul li {
+      width: 60%;
+      height: 12%; }
+    .five .five-3.section .con .con-people {
+      width: 20%;
+      height: 20%;
+      background: url(../images/five-23.png) center no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: -2%;
+      top: 6%; }
+    .five .five-3.section .con .con-people-2 {
+      width: 16%;
+      height: 16%;
+      background: url(../images/five-22.png) center no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: 0%;
+      top: 25%; }
+    .five .five-3.section .con .con-people-3 {
+      width: 34%;
+      height: 34%;
+      background: url(../images/five-29.png) center no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: 0%;
+      top: 90%; }
+    .five .five-3.section .con .con-book {
+      width: 20%;
+      height: 20%;
+      background: url(../images/five-28.png) center no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: 61%;
+      top: 96%; }
+
+.five .five-4.section {
+  background: #32518B;
+  padding: 13% 0 0; }
+  .five .five-4.section .con-title {
+    height: 5%;
+    background-image: url("../images/five-31.png"); }
+  .five .five-4.section p {
+    color: #fff;
+    text-align: center;
+    margin: 5% 0; }
+    .five .five-4.section p span {
+      font-size: 1.8rem;
+      font-weight: bolder;
+      color: #EAB240;
+      margin: 0 4%; }
+  .five .five-4.section .con {
+    height: 60%;
+    background-image: url("../images/five-30.png");
+    background-size: 79%;
+    margin: 14% 0 0 0; }
+    .five .five-4.section .con ul {
+      height: 100%; }
+      .five .five-4.section .con ul li:nth-child(1) {
+        background-image: url("../images/five-32.png");
+        top: 67%;
+        left: -4%; }
+      .five .five-4.section .con ul li:nth-child(2) {
+        background-image: url("../images/five-33.png");
+        top: 43%;
+        left: -7%; }
+      .five .five-4.section .con ul li:nth-child(3) {
+        background-image: url("../images/five-34.png");
+        top: 15%;
+        left: 5%; }
+      .five .five-4.section .con ul li:nth-child(4) {
+        background-image: url("../images/five-35.png");
+        top: 5%;
+        left: 26%; }
+      .five .five-4.section .con ul li:nth-child(5) {
+        background-image: url("../images/five-36.png");
+        top: 15%;
+        left: 61%; }
+      .five .five-4.section .con ul li:nth-child(6) {
+        background-image: url("../images/five-37.png");
+        top: 43%;
+        right: -14%; }
+      .five .five-4.section .con ul li:nth-child(7) {
+        background-image: url("../images/five-38.png");
+        top: 67%;
+        left: 67%; }
+      .five .five-4.section .con ul li {
+        width: 50%;
+        height: 6%; }
+
+.five .five-5.section {
+  background: #EAB240; }
+  .five .five-5.section .con-title {
+    height: 10%;
+    background-image: url("../images/five-49.png"); }
+  .five .five-5.section .con-p {
+    height: 8%;
+    background-image: url("../images/five-50.png"); }
+  .five .five-5.section .con {
+    height: 60%;
+    background-image: url("../images/five-48.png");
+    background-size: 70%;
+    background-position: 80%;
+    position: relative; }
+    .five .five-5.section .con .con-people {
+      width: 70%;
+      height: 70%;
+      position: absolute;
+      background: url(../images/five-51.png) center no-repeat;
+      background-size: contain;
+      top: 50%;
+      left: 10%; }
+
+.five .five-6.section {
+  background: #E8854A;
+  padding: 10% 0 0 0; }
+  .five .five-6.section .con-title {
+    height: 8%;
+    background-image: url("../images/five-52.png"); }
+  .five .five-6.section .con {
+    margin: 10% 0 0 0;
+    height: 60%;
+    background-image: url("../images/five-53.png");
+    background-size: 60%;
+    background-position: 60%;
+    position: relative;
+    z-index: 10; }
+    .five .five-6.section .con .con-pen {
+      width: 40%;
+      height: 40%;
+      position: absolute;
+      background: url(../images/five-55.png) center no-repeat;
+      background-size: contain;
+      top: 30%;
+      right: -10%; }
+  .five .five-6.section .con-book {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    background: url(../images/five-54.png) center no-repeat;
+    background-size: contain;
+    top: 13%;
+    left: 0%;
+    z-index: 1; }
+  .five .five-6.section .con-bottom {
+    height: 20%;
+    background-image: url("../images/five-56.png"); }
+
+.five .five-7.section {
+  background: #32518B;
+  padding: 10% 0 0; }
+  .five .five-7.section .con-title {
+    height: 8%;
+    background-image: url("../images/five-57.png"); }
+  .five .five-7.section .con {
+    margin: 5% 0  0;
+    height: 60%;
+    background-image: url("../images/five-58.png"); }
+  .five .five-7.section .con-bottom {
+    height: 20%;
+    background-image: url("../images/five-59.png"); }
+
+.five .five-8.section {
+  background: #2587AF;
+  padding: 7% 0 0; }
+  .five .five-8.section .con-title {
+    height: 13%;
+    background-image: url("../images/five-77.png"); }
+  .five .five-8.section .con {
+    margin: 10% 0 0;
+    position: relative;
+    height: 50%;
+    background-image: url("../images/five-64.png");
+    background-size: 70%; }
+    .five .five-8.section .con .con-people {
+      width: 50%;
+      height: 50%;
+      background: url(../images/five-60.png) center no-repeat;
+      background-size: contain;
+      left: 25%;
+      top: 19%;
+      position: absolute; }
+    .five .five-8.section .con .con-cloud {
+      width: 40%;
+      height: 40%;
+      background: url(../images/five-63.png) center no-repeat;
+      background-size: contain;
+      left: -3%;
+      top: 3%;
+      position: absolute; }
+    .five .five-8.section .con .con-cloud-1 {
+      width: 30%;
+      height: 30%;
+      background: url(../images/five-61.png) center no-repeat;
+      background-size: contain;
+      left: 69%;
+      top: 32%;
+      position: absolute; }
+    .five .five-8.section .con .con-cloud-2 {
+      width: 20%;
+      height: 20%;
+      background: url(../images/five-61.png) center no-repeat;
+      background-size: contain;
+      left: 70%;
+      top: 0%;
+      position: absolute; }
+  .five .five-8.section .con-bottom {
+    margin: 10% 0 0 0;
+    height: 15%;
+    background-image: url("../images/five-62.png"); }
+
+.five .section .con-title, .five .section .con, .five .section .con-p, .five .section .con-bottom {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; }
+  .five .section .con-title ul, .five .section .con ul, .five .section .con-p ul, .five .section .con-bottom ul {
+    height: 100%;
+    position: relative;
+    padding: 0; }
+    .five .section .con-title ul li, .five .section .con ul li, .five .section .con-p ul li, .five .section .con-bottom ul li {
+      background-repeat: no-repeat;
+      display: inline-block;
+      position: absolute;
+      background-size: contain;
+      background-position: center; }
 
 .six .six-1 {
   background: url(../images/six-15.png) center no-repeat;
@@ -3280,7 +3686,7 @@ li {
       margin: 0 auto; }
   .ten .section .con-text {
     width: 80%;
-    margin: 25% auto 0; }
+    margin: 18% auto 0; }
 
 .ten .active.section .con-pic {
   -webkit-transform: scale(1);
@@ -3294,6 +3700,9 @@ li {
 
 .eleven.ten .ten-16 {
   background-image: url(../images/high-20.png); }
+
+.eleven.ten .ten-16-n .con-text img {
+  width: 90%; }
 
 .eleven.ten .ten-17 {
   background-image: url(../images/high-21.png); }
