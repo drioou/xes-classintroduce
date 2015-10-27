@@ -28,7 +28,7 @@ li{list-style-type:none}
 .bouncein,.bounceindown,.fadein,.fadeindown,.fadeinleft,.fadeintitle,.fadeinup,.rotateInDownLeft,.rotateInUpLeft,.rotatein,.slidefadeinleft,.slidefadeinright,.zoomin,.bounceinleft,.bounceinright{opacity:0}
 .active{.fadeindown{-webkit-animation:fadeInDown 1s .6s forwards;animation:fadeInDown 1s .6s forwards}
     .fadeinup{-webkit-animation:fadeInUp 1s 1.3s forwards;animation:fadeInUp 1s 1.3s forwards}
-    .fadeintitle{-webkit-animation:fadeInTitle .5s 1.3s forwards;animation:fadeInTitle .5s 1.3s forwards}
+    .fadeintitle{-webkit-animation:fadeInTitle .5s 0.5s forwards;animation:fadeInTitle .5s .5s forwards}
     .rotatein{-webkit-animation:rotateIn 1s .6s forwards;animation:rotateIn 1s .6s forwards}
     .fadeinleft{-webkit-animation:fadeInLeft 1s .4s forwards;animation:fadeInLeft 1s .4s forwards}
     .fadeinright{-webkit-animation:fadeInRight 1s .4s forwards;animation:fadeInRight 1s .4s forwards}
@@ -797,7 +797,7 @@ li{list-style-type:none}
         }
         .btn{bottom:2%;position:absolute;}
     }
-     .active.section{
+     .active.section.five-1{
             .con{height:60%;
                 li:nth-child(1){animation:bounceInRight 1s 1.1s forwards;}
                 li:nth-child(2){animation:bounceInRight 1s 1.2s forwards;}
@@ -808,28 +808,46 @@ li{list-style-type:none}
                 li:nth-child(7){animation:bounceInDown .5s .9s forwards;}
                 li:nth-child(8){animation:bounceInDown .5s 1s forwards;}
             }
+
         }
+    .active.five-2.section{
+        .con-star{animation:five-star .5s infinite linear;}
+        .con{.con-rocket{.con-rocket-circle{
+            transform: translate3d(174%,10%,0)
+        }}}
+    }
+    @keyframes five-star{
+            0%{background-image:url(../images/five-14.png) }
+            100%{background-image:url(../images/five-15.png)}
+    }
+    @-webkit-keyframes five-star{
+            0%{background-image:url(../images/five-14.png) }
+            100%{background-image:url(../images/five-15.png)}
+    }
     .five-2.section{background:#2587AF;padding:20% 0 0 0;
         .con-title{height:10%;background-image:url("../images/five-09.png")}
         .con-p{height:8%;background-image:url("../images/five-10.png");}
-        .con{margin:10% 0 0 0;background-image:url("../images/five-13.png");height:50%;
+        .con{margin:10% 0 0 0;background-image:url("../images/five-13.png");height:50%;position: relative;
             .con-rocket{height:100%;width:58%;margin:0 auto;background:url(../images/five-12.png) center no-repeat;background-size:contain;position:relative;
-                .con-rocket-circle{width:50%;height:50%;background:url(../images/five-11.png) center no-repeat;background-size:contain;position:absolute;}
+                .con-rocket-circle{width:40%;height:40%;background:url(../images/five-11.png) center no-repeat;background-size:contain;position:absolute;transform:translate3d(-60%,150%,0);transition:all 2s .3s;}
             }
-            .con-star{}
+            .con-star{
+                width:100%;height:100%;background:url(../images/five-14.png) center no-repeat;background-size:contain;position:absolute;top:0;
+            }
         }
     }
+
     .five-3.section{background:#DB5E4E;padding:10% 0 0 0;
         .con-title{height:13%;background-image:url("../images/five-17.png");}
         .con{margin:10% 0 0 0;height:60%;background-image:url("../images/five-16.png");background-size:67%;position:relative;
-            ul{li:nth-child(1){background-image:url("../images/five-18.png");top:11%;left:-9%;}
-                li:nth-child(2){background-image:url("../images/five-19.png");top:28%;left:49%;}
-                li:nth-child(3){background-image:url("../images/five-20.png");top:50%;left:15%;}
-                li:nth-child(4){background-image:url("../images/five-21.png");top:81%;left:-2%;}
-                li:nth-child(5){background-image:url("../images/five-24.png");left:28%;top:3%;}
-                li:nth-child(6){background-image:url("../images/five-25.png");top:28%;left:14%;height:13%;}
-                li:nth-child(7){background-image:url("../images/five-26.png");top:54%;height:19%;left:39%;}
-                li:nth-child(8){background-image:url("../images/five-27.png");top:81%;left:30%;height:13%;}
+            ul{li:nth-child(1){background-image:url("../images/five-18.png");left:-10%;top:-6%;transition:all .3s 2s;}
+                li:nth-child(2){background-image:url("../images/five-19.png");left:10%;top:-6%;transition:all .5s 2s;}
+                li:nth-child(3){background-image:url("../images/five-20.png");left:30%;top:-6%;transition:all .9s 2s;}
+                li:nth-child(4){background-image:url("../images/five-21.png");left:50%;top:-6%;transition:all 1.5s 2s;}
+                li:nth-child(5){opacity: 0;background-image:url("../images/five-24.png");left:28%;top:3%;}
+                li:nth-child(6){opacity: 0;background-image:url("../images/five-25.png");top:28%;left:14%;height:13%;}
+                li:nth-child(7){opacity: 0;background-image:url("../images/five-26.png");top:54%;height:19%;left:39%;}
+                li:nth-child(8){opacity: 0;background-image:url("../images/five-27.png");top:81%;left:30%;height:13%;}
                 li{width:60%;height:12%;}
             }
             .con-people{width:20%;height:20%;background:url(../images/five-23.png) center no-repeat;background-size:contain;position:absolute;left:-2%;top:6%;}
@@ -837,6 +855,28 @@ li{list-style-type:none}
             .con-people-3{width:34%;height:34%;background:url(../images/five-29.png) center no-repeat;background-size:contain;position:absolute;right:0%;top:90%;}
             .con-book{width:20%;height:20%;background:url(../images/five-28.png) center no-repeat;background-size:contain;position:absolute;right:61%;top:96%;}
         }
+    }
+    .five-3.section.active{
+        ul{
+            li:nth-child(1){animation:shake .4s 5; top:11%;left:-9%;}
+            li:nth-child(2){animation:shake .4s 5; top:28%;left:49%;}
+            li:nth-child(3){animation:shake .4s 5; top:50%;left:15%;}
+            li:nth-child(4){animation:shake .4s 5; top:81%;left:-2%;}
+            li:nth-child(5){animation:fadeInRight 1s .4s forwards;}
+            li:nth-child(6){animation:fadeInLeft 1s .6s forwards;}
+            li:nth-child(7){animation:fadeInRight 1s .8s forwards;}
+            li:nth-child(8){animation:fadeInRight 1s 1s forwards;}
+        }
+    }
+    .five-4.section.active{
+        li:nth-child(1){animation:bounceInLeft .5s .5s forwards;}
+        li:nth-child(2){animation:bounceInLeft .5s .6s forwards;}
+        li:nth-child(3){animation:bounceInLeft .5s .7s forwards;}
+        li:nth-child(4){animation:bounceInDown .5s .8s forwards;}
+        li:nth-child(5){animation:bounceInDown .5s .9s forwards;}
+        li:nth-child(6){animation:bounceInRight .5s 1s forwards;}
+        li:nth-child(7){animation:bounceInRight .5s 1.1s forwards;}
+        li:nth-child(8){animation:bounceInRight .5s 1.2s forwards;}
     }
     .five-4.section{background:#32518B;padding:13% 0 0;
         .con-title{height:5%;background-image:url("../images/five-31.png");}
@@ -852,7 +892,7 @@ li{list-style-type:none}
                 li:nth-child(5){background-image: url("../images/five-36.png");top:15%;left:61%;}
                 li:nth-child(6){background-image: url("../images/five-37.png");top:43%;right:-14%;}
                 li:nth-child(7){background-image: url("../images/five-38.png");top:67%;left:67%;}
-                li{width:50%;height:6%;}
+                li{width:50%;height:6%;opacity: 0;}
             }
         }
     }
@@ -872,6 +912,15 @@ li{list-style-type:none}
             }
         }
     }
+    .five-6.active{
+        .con-book{
+            animation:fadeInTitle .5s .4s forwards;
+        }
+        .con{
+            animation:fadeInTitle .5s .7s forwards;
+        }
+
+    }
     .five-6.section{
         background:#E8854A;padding:10% 0 0 0;
         .con-title{
@@ -881,13 +930,13 @@ li{list-style-type:none}
         .con{
             margin:10% 0 0 0;
             height: 60%;background-image:url("../images/five-53.png");background-size:60%;
-            background-position:60%;position: relative;z-index:10;
+            background-position:60%;position: relative;z-index:10;opacity: 0;
         .con-pen{
             width: 40%;height:40%;position: absolute;;background:url(../images/five-55.png) center no-repeat;background-size:contain;top:30%;right:-10%;
         }
         }
         .con-book{
-                width: 60%;height:60%;position: absolute;background:url(../images/five-54.png) center no-repeat;background-size:contain;top:13%;left:0%;z-index:1;
+                width: 60%;height:60%;position: absolute;background:url(../images/five-54.png) center no-repeat;background-size:contain;top:13%;left:0%;z-index:1;opacity: 0;
             }
             .con-bottom{
                 height: 20%;background-image:url("../images/five-56.png");
@@ -923,6 +972,9 @@ li{list-style-type:none}
             margin:10% 0 0 0;
             height: 15%;background-image:url("../images/five-62.png");
         }
+    }
+    .active.five-8{
+        .con-cloud-2{animation:moveCloud 40s infinite}
     }
     .section{.con-title,.con,.con-p,.con-bottom{background-repeat:no-repeat;background-size:contain;background-position:center;
             ul{height:100%;position:relative;padding:0;
