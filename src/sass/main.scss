@@ -5,8 +5,13 @@ li{list-style-type:none}
 .content,.up,.thumbnailimg{position:absolute;}
 .content,.fp-controlArrow,.none,.last-section.active .up{display:none}
 .content{z-index:10;width:100%;background:#fff;max-width:720px;left:50%;}
-.up{bottom:5%;left:50%;margin:0 0 0 -10px;opacity:0;-webkit-animation:up 4s 2s infinite;animation:up 4s 2s infinite;
+.up{bottom:5%;left:50%;margin:0 0 0 -10px;opacity:0;
     &.up-white{color:#fff}
+}
+.active{
+    .up{
+        animation:up 4s 3s infinite;
+    }
 }
 .fp-slides,.up.up-blank{color:#000}
 .section{position:relative;overflow:hidden}
@@ -30,10 +35,10 @@ li{list-style-type:none}
     .fadeinup{-webkit-animation:fadeInUp 1s 1.3s forwards;animation:fadeInUp 1s 1.3s forwards}
     .fadeintitle{-webkit-animation:fadeInTitle .5s 0.5s forwards;animation:fadeInTitle .5s .5s forwards}
     .rotatein{-webkit-animation:rotateIn 1s .6s forwards;animation:rotateIn 1s .6s forwards}
-    .fadeinleft{-webkit-animation:fadeInLeft 1s .4s forwards;animation:fadeInLeft 1s .4s forwards}
-    .fadeinright{-webkit-animation:fadeInRight 1s .4s forwards;animation:fadeInRight 1s .4s forwards}
+    .fadeinleft{-webkit-animation:fadeInLeft 1s .7s forwards;animation:fadeInLeft 1s .7s forwards}
+    .fadeinright{-webkit-animation:fadeInRight 1s .7s forwards;animation:fadeInRight 1s .7s forwards}
     .bounceindown{-webkit-animation:bounceInDown 1s .5s forwards;animation:bounceInDown 1s .5s forwards}
-    .bouncein{-webkit-animation:bounceIn 1s .5s forwards;animation:bounceIn 1s .5s forwards}
+    .bouncein{-webkit-animation:bounceIn 1s .8s forwards;animation:bounceIn 1s .8s forwards}
     .fadein{-webkit-animation:fadeIn 1s 1s forwards;animation:fadeIn 1s 1s forwards}
     .rotateInDownLeft{-webkit-animation:rotateInDownLeft 1s .4s forwards;animation:rotateInDownLeft 1s .4s forwards}
     .rotateInUpLeft{-webkit-animation:rotateInUpLeft 1s .4s forwards;animation:rotateInUpLeft 1s .4s forwards}
@@ -212,8 +217,10 @@ li{list-style-type:none}
 .active.slide3.slide{.circle-bottom,.circle-top{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 }
 // 各年级班次设置========================================================================
-.two .slide.slide3{.circle-top{background-image:url(../images/bb2-1.png)}
-    .circle-bottom{background-image:url(../images/bb2-2.png);width:73%;top:15%;left:23%}
+.two .slide.slide3{
+    padding:2% 0 0;
+    .circle-top{background-image:url(../images/bb2-1.png)}
+    .circle-bottom{background-image:url(../images/bb2-2.png);width:73%;top:16%;left:23%}
 }
 .three .slide.slide3{.circle-top{background-image:url(../images/bb3-1.png)}
     .circle-bottom{background-image:url(../images/bb3-2.png);width:73%;top:17%;left:24%;}
@@ -1633,16 +1640,34 @@ li{list-style-type:none}
 
 
 // 各年级最后一页
-.last-section.active{.up{left:200%;}
+
+.backhome{
+        right:1%;position: absolute;font-size: 2rem;top:1%;
+        opacity: 0;
+    }
+.active{
+    .backhome{
+        animation:fadeInDown 1s 1s forwards;
+    }
 }
-.last-section{background:#2F4965;padding:0;
-    .logo{height:15%;background:url(../images/logo.png) center no-repeat;background-size:contain;margin:2% 0 0;}
+
+.last-section.active{
+    .up,.backhome{left:200%;}
+
+}
+.last-section{
+
+    background:#2F4965;padding:0;
+
+    .logo{height:10%;background:url(../images/logo.png) center no-repeat;background-size:contain;margin:1% 0 0;}
     .code{height:31%;margin:2% 5% 0;
         .row{margin:0;height:100%;
             .col-xs-5{height:100%;padding:0;
                 dd{height:30%;background:url(../images/last-04.png) center no-repeat;background-size:contain;}
             }
-            .col-xs-5:nth-child(3){dd{background:url(../images/last-05.png) center no-repeat;background-size:contain;}
+            .col-xs-5:nth-child(3){
+                margin:0 0 0 12%;
+                dd{background:url(../images/last-05.png) center no-repeat;background-size:contain;}
             }
         }
     }
@@ -1655,7 +1680,7 @@ li{list-style-type:none}
     .xb{background:#1BA8DA;
         a:before{content:"续报常见问题"}
     }
-    .btn{color:#fff;margin:5% 5% 0 5%;width:90%;
+    .btn{color:#fff;margin:4% 5% 0 5%;width:90%;
         a{color:#fff;font-weight:bolder;letter-spacing:0.2rem;
             i{margin:0 0 0 2%;}
         }
@@ -1670,7 +1695,7 @@ li{list-style-type:none}
     }
     .copy:after{content:"学而思培优上海市场部制作";}
     .maker{margin:0;}
-    .maker:after{content:"设计:海虹、思佳;制作:段勇";}
+    .maker:after{content:"设计:海虹、刘思佳;  制作:段勇";}
 }
 // 终于到主页了=================
 .index{background:#1B2B39;padding:3% 0 0 0;
@@ -1692,7 +1717,7 @@ li{list-style-type:none}
         .i10{width:49%;margin-left:1%;height:30%;
             .row{height:100%;
                 .i10-1{width:49%;height:100%;background:url(../images/index-08.png) center no-repeat;background-size:cover;}
-                .i10-2{width:48%;height:100%;background:url(../images/index-09.png) center no-repeat;background-size:cover;margin:0 0 0 2.5%;}
+                .i10-2{width:49%;height:100%;background:url(../images/index-09.png) center no-repeat;background-size:cover;margin:0 0 0 2%;}
             }
         }
         .i13,.i16{float:right;margin:1% 0 0 1%;}

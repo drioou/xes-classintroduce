@@ -7,6 +7,26 @@ window.onload = function() {
 
 $(".content").css("margin-left" ,"-"+$(".content").width()*.5+"px" );
 
+$(".btn.zc a").attr("href","http://ssh.speiyou.com/z2015/2016zhongce/index.html");
+$(".btn.xc a").attr("href","http://ssh.speiyou.com/z2015/2016xince/index.html");
+$(".btn.xb a").attr("href","http://ssh.speiyou.com/z2015/2016xbquestion/index.html");
+function logo(){
+    $(".logo").append("<a></a>");
+    $(".logo a").attr("href","http://ssh.speiyou.com");
+    $(".logo a").css({"width":"100%","height":"100%","display":"block"});
+};
+logo();
+
+function changeLastPage(){
+    $(".last-section .col-xs-5:nth-child(1)").hide();
+    $(".last-section .row.back .col-xs-5:nth-child(1)").show();
+    $(".btn.xc").after("<div class='btn app fadeinleft'><a href=''>用学而思APP&nbsp;&nbsp;报班不排队<i class='fa fa-caret-right'></i></a></div>");
+    $(".btn.app").css({"background":"#4EBEC1"});
+    $(".btn.xb").removeClass(".fadeinleft").addClass("fadeinright");
+    $(".section").append(" <i class='fa fa-home backhome backfirst'></i> ");
+
+};
+changeLastPage();
 
 
 // meta================
@@ -16,8 +36,12 @@ function mkmeta() {
     meta.setAttribute("content", "duanyong");
     // document.head.appendChild(meta);
     $("head").append(meta);
-}
+};
 mkmeta();
+
+
+
+
 // 屏幕旋转检测============================================
 
 function mkup() {
@@ -88,10 +112,12 @@ $(document).ready(function() {
 
              if (index == 1) {
                 $(".up").show();
+                $(".backhome").show();
             }
 
             if (index == 2) {
                 $(".up").show();
+                $(".backhome").show();
                 $.fn.fullpage.setAllowScrolling(true, "down");
             }
 
@@ -100,10 +126,12 @@ $(document).ready(function() {
 
             if (index == 1) {
                 $(".up").hide();
+                 $(".backhome").hide();
             }
 
             if (index == 2) {
                 $(".up").hide();
+                $(".backhome").hide();
                 $.fn.fullpage.setAllowScrolling(false, "down")
             }
 

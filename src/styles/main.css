@@ -26,11 +26,12 @@ li {
   bottom: 5%;
   left: 50%;
   margin: 0 0 0 -10px;
-  opacity: 0;
-  -webkit-animation: up 4s 2s infinite;
-  animation: up 4s 2s infinite; }
+  opacity: 0; }
   .up.up-white {
     color: #fff; }
+
+.active .up {
+  animation: up 4s 3s infinite; }
 
 .fp-slides, .up.up-blank {
   color: #000; }
@@ -98,20 +99,20 @@ li {
   animation: rotateIn 1s 0.6s forwards; }
 
 .active .fadeinleft {
-  -webkit-animation: fadeInLeft 1s 0.4s forwards;
-  animation: fadeInLeft 1s 0.4s forwards; }
+  -webkit-animation: fadeInLeft 1s 0.7s forwards;
+  animation: fadeInLeft 1s 0.7s forwards; }
 
 .active .fadeinright {
-  -webkit-animation: fadeInRight 1s 0.4s forwards;
-  animation: fadeInRight 1s 0.4s forwards; }
+  -webkit-animation: fadeInRight 1s 0.7s forwards;
+  animation: fadeInRight 1s 0.7s forwards; }
 
 .active .bounceindown {
   -webkit-animation: bounceInDown 1s 0.5s forwards;
   animation: bounceInDown 1s 0.5s forwards; }
 
 .active .bouncein {
-  -webkit-animation: bounceIn 1s 0.5s forwards;
-  animation: bounceIn 1s 0.5s forwards; }
+  -webkit-animation: bounceIn 1s 0.8s forwards;
+  animation: bounceIn 1s 0.8s forwards; }
 
 .active .fadein {
   -webkit-animation: fadeIn 1s 1s forwards;
@@ -580,14 +581,15 @@ li {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
-.two .slide.slide3 .circle-top {
-  background-image: url(../images/bb2-1.png); }
-
-.two .slide.slide3 .circle-bottom {
-  background-image: url(../images/bb2-2.png);
-  width: 73%;
-  top: 15%;
-  left: 23%; }
+.two .slide.slide3 {
+  padding: 2% 0 0; }
+  .two .slide.slide3 .circle-top {
+    background-image: url(../images/bb2-1.png); }
+  .two .slide.slide3 .circle-bottom {
+    background-image: url(../images/bb2-2.png);
+    width: 73%;
+    top: 16%;
+    left: 23%; }
 
 .three .slide.slide3 .circle-top {
   background-image: url(../images/bb3-1.png); }
@@ -4478,17 +4480,27 @@ li {
 .eleven.ten .ten-18 {
   background-image: url(../images/high-22.png); }
 
-.last-section.active .up {
+.backhome {
+  right: 1%;
+  position: absolute;
+  font-size: 2rem;
+  top: 1%;
+  opacity: 0; }
+
+.active .backhome {
+  animation: fadeInDown 1s 1s forwards; }
+
+.last-section.active .up, .last-section.active .backhome {
   left: 200%; }
 
 .last-section {
   background: #2F4965;
   padding: 0; }
   .last-section .logo {
-    height: 15%;
+    height: 10%;
     background: url(../images/logo.png) center no-repeat;
     background-size: contain;
-    margin: 2% 0 0; }
+    margin: 1% 0 0; }
   .last-section .code {
     height: 31%;
     margin: 2% 5% 0; }
@@ -4502,9 +4514,11 @@ li {
           height: 30%;
           background: url(../images/last-04.png) center no-repeat;
           background-size: contain; }
-      .last-section .code .row .col-xs-5:nth-child(3) dd {
-        background: url(../images/last-05.png) center no-repeat;
-        background-size: contain; }
+      .last-section .code .row .col-xs-5:nth-child(3) {
+        margin: 0 0 0 12%; }
+        .last-section .code .row .col-xs-5:nth-child(3) dd {
+          background: url(../images/last-05.png) center no-repeat;
+          background-size: contain; }
   .last-section .zc {
     background: #F8B62B; }
     .last-section .zc a:before {
@@ -4519,7 +4533,7 @@ li {
       content: "续报常见问题"; }
   .last-section .btn {
     color: #fff;
-    margin: 5% 5% 0 5%;
+    margin: 4% 5% 0 5%;
     width: 90%; }
     .last-section .btn a {
       color: #fff;
@@ -4549,7 +4563,7 @@ li {
   .last-section .maker {
     margin: 0; }
   .last-section .maker:after {
-    content: "设计:海虹、思佳;制作:段勇"; }
+    content: "设计:海虹、刘思佳;  制作:段勇"; }
 
 .index {
   background: #1B2B39;
@@ -4618,11 +4632,11 @@ li {
           background: url(../images/index-08.png) center no-repeat;
           background-size: cover; }
         .index .i7 .i10 .row .i10-2 {
-          width: 48%;
+          width: 49%;
           height: 100%;
           background: url(../images/index-09.png) center no-repeat;
           background-size: cover;
-          margin: 0 0 0 2.5%; }
+          margin: 0 0 0 2%; }
     .index .i7 .i13, .index .i7 .i16 {
       float: right;
       margin: 1% 0 0 1%; }
