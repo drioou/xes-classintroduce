@@ -6,7 +6,8 @@ li {
   list-style-type: none; }
 
 .thumbnailimg {
-  z-index: 1; }
+  z-index: 3;
+  margin: -200% 0 0 0; }
 
 .content, .up, .thumbnailimg {
   position: absolute; }
@@ -17,7 +18,9 @@ li {
 .content {
   z-index: 10;
   width: 100%;
-  background: #fff; }
+  background: #fff;
+  max-width: 720px;
+  left: 50%; }
 
 .up {
   bottom: 5%;
@@ -91,8 +94,8 @@ li {
   animation: fadeInUp 1s 1.3s forwards; }
 
 .active .fadeintitle {
-  -webkit-animation: fadeInTitle 0.5s 1.3s forwards;
-  animation: fadeInTitle 0.5s 1.3s forwards; }
+  -webkit-animation: fadeInTitle 0.5s 0.5s forwards;
+  animation: fadeInTitle 0.5s 0.5s forwards; }
 
 .active .rotatein {
   -webkit-animation: rotateIn 1s 0.6s forwards;
@@ -169,14 +172,14 @@ li {
     font-size: 2.3rem;
     color: #17598A;
     font-weight: bolder;
-    margin: 1% 0 7%;
+    margin: 1% 0 5%;
     -webkit-animation: zoomOut 1s forwards;
     animation: zoomOut 1s forwards; }
     .fp-slides .slide h3 i {
       margin: 0 1% 0 0; }
   .fp-slides .slide .row {
     height: 85%;
-    padding: 0 10%; }
+    padding: 0 0 0 10%; }
     .fp-slides .slide .row .col-xs-1:nth-child(1), .fp-slides .slide .row .col-xs-4:nth-child(1), .fp-slides .slide .row .col-xs-7:nth-child(1) {
       -webkit-animation-delay: .1s;
       animation-delay: .1s; }
@@ -306,14 +309,14 @@ li {
   .fp-slides .slide .text-right {
     font-size: 2rem;
     font-weight: bolder;
-    margin: 0 0 7%; }
+    margin: 0 0 2%; }
     .fp-slides .slide .text-right a {
       color: #F08700;
       text-decoration: none; }
   .fp-slides .slide .row.new {
-    height: 20%; }
+    height: 27%; }
     .fp-slides .slide .row.new .col-xs-7 {
-      height: 60%; }
+      height: 63%; }
     .fp-slides .slide .row.new .col-xs-1 {
       height: 20%; }
     .fp-slides .slide .row.new .col-xs-4 {
@@ -327,7 +330,6 @@ li {
     .fp-slides .slide .row.new .col-xs-7:nth-child(6) {
       margin: 0; }
   .fp-slides .slide .tips {
-    height: 50%;
     padding: 0 5%;
     position: relative; }
     .fp-slides .slide .tips dl {
@@ -336,7 +338,8 @@ li {
       .fp-slides .slide .tips dl dt {
         color: #DA5658;
         font-weight: bolder;
-        font-size: 2rem; }
+        font-size: 2rem;
+        position: absolute; }
     .fp-slides .slide .tips i {
       position: absolute;
       right: 10%;
@@ -348,7 +351,7 @@ li {
   height: 10%;
   top: 0;
   left: 0;
-  background: RGB(53, 71, 91); }
+  background: #363E4E; }
   .fp-slidesNav.top ul {
     height: 100%; }
     .fp-slidesNav.top ul li {
@@ -538,7 +541,7 @@ li {
       background: url(../images/bb-16.png) center no-repeat;
       background-size: contain;
       position: absolute;
-      top: 13%;
+      top: 14.5%;
       left: 17%;
       -webkit-transform: translate3d(20%, 20%, 0);
       transform: translate3d(20%, 20%, 0);
@@ -553,6 +556,25 @@ li {
   .slide3.slide .slide3-text img {
     width: 40%;
     margin: 0 auto; }
+
+.slide4.slide {
+  background: url(../images/bb-29.png) center no-repeat;
+  background-size: cover; }
+  .slide4.slide .slide4-con {
+    margin: 5% 1%; }
+    .slide4.slide .slide4-con img {
+      margin: 5% 0 0; }
+  .slide4.slide h3 {
+    text-align: left;
+    margin: 0 5% 2%;
+    color: #DA5658; }
+
+.slide4-price img {
+  width: 40%; }
+
+.slide5.slide {
+  text-align: center;
+  padding: 15% 0 0; }
 
 .picscale.modal .modal-dialog, .picscale1.modal .modal-dialog {
   margin: 0; }
@@ -572,37 +594,52 @@ li {
   left: 23%; }
 
 .three .slide.slide3 .circle-top {
-  background-image: url(../images/bb6-1.png); }
+  background-image: url(../images/bb3-1.png); }
 
 .three .slide.slide3 .circle-bottom {
-  background-image: url(../images/bb7-2.png);
-  width: 80%;
-  top: 12.6%;
-  left: 16%; }
+  background-image: url(../images/bb3-2.png);
+  width: 73%;
+  top: 17%;
+  left: 24%; }
 
-.four .slide.slide3 .circle-top {
-  background-image: url(../images/bb6-1.png); }
+.four .slide.slide3 .slide-con {
+  height: 240px; }
+  .four .slide.slide3 .slide-con .circle-top {
+    background-image: url(../images/bb4-1.png);
+    height: 125px;
+    width: 90%;
+    left: 5%;
+    top: 0; }
+  .four .slide.slide3 .slide-con .circle-bottom {
+    background-image: url(../images/bb4-2.png);
+    height: 125px;
+    top: 40%;
+    left: 5%;
+    width: 90%; }
 
-.four .slide.slide3 .circle-bottom {
-  background-image: url(../images/bb7-2.png);
-  top: 12.4%;
-  left: 16%; }
+.five .slide.slide3 .slide-con {
+  height: 220px; }
 
 .five .slide.slide3 .circle-top {
-  background-image: url(../images/bb6-1.png); }
+  background-image: url(../images/bb5-1.png);
+  height: 125px;
+  width: 90%;
+  left: 5%;
+  top: 0; }
 
 .five .slide.slide3 .circle-bottom {
-  background-image: url(../images/bb7-2.png);
-  width: 73%;
-  top: 15%;
-  left: 23%; }
+  background-image: url(../images/bb5-2.png);
+  height: 125px;
+  top: 45%;
+  left: 5%;
+  width: 90%; }
 
 .six .slide.slide3 .circle-top {
   background-image: url(../images/bb6-1.png); }
 
 .six .slide.slide3 .circle-bottom {
   background-image: url(../images/bb6-2.png);
-  top: 12.4%;
+  top: 13.4%;
   left: 16%; }
 
 .seven .slide.slide3 .circle-top {
@@ -610,7 +647,7 @@ li {
 
 .seven .slide.slide3 .circle-bottom {
   background-image: url(../images/bb7-2.png);
-  top: 12.4%;
+  top: 13.4%;
   left: 16%; }
 
 .eight .slide.slide3 .circle-top {
@@ -670,24 +707,56 @@ li {
 .eleven .slide.slide3 .slide3-text p:before {
   content: "新生需要参加新生入学测试，通过测试可以到尖子班就读"; }
 
-.slide4.slide {
-  background: url(../images/bb-29.png) center no-repeat;
-  background-size: cover; }
-  .slide4.slide .slide4-con {
-    margin: 5% 1%; }
-    .slide4.slide .slide4-con img {
-      margin: 5% 0 0; }
-  .slide4.slide h3 {
-    text-align: left;
-    margin: 0 5% 2%;
-    color: #DA5658; }
+.blankbg .slide {
+  background-image: url(../images/bb-bg.png);
+  background-size: cover;
+  background-position: bottom; }
+  .blankbg .slide .globe ul {
+    background: url(../images/bb-s2-1.png) center no-repeat;
+    background-size: contain; }
 
-.slide4-price img {
-  width: 40%; }
+.blankbg .slide1 {
+  color: #fff; }
+  .blankbg .slide1 h3 {
+    color: #6867AE; }
+  .blankbg .slide1 .slide-title {
+    height: 7%;
+    background: url(../images/bb-s1-t.png) center no-repeat;
+    background-size: contain; }
 
-.slide5.slide {
-  text-align: center;
-  padding: 15% 0 0; }
+.blankbg .slide2 {
+  color: #fff; }
+  .blankbg .slide2 .slide-title {
+    height: 7%;
+    background: url(../images/bb-s3.png) center no-repeat;
+    background-size: contain; }
+  .blankbg .slide2 .slide2-title {
+    height: 23%;
+    background: url(../images/bb-s2-2.png) center no-repeat;
+    background-size: contain; }
+
+.blankbg .slide3 {
+  color: #fff; }
+  .blankbg .slide3 .slide-title {
+    height: 7%;
+    background: url(../images/bb-s4.png) center no-repeat;
+    background-size: contain; }
+
+.blankbg .slide4, .blankbg .slide5 {
+  color: #fff; }
+  .blankbg .slide4 .slide-title, .blankbg .slide5 .slide-title {
+    height: 7%;
+    background: url(../images/bb-s5.png) center no-repeat;
+    background-size: contain; }
+
+.blankbg .prepage {
+  color: #fff; }
+
+.four .blankbg .slide1 {
+  background: none;
+  color: #000; }
+  .four .blankbg .slide1 i {
+    color: #000; }
 
 .one .one-1 {
   padding: 10% 0 0;
@@ -745,14 +814,14 @@ li {
 .one .one-2 {
   background: url(../images/one-15.png) center no-repeat;
   background-size: contain;
-  padding: 40% 0 0; }
+  padding: 20% 0 0; }
   .one .one-2 .one-2-con {
     height: 50%;
     background: url(../images/one-14.png) center no-repeat;
     background-size: contain; }
   .one .one-2 h2 {
     text-align: center;
-    margin: 20% 0; }
+    margin: 10% 0; }
 
 .one .one-3 {
   background: url(../images/one-16.png) center no-repeat;
@@ -767,17 +836,18 @@ li {
       position: relative;
       opacity: 0; }
       .one .one-3 .one-3-con ul li {
-        height: 30%;
-        width: 30%;
+        height: 35%;
+        width: 35%;
         position: absolute; }
         .one .one-3 .one-3-con ul li:nth-child(1) {
           background: url(../images/one-24.png) center center no-repeat;
-          background-size: contain;
-          left: 40%; }
+          background-size: 100%;
+          left: 41%; }
         .one .one-3 .one-3-con ul li:nth-child(2) {
           background: url(../images/one-25.png) center center no-repeat;
           background-size: contain;
-          top: 15%; }
+          top: 12%;
+          left: 5%; }
         .one .one-3 .one-3-con ul li:nth-child(3) {
           background: url(../images/one-26.png) center center no-repeat;
           background-size: contain;
@@ -788,15 +858,15 @@ li {
           background-size: contain;
           top: 38%; }
   .one .one-3 .one-3-title {
-    height: 10%;
-    margin: 20% 0 0;
+    height: 18%;
+    margin: 10% 0 0;
     background: url(../images/one-23.png) center no-repeat;
     background-size: contain; }
 
 .one .one-4 {
   background: url(../images/one-17.png) center no-repeat;
   background-size: contain;
-  padding: 40% 0 0; }
+  padding: 30% 0 0; }
   .one .one-4 .one-4-con {
     height: 60%;
     background: url(../images/one-30.png) center no-repeat;
@@ -807,7 +877,7 @@ li {
       background-size: contain; }
   .one .one-4 .one-4-title {
     height: 15%;
-    margin: 20% 0 0;
+    margin: 10% 0 0;
     background: url(../images/one-29.png) center no-repeat;
     background-size: contain; }
 
@@ -818,7 +888,7 @@ li {
 .one .one-5 {
   background: url(../images/one-18.png) center no-repeat;
   background-size: contain;
-  padding: 40% 0 0; }
+  padding: 20% 0 0; }
   .one .one-5 .one-5-con {
     height: 60%;
     background: url(../images/one-32.png) center no-repeat;
@@ -834,7 +904,7 @@ li {
   background-size: contain;
   padding: 20% 0 0; }
   .one .one-6 .one-6-top {
-    height: 6%;
+    height: 7%;
     background: url(../images/one-34.png) center no-repeat;
     background-size: contain; }
   .one .one-6 .one-6-middle {
@@ -843,7 +913,7 @@ li {
     background: url(../images/one-35.png) center no-repeat;
     background-size: contain; }
   .one .one-6 .one-6-title {
-    height: 10%;
+    height: 14%;
     margin: 20% 0 0;
     background: url(../images/one-42.png) center no-repeat;
     background-size: contain; }
@@ -853,12 +923,11 @@ li {
   background-size: contain;
   padding: 10% 0 0; }
   .one .one-7 .one-7-top {
-    height: 6%;
+    height: 9%;
     background: url(../images/one-36.png) center no-repeat;
-    background-size: contain; }
+    background-size: 133%; }
   .one .one-7 .one-7-middle {
-    height: 70%;
-    margin: 5% 0 0;
+    height: 66%;
     background: url(../images/one-37.png) center no-repeat;
     background-size: contain; }
   .one .one-7 .one-7-title {
@@ -866,7 +935,7 @@ li {
     background: url(../images/one-38.png) center no-repeat;
     background-size: contain; }
   .one .one-7 p {
-    padding: 0 5%; }
+    padding: 0 1%; }
 
 .one .one-8 {
   background: url(../images/one-21.png) center no-repeat;
@@ -883,11 +952,17 @@ li {
     background-size: contain; }
   .one .one-8 .one-8-title {
     height: 5%;
-    margin: 5% 0 0;
+    margin: 7% 0 0;
     background: url(../images/one-41.png) center no-repeat;
     background-size: contain; }
   .one .one-8 p {
     padding: 5% 10% 0; }
+
+.two .slide1 {
+  background: none;
+  color: #000; }
+  .two .slide1 i {
+    color: #000; }
 
 .two .two-1 {
   background: url(../images/two-09.png) center;
@@ -900,8 +975,8 @@ li {
     text-align: center;
     height: 80%; }
     .two .two-1 .two-con .col-xs-6 {
-      width: 50%;
-      margin: 4% 0;
+      width: 48%;
+      margin: 4% 1%;
       opacity: 0; }
       .two .two-1 .two-con .col-xs-6:nth-child(1) {
         -webkit-animation-delay: 1.1s;
@@ -1019,7 +1094,7 @@ li {
       background: url(../images/two-26.png) no-repeat;
       background-size: contain; }
   .two .two-4 .two-bottom {
-    margin: 10% 0 0; }
+    margin: 20% 0 0; }
     .two .two-4 .two-bottom p {
       padding: 5% 0;
       color: #fff; }
@@ -1035,7 +1110,7 @@ li {
   .two .two-5 .two-con {
     margin: 0 10%; }
   .two .two-5 .two-bottom {
-    margin: 10%; }
+    margin: 15% 10% 0; }
 
 .two .two-6 {
   padding: 10% 5% 0;
@@ -1054,7 +1129,7 @@ li {
       background: url(../images/two-36.png) no-repeat;
       background-size: contain; }
   .two .two-6 .two-bottom {
-    margin: 10%; }
+    margin: 16% 10% 0; }
 
 .two .two-7 {
   padding: 10% 5% 0;
@@ -1064,7 +1139,7 @@ li {
   .two .two-7 .two-title {
     margin: 0 15%; }
   .two .two-7 .two-con {
-    margin: 8% 0 0; }
+    margin: 3% 0 4%; }
   .two .two-7 p {
     padding: 3%; }
 
@@ -1087,7 +1162,7 @@ li {
       background: url(../images/two-46.png) no-repeat;
       background-size: contain; }
   .two .two-8 .two-bottom {
-    margin: 0 2%; }
+    margin: 0 8%; }
   .two .two-8 p {
     padding: 2%; }
 
@@ -1346,6 +1421,12 @@ li {
 
 .three .active.three-8 li:nth-child(3) {
   animation: fadeInDown 1s 1s forwards; }
+
+.three .slide1 {
+  background: none;
+  color: #000; }
+  .three .slide1 i {
+    color: #000; }
 
 .three .three-1.section {
   background: url(../images/three-15.png);
@@ -1708,7 +1789,7 @@ li {
     background-repeat: no-repeat; }
 
 .three .section {
-  padding: 5%;
+  padding: 3% 0 0 0;
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -1948,7 +2029,7 @@ li {
       margin-top: 23%;
       height: 0;
       transition: all 3s 1.4s;
-      background-size: 20%; }
+      background-size: 19%; }
   .there-chinese .there-chinese-5.section .there-chinese-top .there-chinese-top-left {
     background-image: url(../images/there-chinese-38.png);
     width: 60%;
@@ -2159,7 +2240,7 @@ li {
 
 .section {
   background-repeat: no-repeat;
-  padding: 7% 2% 0 2%;
+  padding: 7% 0 0;
   background-position: center center;
   background-size: contain; }
   .section .there-chinese-title {
@@ -2221,6 +2302,415 @@ li {
       background-repeat: no-repeat;
       height: 23%;
       background-size: contain; }
+
+.four .four-1.section {
+  background-image: url(../images/four-33.png);
+  padding: 10% 0 0 0;
+  background-size: cover; }
+  .four .four-1.section .con-title {
+    height: 8%;
+    background-image: url(../images/four-08.png); }
+  .four .four-1.section .con {
+    height: 40%; }
+    .four .four-1.section .con ul {
+      position: relative;
+      z-index: 10; }
+      .four .four-1.section .con ul li:nth-child(1) {
+        background-image: url(../images/four-09.png);
+        left: 35%;
+        top: 100%;
+        transition: all 1s 0.8s; }
+      .four .four-1.section .con ul li:nth-child(2) {
+        background-image: url(../images/four-10.png);
+        left: 35%;
+        top: 100%;
+        transition: all 1s 1s; }
+      .four .four-1.section .con ul li:nth-child(3) {
+        background-image: url(../images/four-11.png);
+        right: 30%;
+        top: 100%;
+        transition: all 1s 1.2s; }
+      .four .four-1.section .con ul li:nth-child(4) {
+        background-image: url(../images/four-12.png);
+        right: 30%;
+        top: 100%;
+        transition: all 1s 1.4s; }
+      .four .four-1.section .con ul li {
+        width: 35%;
+        height: 35%;
+        background-image: url(../images/four-09.png); }
+  .four .four-1.section .con-robot {
+    height: 40%;
+    background: url(../images/four-13.png) no-repeat;
+    background-size: 70%;
+    background-position: bottom; }
+
+.four .active.four-1 .con-robot {
+  animation: moveRobot 30s infinite; }
+
+.four .active.four-1 .con ul li:nth-child(1) {
+  left: 0;
+  top: 100%; }
+
+.four .active.four-1 .con ul li:nth-child(2) {
+  left: 17%;
+  top: 50%; }
+
+.four .active.four-1 .con ul li:nth-child(3) {
+  right: 17%;
+  top: 50%; }
+
+.four .active.four-1 .con ul li:nth-child(4) {
+  right: 0;
+  top: 100%; }
+
+.four .four-2.section {
+  background: #F08D66;
+  padding: 12% 0 0; }
+  .four .four-2.section .con-title {
+    height: 19%;
+    background-image: url(../images/four-14.png); }
+  .four .four-2.section .con {
+    margin: 9% 0 0;
+    height: 53%;
+    background-image: url(../images/four-15.png); }
+
+.four .active.four-3.section .tree-1 {
+  animation: moveup 3s infinite; }
+
+.four .active.four-3.section .con ul li:nth-child(2) .tree {
+  background-size: 30%; }
+
+.four .active.four-3.section .con ul li:nth-child(3) .tree {
+  background-size: 40%; }
+
+.four .active.four-3.section .con ul li:nth-child(4) .tree {
+  background-size: 100%; }
+
+@keyframes moveup {
+  0% {
+    top: 65%;
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes moveup {
+  0% {
+    top: 65%;
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.four .four-3.section {
+  background-image: url(../images/four-34.png);
+  background-position: 0 8%;
+  padding: 10% 0 0; }
+  .four .four-3.section .con-title {
+    height: 17%;
+    background-image: url(../images/four-17.png); }
+  .four .four-3.section .con {
+    height: 65%;
+    position: relative; }
+    .four .four-3.section .con ul {
+      height: 100%; }
+      .four .four-3.section .con ul li:nth-child(1) .hand {
+        height: 70%;
+        background-image: url(../images/four-35.png);
+        position: relative; }
+      .four .four-3.section .con ul li:nth-child(1) .tree-1 {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        bottom: 0;
+        background: url(../images/four-36.png) no-repeat;
+        background-size: contain;
+        z-index: 10;
+        top: 72%;
+        left: 55%; }
+      .four .four-3.section .con ul li:nth-child(1) dl {
+        height: 30%;
+        background: url(../images/four-38.png) no-repeat;
+        background-size: cover;
+        background-position: top;
+        position: relative; }
+      .four .four-3.section .con ul li:nth-child(2) .tree {
+        height: 60%;
+        background-image: url(../images/four-39.png);
+        background-size: 0%;
+        transition: all 1s 0.6s; }
+      .four .four-3.section .con ul li:nth-child(2) dl {
+        height: 40%;
+        background: #F5A741; }
+      .four .four-3.section .con ul li:nth-child(3) .water {
+        height: 30%;
+        background-image: url(../images/four-42.png);
+        background-size: 100%; }
+      .four .four-3.section .con ul li:nth-child(3) .tree {
+        height: 20%;
+        background-image: url(../images/four-40.png);
+        background-size: 0%;
+        background-position: 11% 100%;
+        transition: all 1s 1s; }
+      .four .four-3.section .con ul li:nth-child(3) dl {
+        height: 50%;
+        background: #F08D66; }
+      .four .four-3.section .con ul li:nth-child(4) .tree {
+        height: 40%;
+        background-image: url(../images/four-41.png);
+        background-size: 0%;
+        transition: all 1s 1.5s; }
+      .four .four-3.section .con ul li:nth-child(4) dl {
+        height: 60%;
+        background: #E85E5E; }
+      .four .four-3.section .con ul li {
+        width: 25%;
+        height: 100%;
+        position: relative;
+        vertical-align: bottom; }
+        .four .four-3.section .con ul li .tree, .four .four-3.section .con ul li .hand, .four .four-3.section .con ul li .water {
+          background-size: contain;
+          background-position: bottom;
+          background-repeat: no-repeat; }
+        .four .four-3.section .con ul li dl {
+          color: #fff;
+          padding: 0 6%;
+          position: relative;
+          margin: -5% 0 0 0; }
+          .four .four-3.section .con ul li dl dt {
+            padding: 20% 0 10%; }
+  .four .four-3.section .con-bottom {
+    height: 22%;
+    background: #2B6A86;
+    margin: -5% 0 0 0;
+    padding: 5% 0 0 0;
+    color: #fff;
+    font-weight: bolder;
+    position: relative; }
+    .four .four-3.section .con-bottom p {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      margin: -20px 0 0 0;
+      text-align: center; }
+
+.four .four-4.section {
+  background: #F8E9A7;
+  padding: 15% 0  0; }
+  .four .four-4.section .con-title {
+    height: 8%;
+    background-image: url(../images/four-18.png); }
+  .four .four-4.section .con {
+    margin: 10% 0 0;
+    height: 59%;
+    background-image: url(../images/four-43.png); }
+    .four .four-4.section .con li:nth-child(1) {
+      background-image: url(../images/four-47.png);
+      right: 1%;
+      bottom: 22%; }
+    .four .four-4.section .con li:nth-child(2) {
+      background-image: url(../images/four-45.png);
+      left: 5%;
+      top: 0; }
+    .four .four-4.section .con li:nth-child(3) {
+      background-image: url(../images/four-46.png);
+      left: 5%;
+      bottom: 0; }
+    .four .four-4.section .con li:nth-child(4) {
+      background-image: url(../images/four-44.png);
+      right: 2%;
+      top: 0; }
+    .four .four-4.section .con li {
+      width: 31%;
+      height: 31%; }
+  .four .four-4.section p {
+    text-align: center;
+    padding: 6% 1% 0; }
+
+.four .four-5.section {
+  background: #DC5152;
+  padding: 19% 0 0; }
+  .four .four-5.section .con-title {
+    height: 14%;
+    background-image: url(../images/four-26.png); }
+  .four .four-5.section .con {
+    margin: 5% 0 0;
+    height: 60%;
+    background-image: url(../images/four-19.png); }
+
+.four .four-6.section {
+  background: #17A19E;
+  padding: 17% 0 0; }
+  .four .four-6.section .con-title {
+    height: 6%;
+    background-image: url(../images/four-27.png); }
+  .four .four-6.section .con {
+    height: 41%; }
+    .four .four-6.section .con ul {
+      height: 50%;
+      width: 75%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10; }
+      .four .four-6.section .con ul li:nth-child(1) {
+        background-image: url(../images/four-20.png);
+        left: 5%; }
+      .four .four-6.section .con ul li:nth-child(2) {
+        background-image: url(../images/four-21.png);
+        left: 38%; }
+      .four .four-6.section .con ul li:nth-child(3) {
+        background-image: url(../images/four-22.png);
+        left: 71%; }
+      .four .four-6.section .con ul li {
+        width: 25%;
+        height: 100%;
+        background-position: bottom; }
+    .four .four-6.section .con ul.bottom li:nth-child(1) {
+      background-image: url(../images/four-25.png);
+      left: 5%;
+      background-size: 100%;
+      width: 35%;
+      bottom: -28%; }
+    .four .four-6.section .con ul.bottom li:nth-child(2) {
+      background-image: url(../images/four-24.png);
+      left: 38%; }
+    .four .four-6.section .con ul.bottom li:nth-child(3) {
+      background-image: url(../images/four-23.png);
+      left: 71%; }
+    .four .four-6.section .con .border5 {
+      border-bottom: 5px solid #fff;
+      width: 75%;
+      margin: -2px auto 0;
+      position: relative; }
+  .four .four-6.section h5 {
+    margin: 10% 0 0 0;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    padding: 0 3%;
+    line-height: 2rem; }
+  .four .four-6.section p {
+    margin: 5% 0 0 0;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 0 3%; }
+
+.four .four-7.section {
+  background: #2B6A86;
+  padding: 17% 0 0; }
+  .four .four-7.section .con-title {
+    height: 6%;
+    background-image: url(../images/four-49.png); }
+  .four .four-7.section .con {
+    height: 67%;
+    position: relative; }
+    .four .four-7.section .con ul {
+      height: 60%; }
+      .four .four-7.section .con ul li:nth-child(1) {
+        background-image: url(../images/four-29.png);
+        left: 0;
+        top: 50%; }
+      .four .four-7.section .con ul li:nth-child(2) {
+        background-image: url(../images/four-30.png);
+        left: 10%;
+        top: 63%; }
+      .four .four-7.section .con ul li:nth-child(3) {
+        background-image: url(../images/four-31.png);
+        left: 60%;
+        top: 20%; }
+      .four .four-7.section .con ul li:nth-child(4) {
+        background-image: url(../images/four-32.png);
+        left: 65%;
+        top: 60%; }
+      .four .four-7.section .con ul li {
+        height: 27%;
+        width: 40%; }
+    .four .four-7.section .con .rocket {
+      height: 40%;
+      background: url(../images/four-28.png) center no-repeat;
+      background-position: bottom;
+      background-size: 80%;
+      position: relative; }
+    .four .four-7.section .con .rocket-fly {
+      height: 80%;
+      position: absolute;
+      width: 30%;
+      top: 5%;
+      left: 36%;
+      overflow: hidden; }
+      .four .four-7.section .con .rocket-fly img {
+        height: 100%;
+        margin: 100% 0 0 0;
+        transition: all 1s 1s; }
+  .four .four-7.section p {
+    color: #fff;
+    padding: 0 2%;
+    font-size: 1.3rem;
+    margin: 3% 0 0; }
+
+.four .active.four-7 li:nth-child(1) {
+  animation: moveRobot 30s infinite; }
+
+.four .active.four-7 li:nth-child(2) {
+  animation: moveRobot 35s infinite; }
+
+.four .active.four-7 li:nth-child(3) {
+  animation: moveRobot 40s infinite; }
+
+.four .active.four-7 li:nth-child(4) {
+  animation: moveRobot 25s infinite; }
+
+.four .active.four-7 .con .rocket-fly img {
+  margin: 0; }
+
+.four .section {
+  padding: 0; }
+  .four .section .con-title, .four .section .con, .four .section .con-p, .four .section .con-bottom {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+    .four .section .con-title ul, .four .section .con ul, .four .section .con-p ul, .four .section .con-bottom ul {
+      height: 100%;
+      position: relative;
+      padding: 0; }
+      .four .section .con-title ul li, .four .section .con ul li, .four .section .con-p ul li, .four .section .con-bottom ul li {
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: absolute;
+        background-size: contain;
+        background-position: center; }
+
+@keyframes moveRobot {
+  25% {
+    -webkit-transform: translate3d(7%, 0, 0);
+    transform: translate3d(7%, 0, 0); }
+  70% {
+    -webkit-transform: translate3d(-7%, 0, 0);
+    transform: translate3d(-7%, 0, 0); }
+  0, 100%, 50% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes moveRobot {
+  25% {
+    -webkit-transform: translate3d(7%, 0, 0);
+    transform: translate3d(7%, 0, 0); }
+  70% {
+    -webkit-transform: translate3d(-7%, 0, 0);
+    transform: translate3d(-7%, 0, 0); }
+  0, 100%, 50% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.five .slide1 {
+  background: none; }
 
 .five .five-1.section {
   background: #0E3A60;
@@ -2298,24 +2788,42 @@ li {
     bottom: 2%;
     position: absolute; }
 
-.five .active.section .con {
+.five .active.section.five-1 .con {
   height: 60%; }
-  .five .active.section .con li:nth-child(1) {
+  .five .active.section.five-1 .con li:nth-child(1) {
     animation: bounceInRight 1s 1.1s forwards; }
-  .five .active.section .con li:nth-child(2) {
+  .five .active.section.five-1 .con li:nth-child(2) {
     animation: bounceInRight 1s 1.2s forwards; }
-  .five .active.section .con li:nth-child(3) {
+  .five .active.section.five-1 .con li:nth-child(3) {
     animation: bounceInLeft 1s 1.3s forwards; }
-  .five .active.section .con li:nth-child(4) {
+  .five .active.section.five-1 .con li:nth-child(4) {
     animation: bounceInRight 1s 1.4s forwards; }
-  .five .active.section .con li:nth-child(5) {
+  .five .active.section.five-1 .con li:nth-child(5) {
     animation: bounceInDown 0.5s 0.7s forwards; }
-  .five .active.section .con li:nth-child(6) {
+  .five .active.section.five-1 .con li:nth-child(6) {
     animation: bounceInDown 0.5s 0.8s forwards; }
-  .five .active.section .con li:nth-child(7) {
+  .five .active.section.five-1 .con li:nth-child(7) {
     animation: bounceInDown 0.5s 0.9s forwards; }
-  .five .active.section .con li:nth-child(8) {
+  .five .active.section.five-1 .con li:nth-child(8) {
     animation: bounceInDown 0.5s 1s forwards; }
+
+.five .active.five-2.section .con-star {
+  animation: five-star 0.5s infinite linear; }
+
+.five .active.five-2.section .con .con-rocket .con-rocket-circle {
+  transform: translate3d(174%, 10%, 0); }
+
+@keyframes five-star {
+  0% {
+    background-image: url(../images/five-14.png); }
+  100% {
+    background-image: url(../images/five-15.png); } }
+
+@-webkit-keyframes five-star {
+  0% {
+    background-image: url(../images/five-14.png); }
+  100% {
+    background-image: url(../images/five-15.png); } }
 
 .five .five-2.section {
   background: #2587AF;
@@ -2329,7 +2837,8 @@ li {
   .five .five-2.section .con {
     margin: 10% 0 0 0;
     background-image: url("../images/five-13.png");
-    height: 50%; }
+    height: 50%;
+    position: relative; }
     .five .five-2.section .con .con-rocket {
       height: 100%;
       width: 58%;
@@ -2338,11 +2847,20 @@ li {
       background-size: contain;
       position: relative; }
       .five .five-2.section .con .con-rocket .con-rocket-circle {
-        width: 50%;
-        height: 50%;
+        width: 40%;
+        height: 40%;
         background: url(../images/five-11.png) center no-repeat;
         background-size: contain;
-        position: absolute; }
+        position: absolute;
+        transform: translate3d(-60%, 150%, 0);
+        transition: all 2s 0.3s; }
+    .five .five-2.section .con .con-star {
+      width: 100%;
+      height: 100%;
+      background: url(../images/five-14.png) center no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 0; }
 
 .five .five-3.section {
   background: #DB5E4E;
@@ -2358,35 +2876,43 @@ li {
     position: relative; }
     .five .five-3.section .con ul li:nth-child(1) {
       background-image: url("../images/five-18.png");
-      top: 11%;
-      left: -9%; }
+      left: -10%;
+      top: -6%;
+      transition: all 0.3s 2s; }
     .five .five-3.section .con ul li:nth-child(2) {
       background-image: url("../images/five-19.png");
-      top: 28%;
-      left: 49%; }
+      left: 10%;
+      top: -6%;
+      transition: all 0.5s 2s; }
     .five .five-3.section .con ul li:nth-child(3) {
       background-image: url("../images/five-20.png");
-      top: 50%;
-      left: 15%; }
+      left: 30%;
+      top: -6%;
+      transition: all 0.9s 2s; }
     .five .five-3.section .con ul li:nth-child(4) {
       background-image: url("../images/five-21.png");
-      top: 81%;
-      left: -2%; }
+      left: 50%;
+      top: -6%;
+      transition: all 1.5s 2s; }
     .five .five-3.section .con ul li:nth-child(5) {
+      opacity: 0;
       background-image: url("../images/five-24.png");
       left: 28%;
       top: 3%; }
     .five .five-3.section .con ul li:nth-child(6) {
+      opacity: 0;
       background-image: url("../images/five-25.png");
       top: 28%;
       left: 14%;
       height: 13%; }
     .five .five-3.section .con ul li:nth-child(7) {
+      opacity: 0;
       background-image: url("../images/five-26.png");
       top: 54%;
       height: 19%;
       left: 39%; }
     .five .five-3.section .con ul li:nth-child(8) {
+      opacity: 0;
       background-image: url("../images/five-27.png");
       top: 81%;
       left: 30%;
@@ -2426,6 +2952,62 @@ li {
       position: absolute;
       right: 61%;
       top: 96%; }
+
+.five .five-3.section.active ul li:nth-child(1) {
+  animation: shake 0.4s 5;
+  top: 8%;
+  left: -9%; }
+
+.five .five-3.section.active ul li:nth-child(2) {
+  animation: shake 0.4s 5;
+  top: 26%;
+  left: 49%; }
+
+.five .five-3.section.active ul li:nth-child(3) {
+  animation: shake 0.4s 5;
+  top: 50%;
+  left: 15%; }
+
+.five .five-3.section.active ul li:nth-child(4) {
+  animation: shake 0.4s 5;
+  top: 81%;
+  left: -2%; }
+
+.five .five-3.section.active ul li:nth-child(5) {
+  animation: fadeInRight 1s 0.4s forwards; }
+
+.five .five-3.section.active ul li:nth-child(6) {
+  animation: fadeInLeft 1s 0.6s forwards; }
+
+.five .five-3.section.active ul li:nth-child(7) {
+  animation: fadeInRight 1s 0.8s forwards; }
+
+.five .five-3.section.active ul li:nth-child(8) {
+  animation: fadeInRight 1s 1s forwards; }
+
+.five .five-4.section.active li:nth-child(1) {
+  animation: bounceInLeft 0.5s 0.5s forwards; }
+
+.five .five-4.section.active li:nth-child(2) {
+  animation: bounceInLeft 0.5s 0.6s forwards; }
+
+.five .five-4.section.active li:nth-child(3) {
+  animation: bounceInLeft 0.5s 0.7s forwards; }
+
+.five .five-4.section.active li:nth-child(4) {
+  animation: bounceInDown 0.5s 0.8s forwards; }
+
+.five .five-4.section.active li:nth-child(5) {
+  animation: bounceInDown 0.5s 0.9s forwards; }
+
+.five .five-4.section.active li:nth-child(6) {
+  animation: bounceInRight 0.5s 1s forwards; }
+
+.five .five-4.section.active li:nth-child(7) {
+  animation: bounceInRight 0.5s 1.1s forwards; }
+
+.five .five-4.section.active li:nth-child(8) {
+  animation: bounceInRight 0.5s 1.2s forwards; }
 
 .five .five-4.section {
   background: #32518B;
@@ -2479,7 +3061,8 @@ li {
         left: 67%; }
       .five .five-4.section .con ul li {
         width: 50%;
-        height: 6%; }
+        height: 6%;
+        opacity: 0; }
 
 .five .five-5.section {
   background: #EAB240; }
@@ -2504,6 +3087,12 @@ li {
       top: 50%;
       left: 10%; }
 
+.five .five-6.active .con-book {
+  animation: fadeInTitle 0.5s 0.4s forwards; }
+
+.five .five-6.active .con {
+  animation: fadeInTitle 0.5s 0.7s forwards; }
+
 .five .five-6.section {
   background: #E8854A;
   padding: 10% 0 0 0; }
@@ -2517,7 +3106,8 @@ li {
     background-size: 60%;
     background-position: 60%;
     position: relative;
-    z-index: 10; }
+    z-index: 10;
+    opacity: 0; }
     .five .five-6.section .con .con-pen {
       width: 40%;
       height: 40%;
@@ -2534,7 +3124,8 @@ li {
     background-size: contain;
     top: 13%;
     left: 0%;
-    z-index: 1; }
+    z-index: 1;
+    opacity: 0; }
   .five .five-6.section .con-bottom {
     height: 20%;
     background-image: url("../images/five-56.png"); }
@@ -2601,6 +3192,9 @@ li {
     margin: 10% 0 0 0;
     height: 15%;
     background-image: url("../images/five-62.png"); }
+
+.five .active.five-8 .con-cloud-2 {
+  animation: moveCloud 40s infinite; }
 
 .five .section .con-title, .five .section .con, .five .section .con-p, .five .section .con-bottom {
   background-repeat: no-repeat;
@@ -2921,6 +3515,12 @@ li {
   -webkit-animation: fadeInLeft 0.5s forwards;
   animation: fadeInLeft 0.5s forwards; }
 
+.seven .slide1 {
+  background: none;
+  color: #000; }
+  .seven .slide1 i {
+    color: #000; }
+
 .seven .seven-1 {
   background: url(../images/seven-13.png) center center no-repeat;
   background-size: cover; }
@@ -3217,6 +3817,9 @@ li {
   .seven .seven-1 .col-xs-6:nth-child(4) {
     -webkit-animation-delay: .9s;
     animation-delay: .9s; }
+
+.eight .section {
+  padding: 0; }
 
 .eight .commonbg {
   position: relative;
@@ -3621,6 +4224,23 @@ li {
 .active.section .nine-border {
   width: 100%; }
 
+.ten .last-section.section {
+  padding: 0; }
+
+.ten .slide4.slide .slide4-con {
+  margin: 0; }
+  .ten .slide4.slide .slide4-con img {
+    margin: 0 auto;
+    width: 90%; }
+
+.ten .slide4.slide .slide4-price {
+  font-size: 1.2rem; }
+  .ten .slide4.slide .slide4-price .text-info {
+    font-size: 1.2rem;
+    color: #E7BD23; }
+  .ten .slide4.slide .slide4-price .text-danger {
+    font-size: 1.2rem; }
+
 .ten .ten-15 {
   background: url(../images/high-15.png) center no-repeat;
   background-size: cover; }
@@ -3710,12 +4330,203 @@ li {
 .eleven.ten .ten-18 {
   background-image: url(../images/high-22.png); }
 
+.last-section.active .up {
+  left: 200%; }
+
+.last-section {
+  background: #2F4965;
+  padding: 0; }
+  .last-section .logo {
+    height: 15%;
+    background: url(../images/logo.png) center no-repeat;
+    background-size: contain;
+    margin: 2% 0 0; }
+  .last-section .code {
+    height: 31%;
+    margin: 2% 5% 0; }
+    .last-section .code .row {
+      margin: 0;
+      height: 100%; }
+      .last-section .code .row .col-xs-5 {
+        height: 100%;
+        padding: 0; }
+        .last-section .code .row .col-xs-5 dd {
+          height: 30%;
+          background: url(../images/last-04.png) center no-repeat;
+          background-size: contain; }
+      .last-section .code .row .col-xs-5:nth-child(3) dd {
+        background: url(../images/last-05.png) center no-repeat;
+        background-size: contain; }
+  .last-section .zc {
+    background: #F8B62B; }
+    .last-section .zc a:before {
+      content: "2016第十四届学而思综测"; }
+  .last-section .xc {
+    background: #1AAA8D; }
+    .last-section .xc a:before {
+      content: "2016寒春新生入学测试"; }
+  .last-section .xb {
+    background: #1BA8DA; }
+    .last-section .xb a:before {
+      content: "续报常见问题"; }
+  .last-section .btn {
+    color: #fff;
+    margin: 5% 5% 0 5%;
+    width: 90%; }
+    .last-section .btn a {
+      color: #fff;
+      font-weight: bolder;
+      letter-spacing: 0.2rem; }
+      .last-section .btn a i {
+        margin: 0 0 0 2%; }
+  .last-section .row.back {
+    margin: 5% 5% 0; }
+    .last-section .row.back .col-xs-5 {
+      padding: 0; }
+    .last-section .row.back a {
+      margin: 0;
+      width: 100%;
+      text-align: center; }
+    .last-section .row.back i {
+      margin: 0 5%; }
+  .last-section .copy, .last-section .maker {
+    text-align: center;
+    color: #fff;
+    margin: 5% 0 0;
+    font-size: 1.2rem; }
+    .last-section .copy i, .last-section .maker i {
+      margin: 0 2% 0 0; }
+  .last-section .copy:after {
+    content: "学而思培优上海市场部制作"; }
+  .last-section .maker {
+    margin: 0; }
+  .last-section .maker:after {
+    content: "设计:海虹、思佳;制作:段勇"; }
+
+.index {
+  background: #1B2B39;
+  padding: 3% 0 0 0; }
+  .index .logo {
+    height: 7%;
+    background: url(../images/logo.png) 90% 50% no-repeat;
+    background-size: contain; }
+  .index .title {
+    margin: 5% 0 0;
+    height: 11%;
+    background: url(../images/index-14.png) center no-repeat;
+    background-size: contain; }
+  .index .i3 {
+    height: 21%;
+    margin: 1% 0 0 0;
+    padding: 0 2%; }
+    .index .i3 .i4 {
+      height: 100%;
+      color: #fff;
+      background-color: #4D6079;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-image: url(../images/index-02.png); }
+    .index .i3 .i5, .index .i3 .i6 {
+      width: 24%;
+      margin: 0 0 0 1%;
+      height: 100%; }
+    .index .i3 .i5 {
+      background: url(../images/index-03.png) center no-repeat;
+      background-size: cover; }
+    .index .i3 .i6 {
+      background: url(../images/index-04.png) center no-repeat;
+      background-size: cover; }
+  .index .i7 {
+    height: 50%;
+    margin: 1% 2%  0; }
+    .index .i7 .i8, .index .i7 .i9 {
+      height: 52%; }
+    .index .i7 .i8 {
+      background: url(../images/index-05.png) center no-repeat;
+      background-size: cover; }
+    .index .i7 .i9 {
+      width: 24%;
+      margin: 0 0 0 1%; }
+      .index .i7 .i9 .i9-1 {
+        background: url(../images/index-06.png) center no-repeat;
+        background-size: cover;
+        height: 48%; }
+      .index .i7 .i9 .i9-2 {
+        background: url(../images/index-07.png) center no-repeat;
+        background-size: cover;
+        height: 48%;
+        margin: 5% 0 0 0; }
+    .index .i7 .i10 {
+      width: 49%;
+      margin-left: 1%;
+      height: 30%; }
+      .index .i7 .i10 .row {
+        height: 100%; }
+        .index .i7 .i10 .row .i10-1 {
+          width: 49%;
+          height: 100%;
+          background: url(../images/index-08.png) center no-repeat;
+          background-size: cover; }
+        .index .i7 .i10 .row .i10-2 {
+          width: 48%;
+          height: 100%;
+          background: url(../images/index-09.png) center no-repeat;
+          background-size: cover;
+          margin: 0 0 0 2.5%; }
+    .index .i7 .i13, .index .i7 .i16 {
+      float: right;
+      margin: 1% 0 0 1%; }
+    .index .i7 .i13 {
+      height: 53%;
+      width: 24%;
+      margin: 1% 0 0 1%; }
+      .index .i7 .i13 .i14 {
+        height: 48%;
+        background: url(../images/index-12.png) center no-repeat;
+        background-size: cover; }
+      .index .i7 .i13 .i15 {
+        height: 48%;
+        background: url(../images/index-13.png) center no-repeat;
+        background-size: cover;
+        margin: 5% 0 0 0; }
+    .index .i7 .i16 {
+      height: 52%;
+      width: 24%;
+      margin: 1% 0 0 1%;
+      background: url(../images/index-10.png) center no-repeat;
+      background-size: cover; }
+    .index .i7 .i19 {
+      height: 30%;
+      margin: 1% 0 0 0;
+      background: url(../images/index-11.png) center no-repeat;
+      background-size: cover; }
+  .index a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .index .btn {
+    position: relative;
+    width: 96%;
+    background: #6986A7;
+    margin: -20% 2% 0;
+    border-radius: 0; }
+    .index .btn a {
+      color: #fff;
+      font-weight: bolder;
+      letter-spacing: .5rem; }
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .row {
+  padding: 0;
+  margin: 0; }
+
 .vertical {
   width: 100%;
   height: 100%;
   position: absolute;
   background: #fff;
-  z-index: 10; }
+  z-index: 4; }
   .vertical i {
     font-size: 12rem;
     color: #000;

@@ -1,7 +1,12 @@
 
 window.onload = function() {
     $(".content").show();
+
+
 };
+
+$(".content").css("margin-left" ,"-"+$(".content").width()*.5+"px" );
+
 
 
 // meta================
@@ -81,7 +86,9 @@ $(document).ready(function() {
         onLeave: function(index, nextIndex, direction) {
             var leavingSection = $(this);
 
-
+             if (index == 1) {
+                $(".up").show();
+            }
 
             if (index == 2) {
                 $(".up").show();
@@ -90,6 +97,10 @@ $(document).ready(function() {
 
         },
         afterLoad: function(anchorLink, index) {
+
+            if (index == 1) {
+                $(".up").hide();
+            }
 
             if (index == 2) {
                 $(".up").hide();
@@ -121,7 +132,7 @@ $(document).ready(function() {
     $('#six-btn-3').click(function() {
         $.fn.fullpage.moveTo(6, 0);
     });
-    $('#backfirst').click(function() {
+    $('.backfirst').click(function() {
         $.fn.fullpage.moveTo(1, 0);
     });
     $('.mathcommon').click(function() {
@@ -134,6 +145,9 @@ $(document).ready(function() {
         $.fn.fullpage.moveTo(6, 0);
     });
     $('#threeenglish').click(function() {
+        $.fn.fullpage.moveTo(6, 0);
+    });
+    $('#fourenglish').click(function() {
         $.fn.fullpage.moveTo(6, 0);
     });
     $('#sixenglish').click(function() {
@@ -181,12 +195,15 @@ $("#onenewtime").html("12月7日一年级数学9:00  <br/>一年级英语9:30");
 // 二年级=============================================================
 $("#twotime").html("11月30日二年级数学10:00 <br/> 二年级英语10:30");
 $("#twonewtime").html("11月7日二年级数学10:00  <br/>二年级英语10:30");
+
 $("#there-time").html("11月30日三年级数学11:00  <br/>三年级英语11:30");
-$("#there-new-time").html("11月30日三年级数学9:00 <br/> 三年级英语9:30");
-$("#fourtime").html("11月30日四年级数学9:00 <br/> 一年级英语9:30");
-$("#fournewtime").html("11月30日四年级数学9:00 <br/> 一年级英语9:30");
-$("#fivetime").html("11月30日五年级数学9:00 <br/> 一年级英语9:30");
-$("#fivenewtime").html("11月30日五年级数学9:00 <br/> 一年级英语9:30");
+$("#there-new-time").html("12月7日三年级数学9:00 <br />英语9:30 <br />10月26日三年级语文");
+
+$("#four-time").html("11月30日四年级数学13:00 <br/> 四年级英语13:30");
+$("#four-new-time").html("12月7日四年级数学10:00 <br/> 四年级英语10:30");
+
+$("#five-time").html("11月30日五年级数学14:00 <br/> 五年级英语14:30");
+$("#five-new-time").html("12月7日五年级数学11:00 <br/> 五年级英语11:30");
 // 六年级======================================================================
 $("#sixtime").html("12月1日六年级数学9:00 <br/> 六年级英语9:30");
 $("#sixnewtime").html("12月7日六年级数学13:00 <br/> 六年级英语13:30");
