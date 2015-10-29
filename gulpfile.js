@@ -108,7 +108,7 @@
 
 
 // gulp.task('delRevCss', function(){
-//     del([cssRevSrc,cssRevSrc.replace('src/', 'dist/')]);    
+//     del([cssRevSrc,cssRevSrc.replace('src/', 'dist/')]);
 // })
 
 // //意外出错？清除缓存文件
@@ -191,7 +191,7 @@
 //             cascade: true, //是否美化属性值 默认：true 像这样：
 //             //-webkit-transform: rotate(45deg);
 //             //        transform: rotate(45deg);
-//             remove: true //是否去掉不必要的前缀 默认：true 
+//             remove: true //是否去掉不必要的前缀 默认：true
 //         }))
 //         .pipe(rename({
 //             suffix: '.min'
@@ -245,7 +245,7 @@
 // gulp.task('minify', function() {
 //     return gulp.src('./src/rev/index.shtml')
 //         .pipe(htmlmin({
-//             collapseWhitespace: true, //压缩html 
+//             collapseWhitespace: true, //压缩html
 //             removeComments: true, //清除注释
 //         }))
 //         .pipe(rename("index.html"))
@@ -386,9 +386,9 @@
 // // /**
 // //  * image压缩
 // //  */
-// // gulp.task('buildImg', function() {  
+// // gulp.task('buildImg', function() {
 // //   return gulp.src( config.imageUrl )
-// //     .pipe(imagemin({ 
+// //     .pipe(imagemin({
 // //         distgressive: true,
 // //         progressive: true,
 // //         interlaced: true,
@@ -403,7 +403,7 @@
 // // /**
 // //  * html
 // //  */
-// // gulp.task('buildHtml', function() {  
+// // gulp.task('buildHtml', function() {
 // //   return gulp.src( config.htmlUrl )
 // //     .pipe(gulp.dest('src'));
 // // });
@@ -412,26 +412,26 @@
 // //   return gulp.src(['src/rev/img/*.json', 'src/**/*'])
 // //     .pipe(revCollector())
 // //     .pipe(gulp.dest('src'))
-// //     .pipe(reload({ stream:true }));  
+// //     .pipe(reload({ stream:true }));
 // // });
 
 // // gulp.task('rcss', ['buildCss'], function(){
 // //   return gulp.src(['src/rev/css/*.json', 'src/**/*'])
 // //     .pipe(revCollector())
 // //     .pipe(gulp.dest('src'))
-// //     .pipe(reload({ stream:true }));  
+// //     .pipe(reload({ stream:true }));
 // // });
 
 // // gulp.task('rjs', ['buildJs'], function(){
 // //   return gulp.src(['src/rev/js/*.json', 'src/**/*'])
 // //     .pipe(revCollector())
 // //     .pipe(gulp.dest('src'))
-// //     .pipe(reload({ stream:true }));  
+// //     .pipe(reload({ stream:true }));
 // // });
 
 // // /**
 // //  * browserSync服务监听
-// //  * 
+// //  *
 // //  */
 // // gulp.task('serve',['rimg', 'rjs', 'rcss', 'buildHtml'], function() {
 // //   browserSync({
@@ -590,7 +590,7 @@ gulp.task('minimg', function() {
 gulp.task('minify', function() {
     return gulp.src('index.shtml')
         .pipe(htmlmin({
-            collapseWhitespace: true, //压缩html 
+            collapseWhitespace: true, //压缩html
             removeComments: true, //清除注释
         }))
 
@@ -630,9 +630,8 @@ gulp.task('scripts', function() {
             suffix: '.min'
         }))
         .pipe(size())
-        // .pipe(uglify().on('error', gutil.log))
-
-    .pipe(gulp.dest('dist/scripts'));
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/scripts'));
     // .pipe(notify({
     //     message: 'JS is OK!'
     // }));
@@ -640,7 +639,7 @@ gulp.task('scripts', function() {
 
 /* Sass task */
 gulp.task('sass', function() {
-    gulp.src('src/sass/main.scss')
+    gulp.src('src/sass/*.scss')
         // .on('error', function (err) {
         //        console.error('Error!', err.message)
         //    })
@@ -659,7 +658,7 @@ gulp.task('css', function() {
             cascade: true, //是否美化属性值 默认：true 像这样：
             //-webkit-transform: rotate(45deg);
             //        transform: rotate(45deg);
-            remove: true //是否去掉不必要的前缀 默认：true 
+            remove: true //是否去掉不必要的前缀 默认：true
         }))
         .pipe(rename({
             suffix: '.min'
