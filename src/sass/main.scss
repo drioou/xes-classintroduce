@@ -8,10 +8,7 @@ li{list-style-type:none}
 .up{bottom:5%;left:50%;margin:0 0 0 -10px;opacity:0;
     &.up-white{color:#fff}
 }
-.active{
-    .up{
-        animation:up 4s 3s infinite;
-    }
+.active{.up{animation:up 4s 3s infinite;}
 }
 .fp-slides,.up.up-blank{color:#000}
 .section{position:relative;overflow:hidden}
@@ -217,8 +214,7 @@ li{list-style-type:none}
 .active.slide3.slide{.circle-bottom,.circle-top{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 }
 // 各年级班次设置========================================================================
-.two .slide.slide3{
-    padding:2% 0 0;
+.two .slide.slide3{padding:2% 0 0;
     .circle-top{background-image:url(../images/bb2-1.png)}
     .circle-bottom{background-image:url(../images/bb2-2.png);width:73%;top:16%;left:23%}
 }
@@ -260,9 +256,11 @@ li{list-style-type:none}
         }
     }
 }
-.ten .slide.slide3{.circle-top{background-image:url(../images/bb10-1.png);width:100%;}
+.ten .slide.slide3{
+    .slide-title{background: url(../images/ten-20.png) center no-repeat;background-size:contain;height:4%;margin:0 0 7% 0;}
+    .circle-top{background-image:url(../images/bb10-1.png);width:100%;}
     .circle-bottom{background-image:none;top:12.4%;left:16%}
-    .slide3-text{p:before{content:"新生需要参加新生入学测试，通过测试可以到尖子班就读。想到清北交复班主读的同学需要参加学而思第十四届综合素质测评。"}
+    .slide3-text{p:before{content:"新生需要参加新生入学测试，通过测试可以到尖子班就读。想到清北交复班就读的同学需要参加学而思第十四届综合素质测评。"}
     }
 }
 .eleven .slide.slide3{.circle-top{background-image:url(../images/bb11-1.png);width:100%;}
@@ -490,11 +488,6 @@ li{list-style-type:none}
         .cloud-1{animation:moveCloud 10s infinite;}
         .con{animation:fadeIn .4s forwards;
             ul{animation:fadeInDown .3s .2s forwards;
-                // li:nth-child(1){left:20%;top:10%;}
-                // li:nth-child(2){left:50%;top:10%;}
-                // li:nth-child(3){top:59%;left:16%;}
-                // li:nth-child(4){top:59%;left:38%;}
-                // li:nth-child(5){top:59%;left:60%;}
                 li:nth-child(1){animation:three-li-1 2s 1s forwards linear;}
                 li:nth-child(2){animation:three-li-2 2s 1s forwards linear;}
                 li:nth-child(3){animation:three-li-3 2s 1s forwards linear;}
@@ -546,7 +539,7 @@ li{list-style-type:none}
                 li:nth-child(3){background-image:url(../images/three-18.png);}
                 li:nth-child(4){background-image:url(../images/three-19.png);}
                 li:nth-child(5){background-image:url(../images/three-20.png);}
-                li{display:inline-block;width:30%;height:30%;position:absolute;background-size:contain;background-repeat:no-repeat;opacity:0;
+                li{display:inline-block;width:17%;height:30%;position:absolute;background-size:contain;background-repeat:no-repeat;opacity:0;
                     a{width:100%;height:100%;display:block;}
                 }
             }
@@ -594,7 +587,7 @@ li{list-style-type:none}
         }
         .con-bottom{margin:25% 0 0 0;height:5%;background-image:url(../images/three-35.png);}
         .con-p{text-indent:2em;padding:5%;font-weight:bolder;
-            &:before{content:"连贯学习是孩子成绩提升的关键，7天密集学习，成就优秀学员。"}
+            &:before{content:"连贯学习是孩子成绩提升的关键，寒假7天密集学习，成就优秀学员。"}
         }
     }
     .section.three-5{background-color:#EDC21E;padding:20% 0 0 0;
@@ -982,14 +975,16 @@ li{list-style-type:none}
     0,100%,50%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 }
 // 五年级样式==================================================================
-.five{.slide1{background:none;color:#000;i{color:#000;}}
+.five{.slide1{background:none;color:#000;
+        i{color:#000;}
+    }
     .five-1.section{background:#0E3A60;padding:15% 2% 0;
         .con-title{height:6%;background-image:url(../images/five-65.png)}
         .con-robot{position:absolute;width:20%;height:20%;background:url(../images/five-67.png) center no-repeat;background-size:contain;right:5%;}
         .con{height:0;background-image:url(../images/five-76.png);background-size:70%;background-position:right;position:relative;transition:all .5s .5s;
             ul{margin:20% 0 0 0;
                 li:nth-child(1){background-image:url("../images/five-72.png");height:9%;top:5%;left:26%;}
-                li:nth-child(2){background-image:url("../images/five-73.png");top:24%;left:51%;height:9%;}
+                li:nth-child(2){background-image:url("../images/five-73.png");top:24%;left:51%;height:9%;z-index:10;}
                 li:nth-child(3){background-image:url("../images/five-74.png");top:58%;height:9%;left:-8%;}
                 li:nth-child(4){background-image:url("../images/five-75.png");top:84%;left:36%;height:12%;}
                 li:nth-child(5){background-image:url("../images/five-68.png");top:37%;left:-9%;}
@@ -1403,8 +1398,8 @@ li{list-style-type:none}
 }
 .nine{.active.slide3{.slide-con{ul{li:nth-child(1){left:70%;top:0%;}
                 li:nth-child(2){left:90%;top:50%;}
-                li:nth-child(3){left:10%;top:10%;}
-                li:nth-child(4){left:10%;top:80%;width:40%;}
+                li:nth-child(3){left:0;top:10%;}
+                li:nth-child(4){left:0;top:80%;width:40%;}
                 li:nth-child(5){left:70%;top:90%;}
             }
         }
@@ -1427,21 +1422,17 @@ li{list-style-type:none}
             }
         }
     }
-    .active.slide3.slide3-1{.slide-con{
-            margin:5% 3% 0;
-            ul{li:nth-child(1){top:20%;left:-5%;}
+    .active.slide3.slide3-1{.slide-con{margin:5% auto 0;
+            ul{li:nth-child(1){top:20%;left:-10%;}
                 li:nth-child(2){width:16%;top:50%;left:-3%;height:30%;}
                 li:nth-child(3){left:8%;top:80%;}
                 li:nth-child(4){left:90%;top:40%;width:40%;}
                 li:nth-child(5){left:87%;top:0;width:16%;height:30%;}
             }
-
         }
-        .slide3-text{
-                margin:8% 0 0 0;
-            }
+        .slide3-text{margin:8% 0 0 0;}
     }
-    .slide{padding:3% 0 0 ;}
+    .slide{padding:3% 0 0;}
     .slide3.slide3-1{.slide-title{background-image:url(../images/bb-9-33.png);}
         .slide-con{background:none;
             ul{li:nth-child(1){background-image:url(../images/bb-9-35.png);}
@@ -1455,16 +1446,11 @@ li{list-style-type:none}
         }
     }
     .slide3.slide3-2{.slide-title{background-image:url(../images/bb-9-32.png);}
-        .slide-con{
-            background:none;
-            .top{
-                height:50%;background-image:url(../images/bb-9-25.png);background-size:contain;background-repeat:no-repeat;background-position:center;
-            }
-            .bottom{
-                height:50%;background-image:url(../images/bb-9-26.png);background-size:contain;background-repeat:no-repeat;background-position:center;
-            }
+        .slide-con{background:none;
+            .top{height:50%;background-image:url(../images/bb-9-25.png);background-size:contain;background-repeat:no-repeat;background-position:center;}
+            .bottom{height:50%;background-image:url(../images/bb-9-26.png);background-size:contain;background-repeat:no-repeat;background-position:center;}
         }
-}
+    }
     .nine-1.section{background-color:#7CADCD;background-repeat:repeat-x;background-size:100%;background-position:bottom;-webkit-animation:movebg 10s infinite linear;animation:movebg 10s infinite linear;padding:10% 0 0;position:relative;
         .nine-title{width:50%;margin:0 auto 10%}
         .nine-con{width:45%;margin:0 auto;
@@ -1589,7 +1575,7 @@ li{list-style-type:none}
         .con-pic{width:90%;margin:0 auto;-webkit-transform:scale(5);transform:scale(5);transition:all 1s 1s;
             img{margin:0 auto}
         }
-        .con-text{width:80%;margin:18% auto 0}
+        .con-text{width:80%;margin:10% auto 0}
     }
     .active.section .con-pic{-webkit-transform:scale(1);transform:scale(1)}
     .section:nth-child(2){padding:0}
@@ -1641,32 +1627,19 @@ li{list-style-type:none}
 
 // 各年级最后一页
 
-.backhome{
-        right:1%;position: absolute;font-size: 2rem;top:1%;
-        opacity: 0;
-    }
-.active{
-    .backhome{
-        animation:fadeInDown 1s 1s forwards;
-    }
+.backhome{right:1%;position:absolute;font-size:2rem;top:1%;opacity:0;}
+.active{.backhome{animation:fadeInDown 1s 1s forwards;}
 }
-
-.last-section.active{
-    .up,.backhome{left:200%;}
-
+.last-section.active{.up,.backhome{left:200%;}
 }
-.last-section{
-
-    background:#2F4965;padding:0;
-
-    .logo{height:10%;background:url(../images/logo.png) center no-repeat;background-size:contain;margin:1% 0 0;}
+.last-section{background:#2F4965;padding:0;
+    .logo{height:10%;background:url(../images/logo.png) center no-repeat;background-size:contain;margin:0;}
     .code{height:31%;margin:2% 5% 0;
         .row{margin:0;height:100%;
             .col-xs-5{height:100%;padding:0;
                 dd{height:30%;background:url(../images/last-04.png) center no-repeat;background-size:contain;}
             }
-            .col-xs-5:nth-child(3){
-                margin:0 0 0 12%;
+            .col-xs-5:nth-child(3){margin:0 0 0 12%;
                 dd{background:url(../images/last-05.png) center no-repeat;background-size:contain;}
             }
         }
@@ -1690,7 +1663,7 @@ li{list-style-type:none}
         a{margin:0;width:100%;text-align:center;}
         i{margin:0 5%;}
     }
-    .copy,.maker{text-align:center;color:#fff;margin:5% 0 0;font-size:1.2rem;
+    .copy,.maker{text-align:center;color:#fff;margin:2% 0 0;font-size:1.2rem;
         i{margin:0 2% 0 0;}
     }
     .copy:after{content:"学而思培优上海市场部制作";}
@@ -1698,7 +1671,7 @@ li{list-style-type:none}
     .maker:after{content:"设计:海虹、刘思佳;  制作:段勇";}
 }
 // 终于到主页了=================
-.index{background:#1B2B39;padding:3% 0 0 0;
+.index{overflow:hidden;background:#1B2B39;padding:3% 0 0 0;
     .logo{height:7%;background:url(../images/logo.png) 90% 50% no-repeat;background-size:contain;}
     .title{margin:5% 0 0;height:11%;background:url(../images/index-14.png) center no-repeat;background-size:contain;}
     .i3{height:21%;margin:1% 0 0 0;padding:0 2%;

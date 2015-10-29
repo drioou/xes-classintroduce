@@ -681,6 +681,12 @@ li {
 .nine .fp-slidesNav.top ul li:nth-child(7) a:after {
   content: "课程介绍"; }
 
+.ten .slide.slide3 .slide-title {
+  background: url(../images/ten-20.png) center no-repeat;
+  background-size: contain;
+  height: 4%;
+  margin: 0 0 7% 0; }
+
 .ten .slide.slide3 .circle-top {
   background-image: url(../images/bb10-1.png);
   width: 100%; }
@@ -691,7 +697,7 @@ li {
   left: 16%; }
 
 .ten .slide.slide3 .slide3-text p:before {
-  content: "新生需要参加新生入学测试，通过测试可以到尖子班就读。想到清北交复班主读的同学需要参加学而思第十四届综合素质测评。"; }
+  content: "新生需要参加新生入学测试，通过测试可以到尖子班就读。想到清北交复班就读的同学需要参加学而思第十四届综合素质测评。"; }
 
 .eleven .slide.slide3 .circle-top {
   background-image: url(../images/bb11-1.png);
@@ -1477,7 +1483,7 @@ li {
         background-image: url(../images/three-20.png); }
       .three .three-1.section .con ul li {
         display: inline-block;
-        width: 30%;
+        width: 17%;
         height: 30%;
         position: absolute;
         background-size: contain;
@@ -1638,7 +1644,7 @@ li {
     padding: 5%;
     font-weight: bolder; }
     .three .section.three-4 .con-p:before {
-      content: "连贯学习是孩子成绩提升的关键，7天密集学习，成就优秀学员。"; }
+      content: "连贯学习是孩子成绩提升的关键，寒假7天密集学习，成就优秀学员。"; }
 
 .three .section.three-5 {
   background-color: #EDC21E;
@@ -2744,7 +2750,8 @@ li {
         background-image: url("../images/five-73.png");
         top: 24%;
         left: 51%;
-        height: 9%; }
+        height: 9%;
+        z-index: 10; }
       .five .five-1.section .con ul li:nth-child(3) {
         background-image: url("../images/five-74.png");
         top: 58%;
@@ -3972,11 +3979,11 @@ li {
   top: 50%; }
 
 .nine .active.slide3 .slide-con ul li:nth-child(3) {
-  left: 10%;
+  left: 0;
   top: 10%; }
 
 .nine .active.slide3 .slide-con ul li:nth-child(4) {
-  left: 10%;
+  left: 0;
   top: 80%;
   width: 40%; }
 
@@ -4043,10 +4050,10 @@ li {
         font-size: 1rem; }
 
 .nine .active.slide3.slide3-1 .slide-con {
-  margin: 5% 3% 0; }
+  margin: 5% auto 0; }
   .nine .active.slide3.slide3-1 .slide-con ul li:nth-child(1) {
     top: 20%;
-    left: -5%; }
+    left: -10%; }
   .nine .active.slide3.slide3-1 .slide-con ul li:nth-child(2) {
     width: 16%;
     top: 50%;
@@ -4456,7 +4463,7 @@ li {
       margin: 0 auto; }
   .ten .section .con-text {
     width: 80%;
-    margin: 18% auto 0; }
+    margin: 10% auto 0; }
 
 .ten .active.section .con-pic {
   -webkit-transform: scale(1);
@@ -4500,7 +4507,7 @@ li {
     height: 10%;
     background: url(../images/logo.png) center no-repeat;
     background-size: contain;
-    margin: 1% 0 0; }
+    margin: 0; }
   .last-section .code {
     height: 31%;
     margin: 2% 5% 0; }
@@ -4554,7 +4561,7 @@ li {
   .last-section .copy, .last-section .maker {
     text-align: center;
     color: #fff;
-    margin: 5% 0 0;
+    margin: 2% 0 0;
     font-size: 1.2rem; }
     .last-section .copy i, .last-section .maker i {
       margin: 0 2% 0 0; }
@@ -4566,6 +4573,7 @@ li {
     content: "设计:海虹、刘思佳;  制作:段勇"; }
 
 .index {
+  overflow: hidden;
   background: #1B2B39;
   padding: 3% 0 0 0; }
   .index .logo {

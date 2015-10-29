@@ -39,9 +39,10 @@ changeLastPage();
 function addlink() {
 
     var link = {
-        "one": "http://v.qq.com/page/v/n/f/v0170lj6knf.html",
+        "one": "http://ssh.speiyou.com/e/20151027/562f2c6d82388.shtml",
         "two": "http://ssh.speiyou.com/e/20151027/562f4380953d6.shtml",
         "three":" http://ssh.speiyou.com/e/20151027/562f4c38bf3fa.shtml ",
+        "threechinese":" http://v.qq.com/page/v/n/f/v0170lj6knf.html ",
         "four":" http://ssh.speiyou.com/e/20151027/562f4f636f160.shtml ",
         "five":" http://ssh.speiyou.com/e/20151027/562f51cadd708.shtml ",
         "six":" http://ssh.speiyou.com/e/20151028/56306da671b15.shtml ",
@@ -61,6 +62,7 @@ function addlink() {
     $(".one .one-1 ul li:last-child a").attr("href", link.one).css( txt );
     $(".two .two-1 .col-xs-6:last-child a").attr("href", link.two).css( txt );
     $(".three .three-1 ul li:nth-child(2) a").attr("href", link.three).css( txt );
+    $(".there-chinese .there-chinese-5 .there-chinese-top-left a").attr("href", link.threechinese).css( txt );
     $(".four .four-1 ul li:last-child a").attr("href", link.four).css( txt );
     $(".five .five-1 ul li:nth-child(4) a").attr("href", link.five).css( txt );
     $(".six .six-1 ul li:nth-child(4) a").attr("href", link.six).css( txt );
@@ -222,6 +224,9 @@ $(document).ready(function() {
     $('#fourenglish').click(function() {
         $.fn.fullpage.moveTo(6, 0);
     });
+     $('#fiveenglish').click(function() {
+        $.fn.fullpage.moveTo(6, 0);
+    });
     $('#sixenglish').click(function() {
         $.fn.fullpage.moveTo(7, 0);
     });
@@ -266,7 +271,7 @@ $("#onetime").html("11月30日一年级数学9:00  <br/>一年级英语9:30");
 $("#onenewtime").html("12月7日一年级数学9:00  <br/>一年级英语9:30");
 // 二年级=============================================================
 $("#twotime").html("11月30日二年级数学10:00 <br/> 二年级英语10:30");
-$("#twonewtime").html("11月7日二年级数学10:00  <br/>二年级英语10:30");
+$("#twonewtime").html("12月7日二年级数学10:00  <br/>二年级英语10:30");
 
 $("#there-time").html("11月30日三年级数学11:00  <br/>三年级英语11:30");
 $("#there-new-time").html("12月7日三年级数学9:00 <br />英语9:30 <br />10月26日三年级语文");
