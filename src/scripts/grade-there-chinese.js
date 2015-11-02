@@ -154,5 +154,8 @@ $(document).ready(function() {
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5
 });
+     $('.backfirst').click(function() {
+        $.fn.fullpage.moveTo(1, 0);
+    });
 });
 

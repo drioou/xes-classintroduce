@@ -1,3 +1,5 @@
+.abd{font-weight: bolder;}
+.abd{color:#fff;}
 @charset "UTF-8";
 .content,body,html{height:100%}
 li{list-style-type:none}
@@ -1572,7 +1574,7 @@ li{list-style-type:none}
 .vertical{i,p{position:absolute;left:50%;top:50%}
 }
 .ten{.section{padding:20% 0 0;
-        .con-pic{width:90%;margin:0 auto;-webkit-transform:scale(5);transform:scale(5);transition:all 1s 1s;
+        .con-pic{width:75%;margin:0 auto;-webkit-transform:scale(5);transform:scale(5);transition:all 1s 1s;
             img{margin:0 auto}
         }
         .con-text{width:80%;margin:10% auto 0}
@@ -1590,38 +1592,6 @@ li{list-style-type:none}
     .ten-18{background-image:url(../images/high-22.png)}
 }
 // 高二年级样式结束=======================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1672,7 +1642,7 @@ li{list-style-type:none}
 }
 // 终于到主页了=================
 .index{overflow:hidden;background:#1B2B39;padding:3% 0 0 0;
-    .logo{height:7%;background:url(../images/logo.png) 90% 50% no-repeat;background-size:contain;}
+    .logo{height:10%;background:url(../images/logo.png) 90% 50% no-repeat;background-size:contain;}
     .title{margin:5% 0 0;height:11%;background:url(../images/index-14.png) center no-repeat;background-size:contain;}
     .i3{height:21%;margin:1% 0 0 0;padding:0 2%;
         .i4{height:100%;color:#fff;background-color:#4D6079;background-position:center;background-repeat:no-repeat;-webkit-background-size:cover;background-size:cover;background-image:url(../images/index-02.png);}

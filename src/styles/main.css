@@ -1,4 +1,10 @@
 @charset "UTF-8";
+.abd {
+  font-weight: bolder; }
+
+.abd {
+  color: #fff; }
+
 .content, body, html {
   height: 100%; }
 
@@ -4454,7 +4460,7 @@ li {
 .ten .section {
   padding: 20% 0 0; }
   .ten .section .con-pic {
-    width: 90%;
+    width: 75%;
     margin: 0 auto;
     -webkit-transform: scale(5);
     transform: scale(5);
@@ -4577,7 +4583,7 @@ li {
   background: #1B2B39;
   padding: 3% 0 0 0; }
   .index .logo {
-    height: 7%;
+    height: 10%;
     background: url(../images/logo.png) 90% 50% no-repeat;
     background-size: contain; }
   .index .title {
