@@ -15,44 +15,46 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var cache = require('gulp-cache');
 var size = require('gulp-size');
-var rev = require("gulp-rev");
 var del = require('del');
-var revCollector = require('gulp-rev-collector');
 var revDel = require('rev-del');
 var zip = require('gulp-zip');
 var runSequence = require('run-sequence');
-var fingerprint = require('gulp-fingerprint');
-var RevAll = require('gulp-rev-all');
-var revcss = require('gulp-rev-css-url');
 var CacheBuster = require('gulp-cachebust');
 var sourcemaps = require('gulp-sourcemaps');
 var cachebust = new CacheBuster();
-var rev = require('gulp-rev-append');
+var cssver = require('gulp-make-css-url-version');
+var reveasy = require("gulp-rev-easy");
 
 gulp.task('clean', function() {
   // You can use multiple globbing patterns as you would with `gulp.src`
-  return del(['dist'], ['src/rev/*.*'], ['src/tmp']);
+  return del(['dist', 'src/rev/*.*', 'src/tmp']);
 });
 
 // 压缩图片
 gulp.task('minimg', function() {
+  // var revAll = new RevAll();
   gulp.src('src/images/*.{png,jpg,gif,ico}')
-    .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-    .pipe(gulp.dest('src/tmp/images'))
+    .pipe(cache(imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('dist/images'));
 });
 // 压缩首页
-gulp.task('minify', function() {
+gulp.task('miniindex', function() {
   return gulp.src('src/*.html')
+    .pipe(reveasy())
     .pipe(htmlmin({
       collapseWhitespace: true, //压缩html
       removeComments: true, //清除注释
     }))
-  .pipe(size())
-  .pipe(gulp.dest('src/tmp'));
+    .pipe(size())
+    .pipe(gulp.dest('dist'));
+});
+gulp.task('miniindexs', function() {
+  return gulp.src('src/*.shtml')
+    .pipe(gulp.dest('dist'));
 });
 // 压缩子页
 gulp.task('minicon', function() {
@@ -61,16 +63,15 @@ gulp.task('minicon', function() {
         collapseWhitespace: true,
         removeComments: true, //清除注释
       }))
-      .pipe(gulp.dest("src/tmp/content"));
+      .pipe(reveasy())
+      .pipe(gulp.dest("dist/content"));
   })
   /* Scripts task */
 gulp.task('scripts', function() {
   return gulp.src(['src/scripts/*.js'])
     .pipe(size())
     .pipe(uglify())
-    .pipe(rev())
-    // .pipe(cachebust.resources())
-    .pipe(gulp.dest('src/tmp/scripts'));
+    .pipe(gulp.dest('dist/scripts'));
 });
 /* Sass task */
 gulp.task('sass', function() {
@@ -79,29 +80,20 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('src/styles'));
 });
 gulp.task('css', function() {
-  return gulp.src('src/styles/*.css')
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: true, //是否美化属性值 默认：true 像这样：
-      //-webkit-transform: rotate(45deg);
-      //        transform: rotate(45deg);
-      remove: true //是否去掉不必要的前缀 默认：true
-    }))
-    .pipe(sourcemaps.init())
-    .pipe(minifycss())
-    .pipe(sourcemaps.write())
-    .pipe(size())
-    .pipe(gulp.dest('src/tmp/styles'));
-})
-gulp.task('rev', function() {
-  var revAll = new RevAll(
-    { dontRenameFile: [/^\/favicon.ico$/g, /^\/index.html/g, ]
-   } );
-  return gulp.src(['src/tmp/**'] )
-    .pipe(revAll.revision())
-    .pipe(gulp.dest('dist'));
-});
-/* Reload task */
+    return gulp.src('src/styles/*.css')
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: true, //是否美化属性值 默认：true 像这样：
+        //-webkit-transform: rotate(45deg);
+        //        transform: rotate(45deg);
+        remove: true //是否去掉不必要的前缀 默认：true
+      }))
+      .pipe(minifycss())
+      .pipe(size())
+      .pipe(cssver())
+      .pipe(gulp.dest('dist//styles'));
+  })
+  /* Reload task */
 gulp.task('bs-reload', function() {
   browserSync.reload();
 });
@@ -121,10 +113,8 @@ gulp.task('default', ['build'], function() {
   gulp.watch(['src/scripts/*.js'], ['scripts'])
   gulp.watch(['src/images/*.{png,jpg,gif,ico}'], ['minimg'])
   gulp.watch(['src/styles/*.css'], ['css'])
-  gulp.watch(['src/*.html'], ['minify'])
-  gulp.watch(['src/tmp/**'], ['rev'])
-    // gulp.watch(['src/tmp/**/*'], ['revall'])
-    // gulp.watch(['src/tmp/htmltmp/*.html'], ['revhtml'])
+  gulp.watch(['src/*.html'], ['miniindex'])
+  gulp.watch(['src/*.shtml'], ['miniindexs'])
   gulp.watch(['src/content/*.html'], ['minicon'])
     /* Watch .html files, run the bs-reload task on change. */
   gulp.watch(['dist/index.html', 'dist/content/*.html'], ['bs-reload']);
@@ -132,5 +122,6 @@ gulp.task('default', ['build'], function() {
 
 gulp.task('build', function(done) {
   runSequence(
-    ['clean'], ['minimg'], ['sass'], ['css'], ['scripts'], ['browser-sync'], ['minify'], ['minicon'],['rev'], done);
+    ['clean'], ['minimg'], ['sass'], ['css'], ['scripts'], ['miniindex'],['miniindexs'], ['minicon'], ['browser-sync'],
+    done);
 });
